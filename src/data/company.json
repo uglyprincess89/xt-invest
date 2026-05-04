@@ -1,0 +1,39 @@
+{
+  "name": "XTREME INVEST s.r.o.",
+  "brand": "XT-Invest",
+  "tagline": "Medical Supplies",
+  "ico": "06552251",
+  "dic": "CZ06552251",
+  "sidlo": {
+    "ulice": "Holubinková 169/8",
+    "cast": "Pitkovice",
+    "psc": "104 00",
+    "mesto": "Praha"
+  },
+  "lekarna": {
+    "nazev": "Lékárna u Robina",
+    "ulice": "Korunní 483/89",
+    "psc": "130 00",
+    "mesto": "Praha 3",
+    "oteviraci": {
+      "Po": "8:00 – 18:00",
+      "Út": "8:00 – 18:00",
+      "St": "8:00 – 18:00",
+      "Čt": "8:00 – 18:00",
+      "Pá": "8:00 – 18:00",
+      "So": "Zavřeno",
+      "Ne": "Zavřeno"
+    }
+  },
+  "kontakt": {
+    "telefon": "+420 774 444 767",
+    "email": "info@xt-invest.cz",
+    "web": "www.xt-invest.cz"
+  },
+  "bdPartner": {
+    "nazev": "Becton, Dickinson and Company",
+    "zkratka": "BD",
+    "status": "Autorizovaný reseller pro ČR"
+  },
+  "copyright": "2026"
+}

@@ -1,0 +1,257 @@
+[
+  {
+    "id": 1,
+    "slug": "bd-plastipak-strikacka-10ml",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Plastipak™ injekční stříkačka 10 ml",
+    "ref": "302188",
+    "image": "/images/products/bd-plastipak-10ml.jpg",
+    "description": "Standardní injekční stříkačka BD Plastipak s označením objemu po 1 ml. Sterilní, pro jednorázové použití.",
+    "params": {
+      "Objem": "10 ml",
+      "Průměr pístu": "14,5 mm",
+      "Materiál": "Polypropylen",
+      "Sterilita": "Sterilní, EO",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 2,
+    "slug": "bd-microlance-jehla-21g",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Microlance™ jehla 21G × 1½\"",
+    "ref": "301155",
+    "image": "/images/products/bd-microlance-21g.jpg",
+    "description": "Injekční jehla BD Microlance s trojúhelníkovým brusem pro minimální bolestivost. Sterilní.",
+    "params": {
+      "Průměr": "0,8 mm (21G)",
+      "Délka": "40 mm",
+      "Materiál": "Nerezová ocel",
+      "Hrot": "Trojúhelníkový brus",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 3,
+    "slug": "bd-plastipak-luer-lock-5ml",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Plastipak™ Luer-Lock 5 ml",
+    "ref": "302187",
+    "image": "/images/products/bd-plastipak-luer-lock.jpg",
+    "description": "Injekční stříkačka s Luer-Lock uzávěrem pro bezpečné připojení jehly. Sterilní.",
+    "params": {
+      "Objem": "5 ml",
+      "Typ uzávěru": "Luer-Lock",
+      "Materiál": "Polypropylen",
+      "Sterilita": "Sterilní, EO",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 4,
+    "slug": "bd-vacutainer-edta-4ml",
+    "category": "odber",
+    "categoryLabel": "Odběr krve",
+    "name": "BD Vacutainer™ EDTA zkumavka 4 ml",
+    "ref": "368861",
+    "image": "/images/products/bd-vacutainer-edta.jpg",
+    "description": "Vakuová zkumavka BD Vacutainer s K3EDTA pro odběr a analýzu plné krve a krevního obrazu.",
+    "params": {
+      "Objem": "4 ml",
+      "Aditiva": "K3EDTA 7,2 mg",
+      "Uzávěr": "Levandulová (fialová)",
+      "Délka": "75 mm",
+      "Balení": "100 ks/box"
+    }
+  },
+  {
+    "id": 5,
+    "slug": "bd-vacutainer-sst-5ml",
+    "category": "odber",
+    "categoryLabel": "Odběr krve",
+    "name": "BD Vacutainer™ SST II zkumavka 5 ml",
+    "ref": "367955",
+    "image": "/images/products/bd-vacutainer-sst.jpg",
+    "description": "Separační zkumavka SST II s aktivátorem srážení a separačním gelem pro biochemická vyšetření séra.",
+    "params": {
+      "Objem": "5 ml",
+      "Aditiva": "Aktivátor srážení + separační gel",
+      "Uzávěr": "Zlatá",
+      "Délka": "100 mm",
+      "Balení": "100 ks/box"
+    }
+  },
+  {
+    "id": 6,
+    "slug": "bd-vacutainer-jehla-21g",
+    "category": "odber",
+    "categoryLabel": "Odběr krve",
+    "name": "BD Vacutainer™ odběrová jehla 21G",
+    "ref": "368282",
+    "image": "/images/products/bd-vacutainer-jehla-21g.jpg",
+    "description": "Dvoustranná odběrová jehla BD Vacutainer pro vakuový odběr krve. Sterilní, pro jednorázové použití.",
+    "params": {
+      "Průměr": "0,8 mm (21G)",
+      "Délka": "38 mm",
+      "Typ": "Dvoustranná",
+      "Barva": "Zelená",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 7,
+    "slug": "bd-venflon-pro-safety-18g",
+    "category": "kanyly",
+    "categoryLabel": "Kanyly",
+    "name": "BD Venflon™ Pro Safety 18G",
+    "ref": "393229",
+    "image": "/images/products/bd-venflon-18g.jpg",
+    "description": "Periferní žilní kanyla BD Venflon Pro Safety s pasivní bezpečnostní ochranou jehly. 18G pro velký průtok.",
+    "params": {
+      "Průměr": "1,2 mm (18G)",
+      "Délka": "45 mm",
+      "Průtok": "96 ml/min",
+      "Bezpečnost": "Pasivní ochrana jehly",
+      "Balení": "50 ks/box"
+    }
+  },
+  {
+    "id": 8,
+    "slug": "bd-venflon-pro-safety-20g",
+    "category": "kanyly",
+    "categoryLabel": "Kanyly",
+    "name": "BD Venflon™ Pro Safety 20G",
+    "ref": "393228",
+    "image": "/images/products/bd-venflon-20g.jpg",
+    "description": "Periferní žilní kanyla BD Venflon Pro Safety 20G s pasivní bezpečnostní ochranou. Standardní velikost.",
+    "params": {
+      "Průměr": "0,9 mm (20G)",
+      "Délka": "32 mm",
+      "Průtok": "61 ml/min",
+      "Bezpečnost": "Pasivní ochrana jehly",
+      "Balení": "50 ks/box"
+    }
+  },
+  {
+    "id": 9,
+    "slug": "bd-venflon-pro-safety-22g",
+    "category": "kanyly",
+    "categoryLabel": "Kanyly",
+    "name": "BD Venflon™ Pro Safety 22G",
+    "ref": "393227",
+    "image": "/images/products/bd-venflon-22g.jpg",
+    "description": "Periferní žilní kanyla BD Venflon Pro Safety 22G pro pacienty s drobnými žilami.",
+    "params": {
+      "Průměr": "0,7 mm (22G)",
+      "Délka": "25 mm",
+      "Průtok": "36 ml/min",
+      "Bezpečnost": "Pasivní ochrana jehly",
+      "Balení": "50 ks/box"
+    }
+  },
+  {
+    "id": 10,
+    "slug": "bd-phoenix-nmic-panel",
+    "category": "diagnostika",
+    "categoryLabel": "Diagnostika",
+    "name": "BD Phoenix™ NMIC/ID panel",
+    "ref": "441556",
+    "image": "/images/products/bd-phoenix.jpg",
+    "description": "Kombinovaný panel pro identifikaci mikroorganismů a testování citlivosti na antibiotika. Pro systém BD Phoenix M50.",
+    "params": {
+      "Typ": "Mikrobiologie",
+      "Analýzy": "Identifikace + citlivost",
+      "Kompatibilita": "BD Phoenix M50",
+      "Čas výsledku": "4–8 hodin",
+      "Balení": "10 ks/box"
+    }
+  },
+  {
+    "id": 11,
+    "slug": "bd-plastipak-strikacka-20ml",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Plastipak™ stříkačka 20 ml Luer-Slip",
+    "ref": "300613",
+    "image": "/images/products/bd-plastipak-20ml.jpg",
+    "description": "Větší injekční stříkačka BD Plastipak 20 ml s Luer-Slip uzávěrem. Sterilní.",
+    "params": {
+      "Objem": "20 ml",
+      "Typ uzávěru": "Luer-Slip",
+      "Materiál": "Polypropylen",
+      "Sterilita": "Sterilní, EO",
+      "Balení": "50 ks/krabice"
+    }
+  },
+  {
+    "id": 12,
+    "slug": "bd-vacutainer-citrat-27ml",
+    "category": "odber",
+    "categoryLabel": "Odběr krve",
+    "name": "BD Vacutainer™ citrátová zkumavka 2,7 ml",
+    "ref": "363083",
+    "image": "/images/products/bd-vacutainer-citrat.jpg",
+    "description": "Citrátem sodným zkumavka pro koagulační testy. Přesný poměr 1:9 krev:citrát.",
+    "params": {
+      "Objem": "2,7 ml",
+      "Aditiva": "Citrát sodný 0,109 mol/l",
+      "Uzávěr": "Světle modrá",
+      "Poměr krev:aditivum": "1:9",
+      "Balení": "100 ks/box"
+    }
+  },
+  {
+    "id": 13,
+    "slug": "bd-nexiva-iv-system-20g",
+    "category": "kanyly",
+    "categoryLabel": "Kanyly",
+    "name": "BD Nexiva™ uzavřený IV systém 20G",
+    "ref": "383511",
+    "image": "/images/products/bd-nexiva-20g.jpg",
+    "description": "Uzavřený intravenózní systém BD Nexiva s integrovaným bezjehlým ventilem. Aktivní bezpečnostní ochrana.",
+    "params": {
+      "Průměr": "0,9 mm (20G)",
+      "Délka": "30 mm",
+      "Funkce": "Integrovaný bezjehlý ventil",
+      "Bezpečnost": "Aktivní ochrana jehly",
+      "Balení": "40 ks/box"
+    }
+  },
+  {
+    "id": 14,
+    "slug": "bd-veritor-flu-ab",
+    "category": "diagnostika",
+    "categoryLabel": "Diagnostika",
+    "name": "BD Veritor™ rychlotest Flu A+B",
+    "ref": "256067",
+    "image": "/images/products/bd-veritor-flu.jpg",
+    "description": "Rychlý antigenní test pro detekci Influenza A a B z nosního výtěru. Výsledek do 15 minut.",
+    "params": {
+      "Typ": "Antigenní rychlotest",
+      "Analyty": "Influenza A + Influenza B",
+      "Čas výsledku": "15 minut",
+      "Vzorek": "Nosní výtěr",
+      "Balení": "20 testů/box"
+    }
+  },
+  {
+    "id": 15,
+    "slug": "bd-safetyglide-jehla-31g",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD SafetyGlide™ inzulinová jehla 31G",
+    "ref": "328446",
+    "image": "/images/products/bd-safetyglide-31g.jpg",
+    "description": "Inzulinová jehla BD SafetyGlide s pasivní bezpečnostní ochranou po použití. Pro subkutánní injekce.",
+    "params": {
+      "Průměr": "0,25 mm (31G)",
+      "Délka": "6 mm",
+      "Bezpečnost": "Pasivní ochrana po použití",
+      "Sterilita": "Sterilní, EO",
+      "Balení": "100 ks/krabice"
+    }
+  }
+]

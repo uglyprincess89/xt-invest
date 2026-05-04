@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #1a4d7a;
+  --navy-dark: #0f3358;
+  --teal: #2bbfa4;
+  --teal-dark: #1e9e88;
+  --teal-light: #eaf7f4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+  color: #1a2533;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-teal text-white px-6 py-3 rounded-lg font-medium hover:bg-teal-dark transition-colors;
+  }
+  .btn-outline {
+    @apply border border-white/30 bg-white/10 text-white px-6 py-3 rounded-lg hover:bg-white/20 transition-colors;
+  }
+  .section-title {
+    @apply text-lg font-medium text-navy mb-1;
+  }
+  .section-bar {
+    @apply w-9 h-0.5 bg-teal rounded mb-5;
+  }
+}
