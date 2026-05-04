@@ -17,7 +17,7 @@ export type Product = {
 export type Company = typeof companyData
 export type SeoData = typeof seoData
 
-export const products: Product[] = productsData as Product[]
+export const products: Product[] = productsData as unknown as Product[]
 export const company: Company = companyData
 export const seo: SeoData = seoData
 
