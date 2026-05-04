@@ -110,3 +110,4 @@ Viz `HOSTING.md` pro podrobné instrukce.
 | Teal (tyrkysová) | `#2bbfa4` |
 | Teal Dark | `#1e9e88` |
 # xt-invest
+# xt-invest
