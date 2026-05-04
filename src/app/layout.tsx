@@ -3,17 +3,17 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import seoData from '@/data/seo.json'
+import { seo } from '@/lib/data'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: seoData.pages.home.title,
-  description: seoData.pages.home.description,
-  keywords: seoData.default.keywords,
+  title: seo.pages.home.title,
+  description: seo.pages.home.description,
+  keywords: seo.default.keywords,
   openGraph: {
-    siteName: seoData.default.siteName,
-    url: seoData.default.siteUrl,
+    siteName: seo.default.siteName,
+    url: seo.default.siteUrl,
     type: 'website',
   },
 }
@@ -24,10 +24,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="cs">
-      <body className={inter.className}>
+    <html lang="cs" className="overflow-x-hidden">
+      <body className={`${inter.className} overflow-x-hidden`}>
         <Navbar />
-        <main>{children}</main>
+        <main className="overflow-x-hidden">{children}</main>
         <Footer />
       </body>
     </html>
