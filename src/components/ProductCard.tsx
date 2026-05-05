@@ -3,58 +3,83 @@ import Link from 'next/link'
 import Image from 'next/image'
 import type { Product } from '@/lib/data'
 
-interface Props {
-  product: Product
-}
+export default function ProductCard({ product }: { product: Product }) {
+  // Mailto s plným kontextem produktu (název + REF)
+  const mailtoSubject = encodeURIComponent(
+    `Poptávka: ${product.name} (REF: ${product.ref})`
+  )
+  const mailtoBody = encodeURIComponent(
+    `Dobrý den,\n\nrád bych poptal následující produkt:\n\n` +
+    `Název: ${product.name}\n` +
+    `REF: ${product.ref}\n` +
+    `Kategorie: ${product.categoryLabel}\n\n` +
+    `Prosím o zaslání cenové nabídky pro:\n` +
+    `Počet kusů: \nOrganizace: \n\nDěkuji.`
+  )
+  const mailtoHref = `mailto:info@xt-invest.cz?subject=${mailtoSubject}&body=${mailtoBody}`
 
-export default function ProductCard({ product }: Props) {
   return (
-    <Link href={`/katalog/${product.slug}`} className="group block h-full">
-      <div className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-teal hover:shadow-md transition-all h-full flex flex-col">
-        {/* Obrázek */}
-        <div className="relative h-40 bg-gradient-to-br from-blue-50 to-blue-100 overflow-hidden">
-          <Image
-            src={product.image}
-            alt={product.name}
-            fill
-            className="object-contain p-3"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
-          <span className="absolute top-2 right-2 bg-navy text-white text-[10px] font-semibold px-2 py-0.5 rounded">
-            BD
-          </span>
-        </div>
+    <div className="group h-full">
+      <div className="bg-white border border-gray-200 rounded-xl overflow-hidden h-full flex flex-col"
+        style={{transition:'all 0.2s ease'}}
+        onMouseEnter={e => {
+          const el = e.currentTarget as HTMLElement
+          el.style.transform = 'scale(1.02)'
+          el.style.boxShadow = '0 10px 20px rgba(0,0,0,0.08)'
+          el.style.borderColor = '#2bbfa4'
+        }}
+        onMouseLeave={e => {
+          const el = e.currentTarget as HTMLElement
+          el.style.transform = 'scale(1)'
+          el.style.boxShadow = 'none'
+          el.style.borderColor = '#dce6ef'
+        }}
+      >
+        {/* Obrázek - klikatelný na detail */}
+        <Link href={`/katalog/${product.slug}`} className="block">
+          <div className="relative h-40 bg-gradient-to-br from-blue-50 to-blue-100 overflow-hidden">
+            <Image src={product.image} alt={product.name} fill className="object-contain p-3"
+              sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 16vw" />
+            <span className="absolute top-2 right-2 bg-[#044ED7] text-white text-[10px] font-semibold px-2 py-0.5 rounded">
+              BD
+            </span>
+          </div>
+        </Link>
 
         {/* Obsah */}
         <div className="p-3 flex flex-col flex-1">
-          {/* Kategorie — tmavší pro lepší čitelnost */}
-          <p className="text-[11px] text-teal-dark uppercase tracking-wide font-semibold mb-1">
-            {product.categoryLabel}
-          </p>
-          {/* Název — větší a tučnější */}
-          <h3 className="text-sm font-medium text-gray-800 leading-snug mb-2 flex-1">
-            {product.name}
-          </h3>
-          {/* REF — tmavší šedá pro lepší čitelnost */}
-          <p className="text-xs text-gray-500 font-medium mb-3">REF: {product.ref}</p>
+          <Link href={`/katalog/${product.slug}`} className="block flex-1">
+            <p className="text-[11px] text-teal-dark uppercase tracking-wide font-semibold mb-1">
+              {product.categoryLabel}
+            </p>
+            <h3 className="text-sm font-medium text-gray-800 leading-snug mb-2">
+              {product.name}
+            </h3>
+            <p className="text-xs text-gray-500 font-medium mb-3">REF: {product.ref}</p>
+          </Link>
 
-          <div className="flex items-center justify-between gap-2">
-            {/* Skladem — zelená pouze pro tuto info */}
+          <div className="flex items-center justify-between gap-2 mb-2">
             <span className="flex items-center gap-1.5 text-[11px] text-emerald-600 font-medium">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block shrink-0" />
               Skladem
             </span>
-            {/* Poptat — navy tlačítko, odlišené od zelené */}
-            <a
-              href={`mailto:info@xt-invest.cz?subject=${encodeURIComponent('Poptávka: ' + product.name + ' - xt-invest.cz')}`}
-              onClick={e => e.stopPropagation()}
-              className="bg-navy text-white text-xs px-3 py-1.5 rounded-md hover:bg-navy-dark transition-colors font-medium shrink-0"
+            <Link
+              href={`/katalog/${product.slug}`}
+              className="text-[11px] text-teal-dark hover:text-teal font-medium"
             >
-              Poptat
-            </a>
+              Detail →
+            </Link>
           </div>
+
+          {/* Hlavní CTA - poptat s kontextem */}
+          <a
+            href={mailtoHref}
+            className="block bg-navy hover:bg-navy-dark text-white text-xs font-semibold py-2 rounded-md text-center transition-colors"
+          >
+            Poptat tento produkt
+          </a>
         </div>
       </div>
-    </Link>
+    </div>
   )
 }

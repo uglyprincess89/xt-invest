@@ -19,16 +19,29 @@ export default function LekarnaPage() {
   const dnesIndex = new Date().getDay()
   const dnesMap = [6, 0, 1, 2, 3, 4, 5]
   const dnesDenIndex = dnesMap[dnesIndex]
+  const dnesnamec = dnyVTydnu[dnesDenIndex]
+  const dnesCas = company.lekarna.oteviraci[dnesnamec as keyof typeof company.lekarna.oteviraci]
+  const jeOtevreno = dnesCas !== 'Zavřeno'
 
   return (
     <>
-      <section className="bg-gradient-to-br from-navy-dark to-navy text-white py-12 px-6">
+      <section className="bg-gradient-to-br from-navy-dark to-navy text-white py-10 px-6">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-2xl font-medium mb-3">{company.lekarna.nazev}</h1>
-          <p className="text-white/70 text-sm leading-relaxed max-w-xl">
+          <h1 className="text-2xl md:text-3xl font-semibold mb-3">{company.lekarna.nazev}</h1>
+          <p className="text-white/75 text-sm leading-relaxed max-w-xl mb-4">
             {company.lekarna.ulice}, {company.lekarna.psc} {company.lekarna.mesto}.
             Profesionální lékárenské zásobování pro zdravotnická zařízení.
           </p>
+
+          {/* Status indikátor — otevřeno/zavřeno */}
+          <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium border ${
+            jeOtevreno
+              ? 'bg-emerald-500/15 border-emerald-400/40 text-emerald-300'
+              : 'bg-red-500/15 border-red-400/40 text-red-300'
+          }`}>
+            <span className={`w-2 h-2 rounded-full ${jeOtevreno ? 'bg-emerald-400 animate-pulse' : 'bg-red-400'}`} />
+            {jeOtevreno ? `Dnes otevřeno ${dnesCas}` : 'Dnes zavřeno'}
+          </div>
         </div>
       </section>
 
@@ -38,20 +51,23 @@ export default function LekarnaPage() {
             {sluzby.map((s) => (
               <div key={s.title} className="bg-white border border-gray-200 rounded-xl p-4">
                 <div className="w-9 h-9 bg-teal/10 rounded-lg flex items-center justify-center text-lg mb-3">{s.icon}</div>
-                <h3 className="text-sm font-medium text-navy mb-1.5">{s.title}</h3>
+                <h3 className="text-sm font-semibold text-navy mb-1.5">{s.title}</h3>
                 <p className="text-xs text-gray-500 leading-relaxed">{s.text}</p>
               </div>
             ))}
           </div>
           <div className="bg-gray-50 rounded-xl p-5">
-            <h2 className="text-sm font-medium text-navy mb-4">Otevírací doba</h2>
+            <h2 className="text-sm font-semibold text-navy mb-4">Otevírací doba</h2>
             {dnyVTydnu.map((den, i) => {
               const cas = company.lekarna.oteviraci[den as keyof typeof company.lekarna.oteviraci]
               const jeDnes = i === dnesDenIndex
               const jeZavreno = cas === 'Zavřeno'
               return (
                 <div key={den} className={`flex justify-between items-center py-2.5 border-b border-gray-200 last:border-0 text-sm px-1 ${jeDnes ? 'bg-teal/5 rounded -mx-1 px-2' : ''}`}>
-                  <span className={jeDnes ? 'text-teal-dark font-medium' : 'text-gray-500'}>
+                  <span className={`flex items-center gap-2 ${jeDnes ? 'text-teal-dark font-medium' : 'text-gray-500'}`}>
+                    {jeDnes && (
+                      <span className={`w-2 h-2 rounded-full ${jeZavreno ? 'bg-red-500' : 'bg-emerald-500'}`} />
+                    )}
                     {den}{jeDnes ? ' (dnes)' : ''}
                   </span>
                   <span className={`font-medium ${jeZavreno ? 'text-red-500' : jeDnes ? 'text-teal-dark' : 'text-navy'}`}>

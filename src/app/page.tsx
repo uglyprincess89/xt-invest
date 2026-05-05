@@ -21,17 +21,17 @@ export default function HomePage() {
           <circle cx="1100" cy="440" r="260" fill="none" stroke="white" strokeWidth="50"/>
           <circle cx="80" cy="380" r="200" fill="none" stroke="white" strokeWidth="42"/>
         </svg>
-        <div className="relative max-w-7xl mx-auto px-6 py-16 md:py-20">
+        <div className="relative max-w-7xl mx-auto px-6 py-10">
           <div className="inline-flex items-center gap-2 bg-teal/20 border border-teal/40 text-teal px-4 py-1.5 rounded-full text-xs uppercase tracking-widest mb-6">
             <span className="w-2 h-2 rounded-full bg-teal animate-pulse" />
             Autorizovaný reseller Becton Dickinson pro ČR
           </div>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-5 max-w-3xl">
+          <h1 className="text-2xl md:text-3xl font-semibold leading-snug mb-4 max-w-2xl">
             Autorizovaný distributor{' '}
             <em className="not-italic text-teal">Becton Dickinson</em>
             <br />pro zdravotnická zařízení v České republice
           </h1>
-          <p className="text-white/80 text-base md:text-lg leading-relaxed max-w-2xl mb-8">
+          <p className="text-white/75 text-sm leading-relaxed max-w-xl mb-6">
             Rychlé dodávky originální injekční techniky, Vacutainer™ systémů a laboratorních
             řešení BD. Osobní přístup, férové B2B podmínky a spolehlivost, na kterou se můžete
             spolehnout každý den.
@@ -54,20 +54,37 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* BD STRIP */}
-      <div className="bg-blue-50 border-t-4 border-teal px-6 py-4">
-        <div className="max-w-7xl mx-auto flex items-center gap-4 flex-wrap">
-          <div className="bg-white border-2 border-gray-200 rounded-lg px-4 py-1.5 shrink-0">
-            <Image src="/images/bd-logo.svg" alt="Becton Dickinson" width={65} height={25} />
+      {/* BD AUTORIZACE - dominantní vizuální blok */}
+      <section className="bg-gradient-to-r from-[#044ED7] via-[#0556ed] to-[#044ED7] py-6 px-6 relative overflow-hidden">
+        {/* Subtilní textura */}
+        <svg className="absolute inset-0 w-full h-full opacity-[0.06] pointer-events-none" viewBox="0 0 1200 200" preserveAspectRatio="xMidYMid slice">
+          <circle cx="100" cy="100" r="80" fill="none" stroke="white" strokeWidth="40"/>
+          <circle cx="1100" cy="100" r="100" fill="none" stroke="white" strokeWidth="50"/>
+        </svg>
+        <div className="relative max-w-7xl mx-auto flex items-center gap-5 flex-wrap">
+          {/* BD logo blok */}
+          <div className="bg-white rounded-lg px-5 py-2.5 shrink-0 shadow-md">
+            <Image src="/images/bd-logo.svg" alt="Becton Dickinson" width={75} height={30} />
           </div>
-          <p className="text-sm text-gray-600 flex-1">
-            <strong className="text-navy">Becton, Dickinson and Company</strong> — světový lídr v oblasti zdravotnických pomůcek a diagnostiky
-          </p>
-          <span className="bg-[#e6eefb] text-[#044ED7] text-xs font-semibold px-3 py-1 rounded-full border border-[#044ED7]/20 shrink-0">
-            Autorizovaný reseller
-          </span>
+          {/* Textový obsah */}
+          <div className="flex-1 min-w-[200px]">
+            <p className="text-white text-base font-semibold leading-tight mb-0.5">
+              Becton, Dickinson and Company
+            </p>
+            <p className="text-white/80 text-xs leading-relaxed">
+              Světový lídr v oblasti zdravotnických pomůcek a diagnostiky
+            </p>
+          </div>
+          {/* Auth pill - výraznější */}
+          <div className="flex items-center gap-2 bg-white text-[#044ED7] text-xs font-bold px-4 py-2 rounded-lg shadow-md shrink-0">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M9 12l2 2 4-4"/>
+              <circle cx="12" cy="12" r="10"/>
+            </svg>
+            AUTORIZOVANÝ RESELLER
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* PROČ MY */}
       <section className="py-14 px-6 bg-white">

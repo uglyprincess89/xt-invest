@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import JsonLd from '@/components/JsonLd'
 import { seo } from '@/lib/data'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -26,6 +27,7 @@ export default function RootLayout({
   return (
     <html lang="cs" className="overflow-x-hidden">
       <body className={`${inter.className} overflow-x-hidden`}>
+        <JsonLd />
         <Navbar />
         <main className="overflow-x-hidden">{children}</main>
         <Footer />

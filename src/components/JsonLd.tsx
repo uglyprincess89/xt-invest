@@ -1,0 +1,82 @@
+import { company } from '@/lib/data'
+
+// JSON-LD schémata pro Google - pomáhá pochopit kontext webu
+export default function JsonLd() {
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': 'https://www.xt-invest.cz/#organization',
+    name: company.name,
+    alternateName: 'XT-Invest',
+    url: 'https://www.xt-invest.cz',
+    logo: 'https://www.xt-invest.cz/images/xt-invest-logo-dark.svg',
+    description: 'Autorizovaný distributor zdravotnického materiálu Becton Dickinson pro Českou republiku.',
+    taxID: company.dic,
+    vatID: company.dic,
+    identifier: {
+      '@type': 'PropertyValue',
+      propertyID: 'IČO',
+      value: company.ico,
+    },
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: company.sidlo.ulice,
+      addressLocality: `${company.sidlo.cast}, ${company.sidlo.mesto}`,
+      postalCode: company.sidlo.psc,
+      addressCountry: 'CZ',
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: company.kontakt.telefon,
+      email: company.kontakt.email,
+      contactType: 'customer service',
+      areaServed: 'CZ',
+      availableLanguage: ['Czech'],
+    },
+    sameAs: [
+      'https://www.bd.com',
+    ],
+  }
+
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Pharmacy',
+    '@id': 'https://www.xt-invest.cz/#lekarna',
+    name: company.lekarna.nazev,
+    image: 'https://www.xt-invest.cz/images/xt-invest-logo-dark.svg',
+    parentOrganization: {
+      '@id': 'https://www.xt-invest.cz/#organization',
+    },
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: company.lekarna.ulice,
+      addressLocality: company.lekarna.mesto,
+      postalCode: company.lekarna.psc,
+      addressCountry: 'CZ',
+    },
+    telephone: company.kontakt.telefon,
+    email: company.kontakt.email,
+    priceRange: '$$',
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '08:00',
+        closes: '18:00',
+      },
+    ],
+  }
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+    </>
+  )
+}
