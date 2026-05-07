@@ -23,7 +23,7 @@ export default function ProductCard({ product }: { product: Product }) {
             const el = e.currentTarget as HTMLElement
             el.style.transform = 'scale(1)'
             el.style.boxShadow = 'none'
-            el.style.borderColor = '#dce6ef'
+            el.style.borderColor = '#e5e7eb'
           }}
         >
           <Link href={`/katalog/${product.slug}`} className="block">
@@ -38,27 +38,30 @@ export default function ProductCard({ product }: { product: Product }) {
 
           <div className="p-3 flex flex-col flex-1">
             <Link href={`/katalog/${product.slug}`} className="block flex-1">
-              <p className="text-[11px] text-teal-dark uppercase tracking-wide font-semibold mb-1">
+              {/* Opravený kontrast: navy místo teal-dark pro malý text */}
+              <p className="text-[11px] text-navy uppercase tracking-wide font-semibold mb-1">
                 {product.categoryLabel}
               </p>
               <h3 className="text-sm font-medium text-gray-800 leading-snug mb-2">
                 {product.name}
               </h3>
-              <p className="text-xs text-gray-500 font-medium mb-3">REF: {product.ref}</p>
+              <p className="text-xs text-gray-600 font-medium mb-3">REF: {product.ref}</p>
             </Link>
 
+            {/* Větší touch target pro "Detail produktu" */}
             <div className="flex items-center justify-end mb-2">
               <Link
                 href={`/katalog/${product.slug}`}
-                className="text-[11px] text-teal-dark hover:text-teal font-medium"
+                className="text-xs text-navy font-semibold hover:text-teal-dark transition-colors py-1.5 px-2 -mr-2"
               >
                 Detail produktu →
               </Link>
             </div>
 
+            {/* Větší tlačítko pro lepší touch target */}
             <button
               onClick={() => setModalOpen(true)}
-              className="block w-full bg-navy hover:bg-navy-dark text-white text-xs font-semibold py-2 rounded-md text-center transition-colors"
+              className="block w-full bg-navy hover:bg-navy-dark text-white text-xs font-semibold py-3 rounded-md text-center transition-colors"
             >
               Poptat tento produkt
             </button>
@@ -66,7 +69,6 @@ export default function ProductCard({ product }: { product: Product }) {
         </div>
       </div>
 
-      {/* Modal s formulářem */}
       {modalOpen && (
         <div
           className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"

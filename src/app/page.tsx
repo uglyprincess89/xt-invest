@@ -22,13 +22,12 @@ export default function HomePage() {
           <circle cx="80" cy="380" r="200" fill="none" stroke="white" strokeWidth="42"/>
         </svg>
         <div className="relative max-w-7xl mx-auto px-6 py-10">
-          {/* H1 - bez duplikujícího pillu */}
           <h1 className="text-2xl md:text-3xl font-semibold leading-snug mb-4 max-w-2xl">
             Autorizovaný obchodní partner{' '}
             <em className="not-italic text-teal">Becton Dickinson</em>
             <br />pro zdravotnická zařízení v České republice
           </h1>
-          <p className="text-white/75 text-sm leading-relaxed max-w-xl mb-6">
+          <p className="text-white/90 text-sm leading-relaxed max-w-xl mb-6">
             Rychlé dodávky originální injekční techniky, Vacutainer™ systémů a laboratorních
             řešení BD. Osobní přístup, férové B2B podmínky a spolehlivost, na kterou se můžete
             spolehnout každý den.
@@ -37,14 +36,13 @@ export default function HomePage() {
             <Link href="/katalog" className="bg-teal text-white font-semibold px-7 py-3.5 rounded-lg hover:bg-teal-dark transition-colors text-sm">
               Prohlédnout katalog produktů BD
             </Link>
-            <Link href="/kontakt" className="bg-white/10 border border-white/30 text-white font-medium px-7 py-3.5 rounded-lg hover:bg-white/20 transition-colors text-sm">
+            <Link href="/kontakt" className="bg-white/10 border border-white/50 text-white font-medium px-7 py-3.5 rounded-lg hover:bg-white/20 transition-colors text-sm">
               Získat nabídku na míru
             </Link>
           </div>
-          {/* Trust bar - jen 3 body bez duplikace */}
-          <div className="border-t border-white/15 pt-6 flex flex-wrap gap-x-8 gap-y-2">
+          <div className="border-t border-white/20 pt-6 flex flex-wrap gap-x-8 gap-y-2">
             {['15+ kategorií produktů', 'Dodávky po celé ČR', 'Originální certifikované produkty'].map(item => (
-              <span key={item} className="flex items-center gap-2 text-sm text-white/70">
+              <span key={item} className="flex items-center gap-2 text-sm text-white/90">
                 <span className="w-1.5 h-1.5 rounded-full bg-teal shrink-0" />{item}
               </span>
             ))}
@@ -52,22 +50,22 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* BD STRIP - světlá verze */}
+      {/* BD STRIP */}
       <div className="bg-blue-50 border-t-4 border-teal px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center gap-4 flex-wrap">
           <div className="bg-white border-2 border-gray-200 rounded-lg px-4 py-1.5 shrink-0">
             <Image src="/images/bd-logo.svg" alt="Becton Dickinson" width={65} height={25} />
           </div>
-          <p className="text-sm text-gray-600 flex-1">
+          <p className="text-sm text-gray-700 flex-1">
             <strong className="text-navy">Becton, Dickinson and Company</strong> — světový lídr v oblasti zdravotnických pomůcek a diagnostiky
           </p>
-          <span className="bg-[#e6eefb] text-[#044ED7] text-xs font-semibold px-3 py-1 rounded-full border border-[#044ED7]/20 shrink-0">
+          <span className="bg-[#e6eefb] text-[#044ED7] text-xs font-semibold px-3 py-1 rounded-full border border-[#044ED7]/30 shrink-0">
             Autorizovaný obchodní partner
           </span>
         </div>
       </div>
 
-      {/* PROČ MY - bez "jsme víc než distributor" */}
+      {/* PROČ MY */}
       <section className="py-14 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10">
@@ -86,7 +84,7 @@ export default function HomePage() {
               <div key={card.title} className="bg-gray-50 border border-gray-100 rounded-xl p-5 hover:border-teal hover:shadow-md transition-all">
                 <div className={`w-11 h-11 ${card.bg} rounded-lg flex items-center justify-center text-lg mb-4`}>{card.icon}</div>
                 <h3 className="text-sm font-semibold text-navy mb-2">{card.title}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">{card.text}</p>
+                <p className="text-sm text-gray-600 leading-relaxed">{card.text}</p>
               </div>
             ))}
           </div>
@@ -98,9 +96,9 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-baseline justify-between mb-1">
             <h2 className="text-xl font-semibold text-navy">Vybrané produkty Becton Dickinson</h2>
-            <Link href="/katalog" className="text-sm text-teal hover:text-teal-dark font-semibold transition-colors shrink-0">Zobrazit vše →</Link>
+            <Link href="/katalog" className="text-sm text-navy font-semibold hover:text-teal-dark transition-colors shrink-0">Zobrazit vše →</Link>
           </div>
-          <p className="text-sm text-gray-500 mb-6">Injekční technika • Odběrový materiál • Kanyly • Laboratorní řešení</p>
+          <p className="text-sm text-gray-600 mb-6">Injekční technika • Odběrový materiál • Kanyly • Laboratorní řešení</p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
             {featuredProducts.map(product => (
               <ProductCard key={product.id} product={product} />
@@ -118,22 +116,22 @@ export default function HomePage() {
       <section className="py-12 px-6 bg-white">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <p className="text-xs font-semibold text-teal uppercase tracking-widest mb-3">O společnosti</p>
+            <p className="text-xs font-semibold text-navy uppercase tracking-widest mb-3">O společnosti</p>
             <h2 className="text-xl font-semibold text-navy mb-4 leading-snug">
               {company.name} —<br />autorizovaný obchodní partner BD pro ČR
             </h2>
-            <p className="text-gray-600 text-sm leading-relaxed mb-4">
+            <p className="text-gray-700 text-sm leading-relaxed mb-4">
               Jsme dynamická česká společnost specializující se na distribuci zdravotnického materiálu
               Becton Dickinson. Náš cíl je jednoduchý — zajistit klinikám, laboratořím a ordinacím
               spolehlivý přísun originálních produktů BD za férových podmínek.
             </p>
-            <div className="bg-teal/8 border-l-3 border-teal rounded-r-lg p-4 mb-5 text-sm text-gray-700 leading-relaxed" style={{borderLeftWidth:'3px', borderLeftColor:'#2bbfa4', borderLeftStyle:'solid', background:'rgba(43,191,164,0.07)', borderRadius:'0 8px 8px 0', padding:'12px 16px'}}>
+            <div className="border-l-2 border-teal bg-teal/5 rounded-r-lg p-4 mb-5 text-sm text-gray-700 leading-relaxed">
               💡 Díky vlastní provozovně — Lékárně u Robina v Praze — známe realitu zdravotnické praxe z první ruky. To nám umožňuje lépe chápat vaše potřeby a nabízet řešení, která skutečně fungují.
             </div>
             <div className="flex gap-3 items-center">
-              <Link href="/o-nas" className="text-sm font-medium text-teal hover:text-teal-dark transition-colors">Více o nás →</Link>
-              <span className="text-gray-200">|</span>
-              <Link href="/kontakt" className="text-sm font-medium text-navy hover:text-teal transition-colors">Kontaktovat obchodního zástupce →</Link>
+              <Link href="/o-nas" className="text-sm font-semibold text-navy hover:text-teal-dark transition-colors">Více o nás →</Link>
+              <span className="text-gray-300">|</span>
+              <Link href="/kontakt" className="text-sm font-semibold text-navy hover:text-teal transition-colors">Kontaktovat obchodního zástupce →</Link>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4">
@@ -146,14 +144,14 @@ export default function HomePage() {
               <div key={f.label} className="bg-gray-50 border border-gray-100 rounded-xl p-5 text-center">
                 <div className="text-2xl mb-1">{f.icon}</div>
                 <p className="text-2xl font-bold text-navy">{f.num}</p>
-                <p className="text-xs text-gray-500 mt-0.5 leading-tight">{f.label}</p>
+                <p className="text-xs text-gray-600 mt-0.5 leading-tight">{f.label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* RECENZE - lidštější, profesionální */}
+      {/* RECENZE */}
       <section className="py-12 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-xl font-semibold text-navy mb-1">Co o nás říkají klienti</h2>
@@ -183,10 +181,10 @@ export default function HomePage() {
               },
             ].map((r, i) => (
               <div key={i} className="bg-white border border-gray-200 rounded-xl p-5">
-                <div className="text-yellow-400 text-sm mb-3">★★★★★</div>
+                <div className="text-yellow-500 text-sm mb-3">★★★★★</div>
                 <p className="text-sm text-gray-700 leading-relaxed mb-4">„{r.text}"</p>
                 <p className="text-xs font-semibold text-navy">{r.autor}</p>
-                <p className="text-xs text-gray-400 mb-2">{r.zarizeni}</p>
+                <p className="text-xs text-gray-600 mb-2">{r.zarizeni}</p>
                 <span className={`inline-block text-[10px] px-2 py-0.5 rounded-full font-medium ${r.tagColor}`}>{r.tag}</span>
               </div>
             ))}
@@ -199,13 +197,13 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h2 className="text-xl font-semibold mb-2">Preferujete přímý kontakt?</h2>
-            <p className="text-white/70 text-sm">Volejte přímo nebo napište — odpovídáme do 24 hodin.</p>
+            <p className="text-white/90 text-sm">Volejte přímo nebo napište — odpovídáme do 24 hodin.</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <a href={`tel:${company.kontakt.telefon}`} className="flex items-center gap-2 bg-teal text-white font-semibold px-6 py-3 rounded-lg hover:bg-teal-dark transition-colors text-sm">
               📞 {company.kontakt.telefon}
             </a>
-            <Link href="/kontakt" className="flex items-center gap-2 bg-white/10 border border-white/30 text-white font-medium px-6 py-3 rounded-lg hover:bg-white/20 transition-colors text-sm">
+            <Link href="/kontakt" className="flex items-center gap-2 bg-white/10 border border-white/50 text-white font-semibold px-6 py-3 rounded-lg hover:bg-white/20 transition-colors text-sm">
               Napsat zprávu
             </Link>
           </div>
