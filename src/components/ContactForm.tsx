@@ -12,7 +12,12 @@ const zajemOptions = [
 
 type Status = 'idle' | 'loading' | 'success' | 'error'
 
-export default function ContactForm() {
+interface ContactFormProps {
+  produktNazev?: string  // pokud je vyplněno, jde o poptávku konkrétního produktu
+  onClose?: () => void   // pokud je vyplněno, zobrazí se tlačítko Zavřít (modal režim)
+}
+
+export default function ContactForm({ produktNazev, onClose }: ContactFormProps) {
   const [status, setStatus] = useState<Status>('idle')
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -22,12 +27,16 @@ export default function ContactForm() {
     const form = e.currentTarget
     const data = new FormData(form)
 
+    const zajem = produktNazev
+      ? `Poptávka produktu: ${produktNazev}`
+      : data.get('zajem') as string
+
     const payload = {
       jmeno:      data.get('jmeno') as string,
       organizace: data.get('organizace') as string,
       email:      data.get('email') as string,
       telefon:    data.get('telefon') as string,
-      zajem:      data.get('zajem') as string,
+      zajem,
       zprava:     data.get('zprava') as string,
     }
 
@@ -51,7 +60,25 @@ export default function ContactForm() {
 
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6">
-      <h2 className="text-base font-medium text-navy mb-5">Poptávkový formulář</h2>
+      <div className="flex items-center justify-between mb-5">
+        <div>
+          <h2 className="text-base font-medium text-navy">
+            {produktNazev ? 'Poptávka produktu' : 'Poptávkový formulář'}
+          </h2>
+          {produktNazev && (
+            <p className="text-xs text-teal-dark mt-0.5">{produktNazev}</p>
+          )}
+        </div>
+        {onClose && (
+          <button
+            onClick={onClose}
+            className="text-gray-400 hover:text-gray-600 transition-colors text-xl leading-none"
+            aria-label="Zavřít"
+          >
+            ✕
+          </button>
+        )}
+      </div>
 
       {status === 'success' && (
         <div className="bg-teal/10 border border-teal/30 text-teal-dark rounded-lg p-4 mb-5 text-sm">
@@ -108,22 +135,28 @@ export default function ContactForm() {
           </div>
         </div>
 
-        <div>
-          <label className="block text-xs font-medium text-gray-500 mb-1.5">Zájem o</label>
-          <select
-            name="zajem"
-            className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-navy focus:outline-none focus:border-teal bg-white"
-          >
-            {zajemOptions.map(o => <option key={o}>{o}</option>)}
-          </select>
-        </div>
+        {/* Zájem o — zobrazí se jen na obecném formuláři, ne při poptávce produktu */}
+        {!produktNazev && (
+          <div>
+            <label className="block text-xs font-medium text-gray-500 mb-1.5">Zájem o</label>
+            <select
+              name="zajem"
+              className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-navy focus:outline-none focus:border-teal bg-white"
+            >
+              {zajemOptions.map(o => <option key={o}>{o}</option>)}
+            </select>
+          </div>
+        )}
 
         <div>
           <label className="block text-xs font-medium text-gray-500 mb-1.5">Zpráva</label>
           <textarea
             name="zprava"
             rows={4}
-            placeholder="Popište prosím váš zájem nebo konkrétní poptávku..."
+            placeholder={produktNazev
+              ? `Doplňte prosím množství, frekvenci objednávek nebo jiné požadavky...`
+              : `Popište prosím váš zájem nebo konkrétní poptávku...`
+            }
             className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-navy focus:outline-none focus:border-teal resize-none"
           />
         </div>
