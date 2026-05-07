@@ -14,8 +14,8 @@ export async function POST(req: NextRequest) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      from: 'XT-Invest web <noreply@xt-invest.cz>',
-      to: ['info@xt-invest.cz'],
+      from: 'onboarding@resend.dev',
+      to: ['kansky.michal@gmail.com'],
       reply_to: email,
       subject: `Poptávka: ${zajem} | ${jmeno}`,
       text: `
