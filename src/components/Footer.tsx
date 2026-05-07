@@ -17,7 +17,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold text-sm mb-3">{company.name}</h4>
             <p className="text-sm text-white/75 leading-relaxed">
-              Autorizovaný distributor zdravotnického materiálu Becton Dickinson pro Českou republiku.
+              Autorizovaný obchodní partner Becton Dickinson pro Českou republiku.
               Provozováno pod značkou <strong className="text-white">xt-invest.cz</strong>
             </p>
             {/* Firemní údaje — světlejší pro čitelnost */}

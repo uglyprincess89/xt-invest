@@ -22,12 +22,9 @@ export default function HomePage() {
           <circle cx="80" cy="380" r="200" fill="none" stroke="white" strokeWidth="42"/>
         </svg>
         <div className="relative max-w-7xl mx-auto px-6 py-10">
-          <div className="inline-flex items-center gap-2 bg-teal/20 border border-teal/40 text-teal px-4 py-1.5 rounded-full text-xs uppercase tracking-widest mb-6">
-            <span className="w-2 h-2 rounded-full bg-teal animate-pulse" />
-            Autorizovaný obchodní partner Becton Dickinson pro ČR
-          </div>
+          {/* H1 - bez duplikujícího pillu */}
           <h1 className="text-2xl md:text-3xl font-semibold leading-snug mb-4 max-w-2xl">
-            Autorizovaný distributor{' '}
+            Autorizovaný obchodní partner{' '}
             <em className="not-italic text-teal">Becton Dickinson</em>
             <br />pro zdravotnická zařízení v České republice
           </h1>
@@ -44,8 +41,9 @@ export default function HomePage() {
               Získat nabídku na míru
             </Link>
           </div>
+          {/* Trust bar - jen 3 body bez duplikace */}
           <div className="border-t border-white/15 pt-6 flex flex-wrap gap-x-8 gap-y-2">
-            {['Autorizovaný obchodní partner BD pro ČR', '15+ kategorií produktů', 'Dodávky po celé ČR', 'Originální certifikované produkty'].map(item => (
+            {['15+ kategorií produktů', 'Dodávky po celé ČR', 'Originální certifikované produkty'].map(item => (
               <span key={item} className="flex items-center gap-2 text-sm text-white/70">
                 <span className="w-1.5 h-1.5 rounded-full bg-teal shrink-0" />{item}
               </span>
@@ -54,44 +52,28 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* BD AUTORIZACE - dominantní vizuální blok */}
-      <section className="bg-gradient-to-r from-[#044ED7] via-[#0556ed] to-[#044ED7] py-6 px-6 relative overflow-hidden">
-        {/* Subtilní textura */}
-        <svg className="absolute inset-0 w-full h-full opacity-[0.06] pointer-events-none" viewBox="0 0 1200 200" preserveAspectRatio="xMidYMid slice">
-          <circle cx="100" cy="100" r="80" fill="none" stroke="white" strokeWidth="40"/>
-          <circle cx="1100" cy="100" r="100" fill="none" stroke="white" strokeWidth="50"/>
-        </svg>
-        <div className="relative max-w-7xl mx-auto flex items-center gap-5 flex-wrap">
-          {/* BD logo blok */}
-          <div className="bg-white rounded-lg px-5 py-2.5 shrink-0 shadow-md">
-            <Image src="/images/bd-logo.svg" alt="Becton Dickinson" width={75} height={30} />
+      {/* BD STRIP - světlá verze */}
+      <div className="bg-blue-50 border-t-4 border-teal px-6 py-4">
+        <div className="max-w-7xl mx-auto flex items-center gap-4 flex-wrap">
+          <div className="bg-white border-2 border-gray-200 rounded-lg px-4 py-1.5 shrink-0">
+            <Image src="/images/bd-logo.svg" alt="Becton Dickinson" width={65} height={25} />
           </div>
-          {/* Textový obsah */}
-          <div className="flex-1 min-w-[200px]">
-            <p className="text-white text-base font-semibold leading-tight mb-0.5">
-              Becton, Dickinson and Company
-            </p>
-            <p className="text-white/80 text-xs leading-relaxed">
-              Světový lídr v oblasti zdravotnických pomůcek a diagnostiky
-            </p>
-          </div>
-          {/* Auth pill - výraznější */}
-          <div className="flex items-center gap-2 bg-white text-[#044ED7] text-xs font-bold px-4 py-2 rounded-lg shadow-md shrink-0">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M9 12l2 2 4-4"/>
-              <circle cx="12" cy="12" r="10"/>
-            </svg>
-            AUTORIZOVANÝ OBCHODNÍ PARTNER
-          </div>
+          <p className="text-sm text-gray-600 flex-1">
+            <strong className="text-navy">Becton, Dickinson and Company</strong> — světový lídr v oblasti zdravotnických pomůcek a diagnostiky
+          </p>
+          <span className="bg-[#e6eefb] text-[#044ED7] text-xs font-semibold px-3 py-1 rounded-full border border-[#044ED7]/20 shrink-0">
+            Autorizovaný obchodní partner
+          </span>
         </div>
-      </section>
+      </div>
 
-      {/* PROČ MY */}
+      {/* PROČ MY - bez "jsme víc než distributor" */}
       <section className="py-14 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10">
-            <h2 className="text-2xl font-semibold text-navy mb-3">Jsme víc než jen distributor</h2>
-            <p className="text-gray-500 text-base max-w-xl mx-auto">Váš spolehlivý partner v oblasti zdravotnického materiálu BD.</p>
+            <h2 className="text-2xl font-semibold text-navy mb-3">
+              Váš spolehlivý partner v oblasti zdravotnického materiálu BD po celé ČR
+            </h2>
             <div className="w-8 h-0.5 bg-teal rounded mx-auto mt-4" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -138,14 +120,14 @@ export default function HomePage() {
           <div>
             <p className="text-xs font-semibold text-teal uppercase tracking-widest mb-3">O společnosti</p>
             <h2 className="text-xl font-semibold text-navy mb-4 leading-snug">
-              {company.name} —<br />autorizovaný distributor BD pro ČR
+              {company.name} —<br />autorizovaný obchodní partner BD pro ČR
             </h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
               Jsme dynamická česká společnost specializující se na distribuci zdravotnického materiálu
               Becton Dickinson. Náš cíl je jednoduchý — zajistit klinikám, laboratořím a ordinacím
               spolehlivý přísun originálních produktů BD za férových podmínek.
             </p>
-            <div className="bg-teal/8 border-l-3 border-teal rounded-r-lg p-4 mb-5 text-sm text-gray-700 leading-relaxed" style={{borderLeftWidth:'3px', borderLeftColor:'var(--teal, #2bbfa4)', borderLeftStyle:'solid', background:'rgba(43,191,164,0.07)', borderRadius:'0 8px 8px 0', padding:'12px 16px'}}>
+            <div className="bg-teal/8 border-l-3 border-teal rounded-r-lg p-4 mb-5 text-sm text-gray-700 leading-relaxed" style={{borderLeftWidth:'3px', borderLeftColor:'#2bbfa4', borderLeftStyle:'solid', background:'rgba(43,191,164,0.07)', borderRadius:'0 8px 8px 0', padding:'12px 16px'}}>
               💡 Díky vlastní provozovně — Lékárně u Robina v Praze — známe realitu zdravotnické praxe z první ruky. To nám umožňuje lépe chápat vaše potřeby a nabízet řešení, která skutečně fungují.
             </div>
             <div className="flex gap-3 items-center">
@@ -171,20 +153,38 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* RECENZE */}
+      {/* RECENZE - lidštější, profesionální */}
       <section className="py-12 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-xl font-semibold text-navy mb-1">Důvěřují nám zdravotnická zařízení po celé ČR</h2>
+          <h2 className="text-xl font-semibold text-navy mb-1">Co o nás říkají klienti</h2>
           <div className="w-8 h-0.5 bg-teal rounded mb-8" />
           <div className="grid md:grid-cols-3 gap-5">
             {[
-              { text: 'Spolehlivý dodavatel s výbornou reakcí na urgentní požadavky. Vždy doručí včas a materiál je originální.', autor: 'Vedoucí zásobování', zarizeni: 'Soukromé zdravotnické centrum, Praha', tag: 'Zdravotnické centrum', tagColor: 'bg-[#f0f4ff] text-navy' },
-              { text: 'Profesionální přístup, kvalitní materiál BD a příjemná komunikace. Dlouhodobá spolupráce na vysoké úrovni.', autor: 'Vedoucí laboratoře', zarizeni: 'Laboratoř, Praha', tag: 'Laboratoř', tagColor: 'bg-teal/10 text-teal-dark' },
-              { text: 'Oceňujeme flexibilitu a rychlost vyřízení. Materiál je vždy originální, v perfektní kvalitě a za rozumné ceny.', autor: 'Provozní manažer', zarizeni: 'Klinika, Brno', tag: 'Klinika', tagColor: 'bg-[#e6eefb] text-[#044ED7]' },
+              {
+                text: 'S kolegy z XT-Invest spolupracujeme druhým rokem a jsme spokojeni. Když jsme jednou potřebovali kanyly mimo standardní termín, vyřešili to do druhého dne. To se cení.',
+                autor: 'Vrchní sestra',
+                zarizeni: 'Soukromá klinika, Praha',
+                tag: 'Klinika',
+                tagColor: 'bg-[#e6eefb] text-[#044ED7]'
+              },
+              {
+                text: 'Oceňuji, že komunikace probíhá s konkrétním člověkem, ne přes anonymní callcentrum. Faktury i dodávky chodí přesně, materiál je vždy v pořádku.',
+                autor: 'Vedoucí provozu',
+                zarizeni: 'Laboratoř, Praha',
+                tag: 'Laboratoř',
+                tagColor: 'bg-teal/10 text-teal-dark'
+              },
+              {
+                text: 'Byli jsme zvyklí objednávat přes velké distributory, ale s XT-Invest máme férovější ceny a lidštější přístup. Ani jednou nenastal problém s reklamací nebo dodávkou.',
+                autor: 'Provozní ředitel',
+                zarizeni: 'Zdravotnické zařízení, střední Čechy',
+                tag: 'Zdravotnické zařízení',
+                tagColor: 'bg-[#f0f4ff] text-navy'
+              },
             ].map((r, i) => (
               <div key={i} className="bg-white border border-gray-200 rounded-xl p-5">
                 <div className="text-yellow-400 text-sm mb-3">★★★★★</div>
-                <p className="text-sm text-gray-700 leading-relaxed italic mb-4">„{r.text}"</p>
+                <p className="text-sm text-gray-700 leading-relaxed mb-4">„{r.text}"</p>
                 <p className="text-xs font-semibold text-navy">{r.autor}</p>
                 <p className="text-xs text-gray-400 mb-2">{r.zarizeni}</p>
                 <span className={`inline-block text-[10px] px-2 py-0.5 rounded-full font-medium ${r.tagColor}`}>{r.tag}</span>

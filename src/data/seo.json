@@ -2,23 +2,23 @@
   "default": {
     "siteName": "XT-Invest Medical Supplies",
     "siteUrl": "https://www.xt-invest.cz",
-    "defaultTitle": "XT-Invest | Autorizovaný distributor BD pro ČR",
+    "defaultTitle": "XT-Invest | Autorizovaný obchodní partner BD pro ČR",
     "defaultDescription": "XTREME INVEST s.r.o. — autorizovaný obchodní partner Becton Dickinson pro Českou republiku. Injekční technika, odběr krve, kanyly a diagnostika BD za atraktivních B2B podmínek.",
     "keywords": ["obchodní partner BD", "distributor zdravotnického materiálu", "Becton Dickinson ČR", "injekční technika BD", "Vacutainer", "Venflon", "zdravotnické pomůcky", "B2B zdravotnictví"],
     "ogImage": "/images/og-image.jpg"
   },
   "pages": {
     "home": {
-      "title": "XT-Invest | Autorizovaný distributor BD pro ČR | XTREME INVEST s.r.o.",
+      "title": "XT-Invest | Autorizovaný obchodní partner BD pro ČR | XTREME INVEST s.r.o.",
       "description": "Autorizovaný obchodní partner Becton Dickinson pro Českou republiku. Injekční technika, Vacutainer, Venflon, diagnostika BD. Atraktivní B2B podmínky pro nemocnice a kliniky."
     },
     "katalog": {
       "title": "Katalog produktů BD | XT-Invest",
-      "description": "Kompletní katalog produktů Becton Dickinson — injekční technika, odběr krve, kanyly a diagnostika. Autorizovaný distributor BD pro ČR."
+      "description": "Kompletní katalog produktů Becton Dickinson — injekční technika, odběr krve, kanyly a diagnostika. Autorizovaný obchodní partner BD pro ČR."
     },
     "oNas": {
       "title": "O společnosti | XTREME INVEST s.r.o. | XT-Invest",
-      "description": "XTREME INVEST s.r.o. — autorizovaný distributor zdravotnického materiálu BD pro Českou republiku. IČO: 06552251. Lékárna u Robina, Praha 3."
+      "description": "XTREME INVEST s.r.o. — autorizovaný obchodní partner Becton Dickinson pro Českou republiku. IČO: 06552251. Lékárna u Robina, Praha 3."
     },
     "lekarna": {
       "title": "Lékárna u Robina | Zásobování léčivy | XT-Invest",

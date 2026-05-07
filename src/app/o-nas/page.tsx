@@ -14,7 +14,7 @@ const recenze = [
 ]
 
 const vyhody = [
-  { icon: '🛡️', title: 'Autorizace BD', text: 'Oficiálně autorizovaný distributor Becton Dickinson pro ČR. Všechny produkty 100% originální a certifikované.' },
+  { icon: '🛡️', title: 'Autorizace BD', text: 'Oficiálně autorizovaný obchodní partner Becton Dickinson pro ČR. Všechny produkty 100% originální a certifikované.' },
   { icon: '🚚', title: 'Rychlé dodávky', text: 'Vlastní sklad + flexibilní logistika. Standardní dodávky do 24–48 hodin, urgentní požadavky operativně.' },
   { icon: '🤝', title: 'Osobní přístup', text: 'Stálý obchodní zástupce pro každého klienta, individuální cenové podmínky a rychlá reakce.' },
   { icon: '🏥', title: 'Znalost praxe', text: 'Provozujeme Lékárnu u Robina — rozumíme reálným každodenním potřebám zdravotníků z první ruky.' },
@@ -24,7 +24,7 @@ export default function ONasPage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative bg-gradient-to-br from-[#0a2844] to-navy text-white py-14 px-6 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-[#0a2844] to-navy text-white py-10 px-6 overflow-hidden">
         <svg className="absolute inset-0 w-full h-full opacity-[0.05] pointer-events-none" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice">
           <circle cx="1000" cy="50" r="300" fill="none" stroke="white" strokeWidth="60"/>
           <circle cx="200" cy="350" r="200" fill="none" stroke="white" strokeWidth="40"/>
@@ -32,7 +32,7 @@ export default function ONasPage() {
         <div className="relative max-w-7xl mx-auto">
           <p className="text-xs font-semibold text-teal uppercase tracking-widest mb-3">O společnosti</p>
           <h1 className="text-2xl md:text-3xl font-semibold mb-4 max-w-2xl leading-snug">
-            {company.name} —<br />autorizovaný distributor BD pro Českou republiku
+            {company.name} —<br />autorizovaný obchodní partner BD pro Českou republiku
           </h1>
           <p className="text-white/75 text-sm leading-relaxed max-w-2xl">
             Jsme dynamická česká společnost specializující se na distribuci zdravotnického materiálu

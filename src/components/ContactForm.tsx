@@ -10,33 +10,58 @@ const zajemOptions = [
   'Jiné',
 ]
 
-export default function ContactForm() {
-  const [sent, setSent] = useState(false)
+type Status = 'idle' | 'loading' | 'success' | 'error'
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+export default function ContactForm() {
+  const [status, setStatus] = useState<Status>('idle')
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
+    setStatus('loading')
+
     const form = e.currentTarget
     const data = new FormData(form)
-    const zajem = data.get('zajem') as string
-    const zprava = data.get('zprava') as string
-    const jmeno = data.get('jmeno') as string
-    const organizace = data.get('organizace') as string
 
-    const subject = encodeURIComponent(`Poptávka: ${zajem} - xt-invest.cz`)
-    const body = encodeURIComponent(
-      `Jméno: ${jmeno}\nOrganizace: ${organizace}\nZájem: ${zajem}\n\nZpráva:\n${zprava}`
-    )
-    window.location.href = `mailto:info@xt-invest.cz?subject=${subject}&body=${body}`
-    setSent(true)
+    const payload = {
+      jmeno:      data.get('jmeno') as string,
+      organizace: data.get('organizace') as string,
+      email:      data.get('email') as string,
+      telefon:    data.get('telefon') as string,
+      zajem:      data.get('zajem') as string,
+      zprava:     data.get('zprava') as string,
+    }
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+
+      if (res.ok) {
+        setStatus('success')
+        form.reset()
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6">
       <h2 className="text-base font-medium text-navy mb-5">Poptávkový formulář</h2>
 
-      {sent && (
+      {status === 'success' && (
         <div className="bg-teal/10 border border-teal/30 text-teal-dark rounded-lg p-4 mb-5 text-sm">
-          Děkujeme za poptávku! Otevřeli jsme váš e-mailový klient s předvyplněnou zprávou.
+          ✓ Poptávka odeslána! Odpovíme vám zpravidla do 24 hodin.
+        </div>
+      )}
+
+      {status === 'error' && (
+        <div className="bg-red-50 border border-red-200 text-red-700 rounded-lg p-4 mb-5 text-sm">
+          Odeslání se nezdařilo. Zkuste to prosím znovu nebo nás kontaktujte přímo na info@xt-invest.cz
         </div>
       )}
 
@@ -106,9 +131,10 @@ export default function ContactForm() {
         <div className="flex items-start gap-4">
           <button
             type="submit"
-            className="bg-teal text-white font-medium px-7 py-3 rounded-lg hover:bg-teal-dark transition-colors text-sm"
+            disabled={status === 'loading'}
+            className="bg-teal text-white font-medium px-7 py-3 rounded-lg hover:bg-teal-dark transition-colors text-sm disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            Odeslat poptávku
+            {status === 'loading' ? 'Odesílám...' : 'Odeslat poptávku'}
           </button>
           <p className="text-xs text-gray-400 pt-1">
             * Povinná pole. Vaše údaje zpracováváme v souladu s GDPR.

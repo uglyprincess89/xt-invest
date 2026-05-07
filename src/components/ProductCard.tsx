@@ -4,7 +4,6 @@ import Image from 'next/image'
 import type { Product } from '@/lib/data'
 
 export default function ProductCard({ product }: { product: Product }) {
-  // Mailto s plným kontextem produktu (název + REF)
   const mailtoSubject = encodeURIComponent(
     `Poptávka: ${product.name} (REF: ${product.ref})`
   )
@@ -35,7 +34,6 @@ export default function ProductCard({ product }: { product: Product }) {
           el.style.borderColor = '#dce6ef'
         }}
       >
-        {/* Obrázek - klikatelný na detail */}
         <Link href={`/katalog/${product.slug}`} className="block">
           <div className="relative h-40 bg-gradient-to-br from-blue-50 to-blue-100 overflow-hidden">
             <Image src={product.image} alt={product.name} fill className="object-contain p-3"
@@ -46,7 +44,6 @@ export default function ProductCard({ product }: { product: Product }) {
           </div>
         </Link>
 
-        {/* Obsah */}
         <div className="p-3 flex flex-col flex-1">
           <Link href={`/katalog/${product.slug}`} className="block flex-1">
             <p className="text-[11px] text-teal-dark uppercase tracking-wide font-semibold mb-1">
@@ -58,20 +55,17 @@ export default function ProductCard({ product }: { product: Product }) {
             <p className="text-xs text-gray-500 font-medium mb-3">REF: {product.ref}</p>
           </Link>
 
-          <div className="flex items-center justify-between gap-2 mb-2">
-            <span className="flex items-center gap-1.5 text-[11px] text-emerald-600 font-medium">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block shrink-0" />
-              Skladem
-            </span>
+          {/* Detail link bez "skladem" tvrzení */}
+          <div className="flex items-center justify-end mb-2">
             <Link
               href={`/katalog/${product.slug}`}
               className="text-[11px] text-teal-dark hover:text-teal font-medium"
             >
-              Detail →
+              Detail produktu →
             </Link>
           </div>
 
-          {/* Hlavní CTA - poptat s kontextem */}
+          {/* Hlavní CTA */}
           <a
             href={mailtoHref}
             className="block bg-navy hover:bg-navy-dark text-white text-xs font-semibold py-2 rounded-md text-center transition-colors"
