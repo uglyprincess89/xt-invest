@@ -10,7 +10,7 @@ export default function JsonLd() {
     alternateName: 'XT-Invest',
     url: 'https://www.xt-invest.cz',
     logo: 'https://www.xt-invest.cz/images/xt-invest-logo-dark.svg',
-    description: 'Autorizovaný distributor zdravotnického materiálu Becton Dickinson pro Českou republiku.',
+    description: 'Autorizovaný obchodní partner Becton Dickinson pro Českou republiku.',
     taxID: company.dic,
     vatID: company.dic,
     identifier: {

@@ -24,7 +24,7 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto px-6 py-10">
           <div className="inline-flex items-center gap-2 bg-teal/20 border border-teal/40 text-teal px-4 py-1.5 rounded-full text-xs uppercase tracking-widest mb-6">
             <span className="w-2 h-2 rounded-full bg-teal animate-pulse" />
-            Autorizovaný reseller Becton Dickinson pro ČR
+            Autorizovaný obchodní partner Becton Dickinson pro ČR
           </div>
           <h1 className="text-2xl md:text-3xl font-semibold leading-snug mb-4 max-w-2xl">
             Autorizovaný distributor{' '}
@@ -45,7 +45,7 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="border-t border-white/15 pt-6 flex flex-wrap gap-x-8 gap-y-2">
-            {['Autorizovaný reseller BD pro ČR', '15+ kategorií produktů', 'Dodávky po celé ČR', 'Originální certifikované produkty'].map(item => (
+            {['Autorizovaný obchodní partner BD pro ČR', '15+ kategorií produktů', 'Dodávky po celé ČR', 'Originální certifikované produkty'].map(item => (
               <span key={item} className="flex items-center gap-2 text-sm text-white/70">
                 <span className="w-1.5 h-1.5 rounded-full bg-teal shrink-0" />{item}
               </span>
@@ -81,7 +81,7 @@ export default function HomePage() {
               <path d="M9 12l2 2 4-4"/>
               <circle cx="12" cy="12" r="10"/>
             </svg>
-            AUTORIZOVANÝ RESELLER
+            AUTORIZOVANÝ OBCHODNÍ PARTNER
           </div>
         </div>
       </section>
@@ -96,7 +96,7 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
-              { icon: '🛡️', bg: 'bg-[#e6eefb]', title: 'Originální produkty BD', text: 'Jako oficiálně autorizovaný reseller BD garantujeme 100% pravost a plnou certifikaci všech produktů.' },
+              { icon: '🛡️', bg: 'bg-[#e6eefb]', title: 'Originální produkty BD', text: 'Jako oficiálně autorizovaný obchodní partner BD garantujeme 100% pravost a plnou certifikaci všech produktů.' },
               { icon: '🚚', bg: 'bg-teal/10', title: 'Rychlé dodávky', text: 'Vlastní sklad + flexibilní logistika. Standardní dodávky do 24–48 hodin, urgentní požadavky řešíme operativně.' },
               { icon: '🤝', bg: 'bg-navy/10', title: 'Osobní přístup', text: 'Každý klient má svého stálého obchodního zástupce. Individuální podmínky a rychlá reakce vždy.' },
               { icon: '🔬', bg: 'bg-teal/10', title: 'Komplexní řešení', text: 'Široký sortiment BD — od injekční techniky a Vacutainer™ odběrových systémů až po laboratorní řešení.' },

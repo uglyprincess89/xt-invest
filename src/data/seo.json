@@ -3,14 +3,14 @@
     "siteName": "XT-Invest Medical Supplies",
     "siteUrl": "https://www.xt-invest.cz",
     "defaultTitle": "XT-Invest | Autorizovaný distributor BD pro ČR",
-    "defaultDescription": "XTREME INVEST s.r.o. — autorizovaný reseller Becton Dickinson pro Českou republiku. Injekční technika, odběr krve, kanyly a diagnostika BD za atraktivních B2B podmínek.",
-    "keywords": ["reseller BD", "distributor zdravotnického materiálu", "Becton Dickinson ČR", "injekční technika BD", "Vacutainer", "Venflon", "zdravotnické pomůcky", "B2B zdravotnictví"],
+    "defaultDescription": "XTREME INVEST s.r.o. — autorizovaný obchodní partner Becton Dickinson pro Českou republiku. Injekční technika, odběr krve, kanyly a diagnostika BD za atraktivních B2B podmínek.",
+    "keywords": ["obchodní partner BD", "distributor zdravotnického materiálu", "Becton Dickinson ČR", "injekční technika BD", "Vacutainer", "Venflon", "zdravotnické pomůcky", "B2B zdravotnictví"],
     "ogImage": "/images/og-image.jpg"
   },
   "pages": {
     "home": {
       "title": "XT-Invest | Autorizovaný distributor BD pro ČR | XTREME INVEST s.r.o.",
-      "description": "Autorizovaný reseller Becton Dickinson pro Českou republiku. Injekční technika, Vacutainer, Venflon, diagnostika BD. Atraktivní B2B podmínky pro nemocnice a kliniky."
+      "description": "Autorizovaný obchodní partner Becton Dickinson pro Českou republiku. Injekční technika, Vacutainer, Venflon, diagnostika BD. Atraktivní B2B podmínky pro nemocnice a kliniky."
     },
     "katalog": {
       "title": "Katalog produktů BD | XT-Invest",
