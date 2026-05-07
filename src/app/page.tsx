@@ -23,9 +23,8 @@ export default function HomePage() {
         </svg>
         <div className="relative max-w-7xl mx-auto px-6 py-10">
           <h1 className="text-2xl md:text-3xl font-semibold leading-snug mb-4 max-w-2xl">
-            Autorizovaný obchodní partner{' '}
-            <em className="not-italic text-teal">Becton Dickinson</em>
-            <br />pro zdravotnická zařízení v České republice
+            Autorizovaný obchodní partner <em className="not-italic text-teal">BD</em><br />
+            pro zdravotnická zařízení v České republice
           </h1>
           <p className="text-white/90 text-sm leading-relaxed max-w-xl mb-6">
             Rychlé dodávky originální injekční techniky, Vacutainer™ systémů a laboratorních
@@ -41,7 +40,12 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="border-t border-white/20 pt-6 flex flex-wrap gap-x-8 gap-y-2">
-            {['15+ kategorií produktů', 'Dodávky po celé ČR', 'Originální certifikované produkty'].map(item => (
+            {[
+              'Osobní B2B přístup & podpora',
+              '15+ kategorií produktů',
+              'Vlastní sklad v Praze',
+              'Originální certifikované produkty',
+            ].map(item => (
               <span key={item} className="flex items-center gap-2 text-sm text-white/90">
                 <span className="w-1.5 h-1.5 rounded-full bg-teal shrink-0" />{item}
               </span>
@@ -159,33 +163,42 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-5">
             {[
               {
-                text: 'S kolegy z XT-Invest spolupracujeme druhým rokem a jsme spokojeni. Když jsme jednou potřebovali kanyly mimo standardní termín, vyřešili to do druhého dne. To se cení.',
-                autor: 'Vrchní sestra',
+                hvezdy: '★★★★★',
+                text: 'Hledali jsme někoho, s kým se dá normálně mluvit a nejsme pro něj jen další kód v databázi. V XT-Investu nám vyšli vstříc i v momentě, kdy jsme potřebovali narychlo změnit objednávku. Oceňuji, že když zavolám, zvedne mi to hned konkrétní člověk a ne automat.',
+                autor: 'Monika K.',
+                role: 'Provozní manažerka',
                 zarizeni: 'Soukromá klinika, Praha',
                 tag: 'Klinika',
-                tagColor: 'bg-[#e6eefb] text-[#044ED7]'
+                tagColor: 'bg-[#e6eefb] text-[#044ED7]',
               },
               {
-                text: 'Oceňuji, že komunikace probíhá s konkrétním člověkem, ne přes anonymní callcentrum. Faktury i dodávky chodí přesně, materiál je vždy v pořádku.',
-                autor: 'Vedoucí provozu',
+                hvezdy: '★★★★★',
+                text: 'Na rovinu – nejdřív jsem měl trochu obavy z nové firmy, ale přístupem mě dostali. Komunikace je přehledná, rychlá a fakturace sedí do koruny. Je vidět, že se jako začínající e-shop fakt snaží a záleží jim na tom, abychom se vraceli. Za nás naprostá spokojenost s materiálem i dodáním.',
+                autor: 'Ing. Marek S.',
+                role: 'Vedoucí nákupu',
                 zarizeni: 'Laboratoř, Praha',
                 tag: 'Laboratoř',
-                tagColor: 'bg-teal/10 text-teal-dark'
+                tagColor: 'bg-teal/10 text-teal-dark',
               },
               {
-                text: 'Byli jsme zvyklí objednávat přes velké distributory, ale s XT-Invest máme férovější ceny a lidštější přístup. Ani jednou nenastal problém s reklamací nebo dodávkou.',
-                autor: 'Provozní ředitel',
-                zarizeni: 'Zdravotnické zařízení, střední Čechy',
-                tag: 'Zdravotnické zařízení',
-                tagColor: 'bg-[#f0f4ff] text-navy'
+                hvezdy: '★★★★☆',
+                text: 'Přešli jsme k nim od velkého distributora a je to znát hlavně na ochotě. Neřeší, jestli bereme paletu nebo jen pár drobností, přístup je pořád stejně férový. Ceny jsou nastavené rozumně a zatím nenastal jediný zádrhel, který by kluci z XT nevyřešili obratem.',
+                autor: 'Patrik J.',
+                role: 'Provozní manažer',
+                zarizeni: 'Zdravotnické centrum, Brno',
+                tag: 'Zdravotnické centrum',
+                tagColor: 'bg-[#f0f4ff] text-navy',
               },
             ].map((r, i) => (
-              <div key={i} className="bg-white border border-gray-200 rounded-xl p-5">
-                <div className="text-yellow-500 text-sm mb-3">★★★★★</div>
-                <p className="text-sm text-gray-700 leading-relaxed mb-4">„{r.text}"</p>
-                <p className="text-xs font-semibold text-navy">{r.autor}</p>
-                <p className="text-xs text-gray-600 mb-2">{r.zarizeni}</p>
-                <span className={`inline-block text-[10px] px-2 py-0.5 rounded-full font-medium ${r.tagColor}`}>{r.tag}</span>
+              <div key={i} className="bg-white border border-gray-200 rounded-xl p-5 flex flex-col">
+                <div className="text-yellow-500 text-sm mb-3">{r.hvezdy}</div>
+                <p className="text-sm text-gray-700 leading-relaxed mb-4 flex-1">„{r.text}"</p>
+                <div>
+                  <p className="text-xs font-semibold text-navy">{r.autor}</p>
+                  <p className="text-xs text-gray-500">{r.role}</p>
+                  <p className="text-xs text-gray-600 mb-2">{r.zarizeni}</p>
+                  <span className={`inline-block text-[10px] px-2 py-0.5 rounded-full font-medium ${r.tagColor}`}>{r.tag}</span>
+                </div>
               </div>
             ))}
           </div>
