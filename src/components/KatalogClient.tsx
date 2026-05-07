@@ -1,10 +1,12 @@
 'use client'
 import { useState } from 'react'
 import ProductCard from '@/components/ProductCard'
+import ContactForm from '@/components/ContactForm'
 import { products, categories } from '@/lib/data'
 
 export default function KatalogClient() {
   const [activeCategory, setActiveCategory] = useState<string>('vse')
+  const [modalOpen, setModalOpen] = useState(false)
 
   const filtered = activeCategory === 'vse'
     ? products
@@ -75,15 +77,27 @@ export default function KatalogClient() {
             <p className="text-white/70 text-sm mb-5">
               Náš sortiment BD je širší. Kontaktujte nás a připravíme individuální nabídku.
             </p>
-            <a
-              href="mailto:info@xt-invest.cz?subject=Poptávka produktů BD - xt-invest.cz"
+            <button
+              onClick={() => setModalOpen(true)}
               className="inline-block bg-teal text-white font-semibold px-6 py-3 rounded-lg hover:bg-teal-dark transition-colors text-sm"
             >
               Nezávazně poptat
-            </a>
+            </button>
           </div>
         </div>
       </section>
+
+      {/* Modal s formulářem */}
+      {modalOpen && (
+        <div
+          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
+          onClick={(e) => { if (e.target === e.currentTarget) setModalOpen(false) }}
+        >
+          <div className="w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-xl">
+            <ContactForm onClose={() => setModalOpen(false)} />
+          </div>
+        </div>
+      )}
     </>
   )
 }
