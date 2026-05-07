@@ -15,7 +15,7 @@ export async function POST(req: NextRequest) {
     },
     body: JSON.stringify({
       from: 'onboarding@resend.dev',
-      to: ['kansky.michal@gmail.com'],
+      to: ['info@xt-invest.cz'],
       reply_to: email,
       subject: `Poptávka: ${zajem} | ${jmeno}`,
       text: `
