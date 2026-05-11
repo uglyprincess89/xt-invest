@@ -42,7 +42,7 @@ export default function HomePage() {
           <div className="border-t border-white/20 pt-6 flex flex-wrap gap-x-8 gap-y-2">
             {[
               'Osobní B2B přístup & podpora',
-              '15+ kategorií produktů',
+              'Sortiment průběžně rozšiřujeme',
               'Vlastní sklad v Praze',
               'Originální certifikované produkty',
             ].map(item => (
@@ -110,8 +110,11 @@ export default function HomePage() {
           </div>
           <div className="text-center">
             <Link href="/katalog" className="inline-block bg-navy text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-navy-dark transition-colors text-sm">
-              Zobrazit kompletní katalog (15+ kategorií)
+              Zobrazit kompletní katalog
             </Link>
+            <p className="text-xs text-gray-500 mt-3">
+              Nabídku průběžně rozšiřujeme a doplňujeme — pokud nenajdete konkrétní produkt, ozvěte se nám.
+            </p>
           </div>
         </div>
       </section>
@@ -130,7 +133,7 @@ export default function HomePage() {
               spolehlivý přísun originálních produktů BD za férových podmínek.
             </p>
             <div className="border-l-2 border-teal bg-teal/5 rounded-r-lg p-4 mb-5 text-sm text-gray-700 leading-relaxed">
-              💡 Díky vlastní provozovně — Lékárně u Robina v Praze — známe realitu zdravotnické praxe z první ruky. To nám umožňuje lépe chápat vaše potřeby a nabízet řešení, která skutečně fungují.
+              💡 Provozujeme vlastní lékárnu — Lékárnu u Robina v Praze. Každý den tam řešíme to, co i vy: pacienty, sklady, papírování. Víme proto, co v praxi funguje a co zůstává jen na papíře.
             </div>
             <div className="flex gap-3 items-center">
               <Link href="/o-nas" className="text-sm font-semibold text-navy hover:text-teal-dark transition-colors">Více o nás →</Link>
@@ -140,7 +143,7 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             {[
-              { icon: '📦', num: '15+', label: 'kategorií produktů BD' },
+              { icon: '📦', num: 'BD', label: 'autorizovaný partner' },
               { icon: '✓', num: '100%', label: 'originální produkty' },
               { icon: '🤝', num: 'B2B', label: 'individuální podmínky' },
               { icon: '📍', num: 'ČR', label: 'celostátní pokrytí' },
