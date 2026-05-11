@@ -34,7 +34,5 @@ export function getProductsByCategory(category: string): Product[] {
 export const categories = [
   { id: 'injekce', label: 'Injekční technika' },
   { id: 'odber', label: 'Odběr krve' },
-  { id: 'kanyly', label: 'Kanyly' },
-  { id: 'diagnostika', label: 'Diagnostika' },
   { id: 'specialni', label: 'Speciální zkumavky' },
 ]

@@ -10,7 +10,7 @@ const sluzby = [
   { icon: '📋', title: 'Výdej na žádanky', text: 'Pravidelný výdej léčiv na základě žádanek pro zdravotnická zařízení. Rychlé a spolehlivé vyřízení.' },
   { icon: '🚚', title: 'Zásobování zařízení', text: 'Pravidelné zásobování ambulancí, klinik a ordinací s individuálním harmonogramem dodávek.' },
   { icon: '💊', title: 'Léčiva na předpis', text: 'Kompletní sortiment léčiv na lékařský předpis. Spolupráce s pojišťovnami a přímý výdej.' },
-  { icon: '📞', title: 'Urgentní objednávky', text: `V případě potřeby zajistíme urgentní dodávku léčiv. Kontakt: ${company.kontakt.telefon}.` },
+  { icon: '📞', title: 'Urgentní objednávky', text: `V případě potřeby zajistíme urgentní dodávku léčiv. Kontakt: ${company.lekarna.telefon}.` },
 ]
 
 const dnyVTydnu = ['Po', 'Út', 'St', 'Čt', 'Pá', 'So', 'Ne']
@@ -19,29 +19,20 @@ export default function LekarnaPage() {
   const dnesIndex = new Date().getDay()
   const dnesMap = [6, 0, 1, 2, 3, 4, 5]
   const dnesDenIndex = dnesMap[dnesIndex]
-  const dnesnamec = dnyVTydnu[dnesDenIndex]
-  const dnesCas = company.lekarna.oteviraci[dnesnamec as keyof typeof company.lekarna.oteviraci]
-  const jeOtevreno = dnesCas !== 'Zavřeno'
 
   return (
     <>
-      <section className="bg-gradient-to-br from-navy-dark to-navy text-white py-10 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative bg-gradient-to-br from-navy-dark to-navy text-white py-10 px-6 overflow-hidden">
+        <svg className="absolute inset-0 w-full h-full opacity-[0.05] pointer-events-none" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice">
+          <circle cx="1000" cy="50" r="300" fill="none" stroke="white" strokeWidth="60"/>
+          <circle cx="200" cy="350" r="200" fill="none" stroke="white" strokeWidth="40"/>
+        </svg>
+        <div className="relative max-w-7xl mx-auto">
           <h1 className="text-2xl md:text-3xl font-semibold mb-3">{company.lekarna.nazev}</h1>
-          <p className="text-white/75 text-sm leading-relaxed max-w-xl mb-4">
+          <p className="text-white/75 text-sm leading-relaxed max-w-xl">
             {company.lekarna.ulice}, {company.lekarna.psc} {company.lekarna.mesto}.
             Profesionální lékárenské zásobování pro zdravotnická zařízení.
           </p>
-
-          {/* Status indikátor — otevřeno/zavřeno */}
-          <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium border ${
-            jeOtevreno
-              ? 'bg-emerald-500/15 border-emerald-400/40 text-emerald-300'
-              : 'bg-red-500/15 border-red-400/40 text-red-300'
-          }`}>
-            <span className={`w-2 h-2 rounded-full ${jeOtevreno ? 'bg-emerald-400 animate-pulse' : 'bg-red-400'}`} />
-            {jeOtevreno ? `Dnes otevřeno ${dnesCas}` : 'Dnes zavřeno'}
-          </div>
         </div>
       </section>
 
@@ -76,7 +67,44 @@ export default function LekarnaPage() {
                 </div>
               )
             })}
+            <div className="mt-4 pt-4 border-t border-gray-200 text-xs space-y-1.5">
+              <div className="flex justify-between text-gray-600">
+                <span>Telefon</span>
+                <a href={`tel:${company.lekarna.telefon}`} className="text-teal-dark font-medium hover:underline">{company.lekarna.telefon}</a>
+              </div>
+              <div className="flex justify-between text-gray-600">
+                <span>E-mail</span>
+                <a href={`mailto:${company.lekarna.email}`} className="text-teal-dark font-medium hover:underline">{company.lekarna.email}</a>
+              </div>
+              <div className="flex justify-between text-gray-600">
+                <span>Web</span>
+                <a href="https://www.lekarnafamily.cz" target="_blank" rel="noopener noreferrer" className="text-teal-dark font-medium hover:underline">
+                  lekarnafamily.cz ↗
+                </a>
+              </div>
+            </div>
           </div>
+        </div>
+
+        <div className="max-w-7xl mx-auto mt-6 bg-navy text-white rounded-xl p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div>
+            <h3 className="text-sm font-semibold mb-1">Navštivte oficiální web lékárny</h3>
+            <p className="text-white/70 text-xs">
+              Kompletní sortiment léčiv, online objednávky a další informace najdete na webu Lékárny u Robina.
+            </p>
+          </div>
+          <a
+            href="https://www.lekarnafamily.cz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 inline-flex items-center gap-2 bg-teal text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-teal-dark transition-colors text-sm"
+          >
+            lekarnafamily.cz
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M7 17L17 7"/>
+              <path d="M7 7h10v10"/>
+            </svg>
+          </a>
         </div>
       </section>
     </>

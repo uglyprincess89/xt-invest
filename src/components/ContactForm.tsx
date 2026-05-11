@@ -4,8 +4,7 @@ import { useState } from 'react'
 const zajemOptions = [
   'Produkty BD — injekční technika',
   'Produkty BD — odběr krve',
-  'Produkty BD — kanyly',
-  'Produkty BD — diagnostika',
+  'Produkty BD — speciální zkumavky',
   'Zásobování léčivy (Lékárna u Robina)',
   'Jiné',
 ]

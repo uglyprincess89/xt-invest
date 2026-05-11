@@ -5,8 +5,8 @@ import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
 const navLinks = [
-  { href: '/katalog', label: 'Produkty BD' },
   { href: '/o-nas', label: 'O nás' },
+  { href: '/katalog', label: 'Produkty BD' },
   { href: '/lekarna', label: 'Lékárna u Robina' },
   { href: '/kontakt', label: 'Kontakt' },
 ]
@@ -17,19 +17,39 @@ export default function Navbar() {
 
   return (
     <header className="bg-navy sticky top-0 z-50 shadow-md w-full overflow-x-hidden">
-      <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-3">
 
-        {/* Logo */}
-        <Link href="/" className="shrink-0 flex items-center" onClick={() => setMenuOpen(false)}>
-          <Image
-            src="/images/xt-invest-logo-white.svg"
-            alt="XT-Invest Medical Supplies"
-            width={180}
-            height={56}
-            className="h-11 w-auto"
-            priority
-          />
-        </Link>
+        <div className="flex items-center gap-2 shrink-0">
+          {/* Logo */}
+          <Link href="/" className="flex items-center" onClick={() => setMenuOpen(false)} aria-label="XT-Invest — domů">
+            <Image
+              src="/images/xt-invest-logo-white.svg"
+              alt="XT-Invest Medical Supplies"
+              width={180}
+              height={56}
+              className="h-11 w-auto"
+              priority
+            />
+          </Link>
+
+          {/* Tlačítko Domů */}
+          <Link
+            href="/"
+            onClick={() => setMenuOpen(false)}
+            aria-label="Domů"
+            title="Domů"
+            className={`hidden sm:flex items-center justify-center w-9 h-9 rounded-md transition-colors ${
+              pathname === '/'
+                ? 'bg-white/15 text-white'
+                : 'text-white/80 hover:bg-white/10 hover:text-white'
+            }`}
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </Link>
+        </div>
 
         {/* Desktop navigace */}
         <nav className="hidden md:flex items-center gap-1 flex-1 justify-center">

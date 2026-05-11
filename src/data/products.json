@@ -159,5 +159,715 @@
       "Použití": "Pouze pro výzkum (RUO)",
       "Balení": "100 ks/případ"
     }
+  },
+  {
+    "id": 10,
+    "slug": "bd-microlance-3-27g",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Microlance™ 3 jehla 27G × 1/2\" (0,4 × 13 mm)",
+    "ref": "300635",
+    "image": "/images/products/bd-microlance-3.jpg",
+    "description": "Sterilní jednorázová injekční jehla s tenkostěnnou kanylou a hrotem broušeným ve třech úhlech pro hladký vpich. Silikonová mazací vrstva minimalizuje tření při průniku tkání. Barevně kódována dle ISO 6009 (šedá). Vhodná pro intradermální aplikaci, tuberkulinové testy a aplikaci malých dávek. Kompatibilní s Luer Slip i Luer Lock stříkačkami.",
+    "params": {
+      "Gauge": "27G (0,4 mm)",
+      "Délka": "1/2\" (13 mm)",
+      "Barva": "Šedá",
+      "Hrot": "Regular Bevel, Regular Wall",
+      "Konektor": "Luer / Luer Lock (ISO)",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 11,
+    "slug": "bd-microlance-3-25g",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Microlance™ 3 jehla 25G × 5/8\" (0,5 × 16 mm)",
+    "ref": "300600",
+    "image": "/images/products/bd-microlance-3.jpg",
+    "description": "Sterilní jednorázová injekční jehla s tenkostěnnou kanylou a laserově broušeným hrotem pro snížení bolesti při vpichu. Barevně kódována dle ISO 6009 (oranžová). Typická aplikace: subkutánní injekce, vakcinace. Kompatibilní s Luer Slip i Luer Lock stříkačkami.",
+    "params": {
+      "Gauge": "25G (0,5 mm)",
+      "Délka": "5/8\" (16 mm)",
+      "Barva": "Oranžová",
+      "Hrot": "Regular Bevel, Regular Wall",
+      "Konektor": "Luer / Luer Lock (ISO)",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 12,
+    "slug": "bd-microlance-3-23g",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Microlance™ 3 jehla 23G × 1\" (0,6 × 25 mm)",
+    "ref": "300800",
+    "image": "/images/products/bd-microlance-3.jpg",
+    "description": "Sterilní jednorázová injekční jehla s tenkostěnnou kanylou (thin wall) pro vyšší průtok. Hrot broušený ve třech úhlech zajišťuje hladký a méně bolestivý vpich. Barevně kódována dle ISO 6009 (modrá). Vhodná pro intramuskulární a subkutánní aplikaci, odběr léčiv z lahvičky a ampulky.",
+    "params": {
+      "Gauge": "23G (0,6 mm)",
+      "Délka": "1\" (25 mm)",
+      "Barva": "Modrá",
+      "Hrot": "Regular Bevel, Thin Wall",
+      "Konektor": "Luer / Luer Lock (ISO)",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 13,
+    "slug": "bd-microlance-3-21g",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Microlance™ 3 jehla 21G × 1 1/2\" (0,8 × 40 mm)",
+    "ref": "304432",
+    "image": "/images/products/bd-microlance-21g.jpg",
+    "description": "Sterilní jednorázová injekční jehla 21G s tenkostěnnou kanylou pro vysoký průtok. Barevně kódována dle ISO 6009 (zelená). Vhodná pro intramuskulární aplikaci, aspiraci viskóznějších léčiv a běžný odběr krve. Hrot broušený ve třech úhlech.",
+    "params": {
+      "Gauge": "21G (0,8 mm)",
+      "Délka": "1 1/2\" (40 mm)",
+      "Barva": "Zelená",
+      "Hrot": "Regular Bevel, Thin Wall",
+      "Konektor": "Luer / Luer Lock (ISO)",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 14,
+    "slug": "bd-microlance-3-20g",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Microlance™ 3 jehla 20G × 1 1/2\" (0,9 × 40 mm)",
+    "ref": "301300",
+    "image": "/images/products/bd-microlance-family.jpg",
+    "description": "Sterilní jednorázová injekční jehla 20G s tenkostěnnou kanylou pro maximální průtok. Barevně kódována dle ISO 6009 (žlutá). Vhodná pro aspiraci viskózních roztoků, ředění léčiv a intramuskulární aplikaci u dospělých pacientů.",
+    "params": {
+      "Gauge": "20G (0,9 mm)",
+      "Délka": "1 1/2\" (40 mm)",
+      "Barva": "Žlutá",
+      "Hrot": "Regular Bevel, Thin Wall",
+      "Konektor": "Luer / Luer Lock (ISO)",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 15,
+    "slug": "bd-discardit-ii-2ml",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Discardit™ II stříkačka 2 ml (Luer Slip, bez jehly)",
+    "ref": "300928",
+    "image": "/images/products/bd-discardit-2ml.jpg",
+    "description": "Jednorázová 2-dílná sterilní injekční stříkačka pro injekci a aspiraci léčiv i tělních tekutin. Lubrikace v materiálu válce zajišťuje hladký pohyb pístu se sníženou třecí silou. Robustní retenční kroužek brání nechtěnému vytažení pístu při aspiraci. Průhledný válec s výraznou stupnicí pro přesné dávkování. Excentrický Luer Slip konektor umožňuje aplikaci pod nižším úhlem.",
+    "params": {
+      "Objem": "2 ml",
+      "Konstrukce": "2-dílná",
+      "Konektor": "Luer Slip, excentrický",
+      "Materiál": "Polypropylen / polyetylen",
+      "Bez latexu": "Ano",
+      "Bez PVC/DEHP": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 16,
+    "slug": "bd-discardit-ii-5ml",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Discardit™ II stříkačka 5 ml (Luer Slip, bez jehly)",
+    "ref": "309050",
+    "image": "/images/products/bd-discardit-family.jpg",
+    "description": "Jednorázová 2-dílná sterilní injekční stříkačka 5 ml. Excentrický Luer Slip konektor pro aplikaci pod nízkým úhlem v blízkosti kůže. Průhledný válec s výraznou stupnicí, snadno čitelná i pod úhlem. Latex-free a PVC-free konstrukce. Vhodná pro injekci, aspiraci a výplach.",
+    "params": {
+      "Objem": "5 ml",
+      "Konstrukce": "2-dílná",
+      "Konektor": "Luer Slip, excentrický",
+      "Materiál": "Polypropylen / polyetylen",
+      "Bez latexu": "Ano",
+      "Bez PVC/DEHP": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 17,
+    "slug": "bd-discardit-ii-10ml",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Discardit™ II stříkačka 10 ml (Luer Slip, bez jehly)",
+    "ref": "309110",
+    "image": "/images/products/bd-discardit-family.jpg",
+    "description": "Jednorázová 2-dílná sterilní injekční stříkačka 10 ml. Excentrický Luer Slip konektor. Lubrikovaný píst pro plynulý pohyb a přesné dávkování. Retenční kroužek zabraňuje vytažení pístu při aspiraci. Vhodná pro injekce, aspiraci a výplach ran.",
+    "params": {
+      "Objem": "10 ml",
+      "Konstrukce": "2-dílná",
+      "Konektor": "Luer Slip, excentrický",
+      "Materiál": "Polypropylen / polyetylen",
+      "Bez latexu": "Ano",
+      "Bez PVC/DEHP": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 18,
+    "slug": "bd-discardit-ii-20ml",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Discardit™ II stříkačka 20 ml (Luer Slip, bez jehly)",
+    "ref": "300296",
+    "image": "/images/products/bd-discardit-20ml.jpg",
+    "description": "Jednorázová 2-dílná sterilní injekční stříkačka 20 ml. Excentrický Luer Slip konektor. Vhodná pro aplikaci větších objemů, výplach ran a aspiraci. Průhledný válec s odolnou, dobře čitelnou stupnicí.",
+    "params": {
+      "Objem": "20 ml",
+      "Konstrukce": "2-dílná",
+      "Konektor": "Luer Slip, excentrický",
+      "Materiál": "Polypropylen / polyetylen",
+      "Bez latexu": "Ano",
+      "Bez PVC/DEHP": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "80 ks/krabice"
+    }
+  },
+  {
+    "id": 19,
+    "slug": "bd-emerald-2ml",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Emerald™ stříkačka 2 ml (3-dílná, Luer Slip)",
+    "ref": "307727",
+    "image": "/images/products/bd-emerald-2ml.jpg",
+    "description": "Univerzální 3-dílná injekční stříkačka pro injekci a aspiraci tekutin z lahviček, ampulí a podkožních tkání. Latex-free zátka pístu zabraňuje úniku léčiva a slouží jako referenční značka stupnice. Průhledný válec s výraznou stupnicí. Speciální silikonová lubrikace zajišťuje plynulý a rovnoměrný pohyb pístu. Vyrobeno z méně materiálu (až o 30 %) v souladu s udržitelnou produkcí BD.",
+    "params": {
+      "Objem": "2 ml (stupnice do 2,5 ml)",
+      "Konstrukce": "3-dílná",
+      "Konektor": "Luer Slip, koncentrický",
+      "Mrtvý prostor": "0,07 ml",
+      "Bez latexu": "Ano",
+      "Bez PVC/DEHP": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 20,
+    "slug": "bd-emerald-5ml",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Emerald™ stříkačka 5 ml (3-dílná, Luer Slip)",
+    "ref": "307731",
+    "image": "/images/products/bd-emerald-2ml.jpg",
+    "description": "Univerzální 3-dílná injekční stříkačka 5 ml pro injekci a aspiraci. Latex-free zátka pístu, průhledný válec, výrazná stupnice pro přesné dávkování. Silikonová lubrikace pro plynulý pohyb pístu. Konvenční Luer Slip špička. Šetrná k životnímu prostředí — méně materiálu a netoxické vstupy.",
+    "params": {
+      "Objem": "5 ml",
+      "Konstrukce": "3-dílná",
+      "Konektor": "Luer Slip, koncentrický",
+      "Mrtvý prostor": "0,075 ml",
+      "Bez latexu": "Ano",
+      "Bez PVC/DEHP": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 21,
+    "slug": "bd-plastipak-tuberculin-1ml",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Plastipak™ Tuberkulinová stříkačka 1 ml (3-dílná, bez jehly)",
+    "ref": "303172",
+    "image": "/images/products/bd-tuberculin-1ml.jpg",
+    "description": "Přesná 3-dílná tuberkulinová stříkačka 1 ml s jemnou stupnicí po 0,01 ml pro exaktní dávkování malých objemů. Vhodná pro intradermální a subkutánní aplikaci, tuberkulinový test (PPD) a další aplikace s nízkým objemem. Průhledný válec z polypropylenu, latex-free těsnění pístu, silikonová mazací vrstva. Konvenční Luer Slip špička.",
+    "params": {
+      "Objem": "1 ml",
+      "Stupnice": "0,01 ml dílky",
+      "Konstrukce": "3-dílná",
+      "Konektor": "Luer Slip, koncentrický",
+      "Původ": "Vyrobeno ve Španělsku",
+      "Bez latexu": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 22,
+    "slug": "bd-plastipak-tuberculin-1ml-25g",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Plastipak™ Tuberkulinová stříkačka 1 ml s jehlou 25G × 5/8\"",
+    "ref": "303175",
+    "image": "/images/products/bd-tuberculin-1ml.jpg",
+    "description": "Tuberkulinová 3-dílná stříkačka 1 ml s nasazenou jehlou 25G × 5/8\" (0,5 × 16 mm). Připraveno k použití bez nutnosti samostatného sestavení. Jemná stupnice po 0,01 ml. Vhodné pro tuberkulinový test (Mantoux), vakcinace a další intradermální/subkutánní aplikace.",
+    "params": {
+      "Objem stříkačky": "1 ml",
+      "Stupnice": "0,01 ml dílky",
+      "Jehla": "25G × 5/8\" (0,5 × 16 mm), oranžová",
+      "Konstrukce": "3-dílná",
+      "Konektor": "Luer Slip",
+      "Bez latexu": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 23,
+    "slug": "bd-plastipak-ll-5ml",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Plastipak™ stříkačka 5 ml Luer Lock (3-dílná, bez jehly)",
+    "ref": "309649",
+    "image": "/images/products/bd-plastipak-luer-lock.jpg",
+    "description": "Precizní 3-dílná injekční stříkačka 5 ml s Luer Lock konektorem pro bezpečné, netěsnící připojení jehly nebo katetru. Vysoce průhledný válec a dvojité těsnění pístu zajišťují přesnou aplikaci a snadné odečítání objemu. Plynulý pohyb pístu i u viskóznějších roztoků. Latex-free, PVC-free konstrukce.",
+    "params": {
+      "Objem": "5 ml",
+      "Konstrukce": "3-dílná",
+      "Konektor": "Luer Lock, koncentrický",
+      "Materiál": "Polypropylen",
+      "Bez latexu": "Ano",
+      "Bez PVC/DEHP": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "125 ks/krabice"
+    }
+  },
+  {
+    "id": 24,
+    "slug": "bd-plastipak-ll-10ml",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Plastipak™ stříkačka 10 ml Luer Lock (3-dílná, bez jehly)",
+    "ref": "300912",
+    "image": "/images/products/bd-plastipak-10ml.jpg",
+    "description": "3-dílná injekční stříkačka 10 ml s Luer Lock konektorem (Eurographics provedení) pro bezpečné spojení s jehlou nebo katetrem. Průhledný válec, dvojité těsnění pístu, plynulý chod i u viskózních roztoků. Vhodná pro aplikaci léčiv, výplach a aspiraci. Latex-free.",
+    "params": {
+      "Objem": "10 ml",
+      "Konstrukce": "3-dílná",
+      "Konektor": "Luer Lock, koncentrický",
+      "Materiál": "Polypropylen",
+      "Bez latexu": "Ano",
+      "Bez PVC/DEHP": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 25,
+    "slug": "bd-plastipak-ll-20ml",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Plastipak™ stříkačka 20 ml Luer Lock E/T (3-dílná, bez jehly)",
+    "ref": "300613",
+    "image": "/images/products/bd-plastipak-20ml.jpg",
+    "description": "3-dílná injekční stříkačka 20 ml s excentrickou špičkou (Eccentric Tip) a Luer Lock konektorem. Vhodná pro aplikaci pod nízkým úhlem, větší objemy léčiv, výplachy a aspiraci. Vysoce průhledný válec s výraznou stupnicí, dvojité těsnění pístu pro přesnou aplikaci.",
+    "params": {
+      "Objem": "20 ml",
+      "Konstrukce": "3-dílná",
+      "Konektor": "Luer Lock, excentrický (E/T)",
+      "Materiál": "Polypropylen",
+      "Bez latexu": "Ano",
+      "Bez PVC/DEHP": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "120 ks/karton"
+    }
+  },
+  {
+    "id": 26,
+    "slug": "bd-plastipak-ll-50ml",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Plastipak™ stříkačka 50 ml Luer Lock (3-dílná, koncentrická)",
+    "ref": "300865",
+    "image": "/images/products/bd-plastipak-luer-lock.jpg",
+    "description": "Velkoobjemová 3-dílná injekční stříkačka 50 ml s Luer Lock koncentrickou špičkou. Vhodná pro infuzní pumpy, aplikaci velkých objemů, výplach ran a aspiraci. Robustní konstrukce, plynulý pohyb pístu i při dlouhých aplikacích. Latex-free, PVC-free.",
+    "params": {
+      "Objem": "50 ml",
+      "Konstrukce": "3-dílná",
+      "Konektor": "Luer Lock, koncentrický",
+      "Materiál": "Polypropylen",
+      "Bez latexu": "Ano",
+      "Bez PVC/DEHP": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "60 ks/krabice"
+    }
+  },
+  {
+    "id": 27,
+    "slug": "bd-plastipak-100ml-catheter",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Plastipak™ stříkačka 100 ml s katetrovou špičkou (3-dílná)",
+    "ref": "300605",
+    "image": "/images/products/bd-plastipak-luer-lock.jpg",
+    "description": "Velkoobjemová 3-dílná injekční stříkačka 100 ml s katetrovou špičkou (Catheter Tip) pro přímé napojení na katetr nebo sondu. Určená pro výplachy, aspiraci a aplikaci enterální výživy. Vysoce průhledný válec, dvojité těsnění pístu, plynulý chod. Latex-free.",
+    "params": {
+      "Objem": "100 ml",
+      "Konstrukce": "3-dílná",
+      "Konektor": "Catheter Tip (katetrová špička)",
+      "Materiál": "Polypropylen",
+      "Bez latexu": "Ano",
+      "Bez PVC/DEHP": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "25 ks/krabice"
+    }
+  },
+  {
+    "id": 28,
+    "slug": "bd-vacutainer-citrate-2-7ml",
+    "category": "odber",
+    "categoryLabel": "Odběr krve",
+    "name": "BD Vacutainer® Citrate zkumavka 2,7 ml (3,2% trinatrium citrát)",
+    "ref": "363048",
+    "image": "/images/products/bd-vacutainer-citrat.jpg",
+    "description": "Vakuová odběrová zkumavka pro koagulační vyšetření (PT, APTT, fibrinogen, D-dimer). Obsahuje 3,2% (0,109 M) roztok trinatrium citrátu v poměru 1:9 k objemu krve. Plastový uzávěr BD Hemogard™ s integrovanou bezpečnostní krytkou snižuje riziko kontaktu s krví při otevírání. Sterilní vnitřek zkumavky.",
+    "params": {
+      "Objem odběru": "2,7 ml",
+      "Rozměr": "13 × 100 mm",
+      "Aditivum": "3,2% trinatrium citrát (0,109 M)",
+      "Poměr aditivum:krev": "1:9",
+      "Materiál": "PET / PP",
+      "Uzávěr": "BD Hemogard™ světle modrý",
+      "Použití": "Koagulační analýza",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 29,
+    "slug": "bd-vacutainer-edta-4ml",
+    "category": "odber",
+    "categoryLabel": "Odběr krve",
+    "name": "BD Vacutainer® K2EDTA zkumavka 4,0 ml (fialový uzávěr)",
+    "ref": "368861",
+    "image": "/images/products/bd-vacutainer-edta.jpg",
+    "description": "Vakuová odběrová zkumavka s K2EDTA antikoagulansem pro hematologická vyšetření — krevní obraz, diferenciál, retikulocyty, HbA1c. K2EDTA stříkáno na vnitřní stěnu zkumavky pro rychlé rozpuštění ve vzorku. Plastový uzávěr BD Hemogard™ fialový se sníženým rizikem kontaktu s krví.",
+    "params": {
+      "Objem odběru": "4,0 ml",
+      "Rozměr": "13 × 75 mm",
+      "Aditivum": "K2EDTA (spray-dried)",
+      "Materiál": "PET",
+      "Uzávěr": "BD Hemogard™ fialový (lavender)",
+      "Použití": "Hematologie, krevní obraz",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 30,
+    "slug": "bd-vacutainer-serum-10ml",
+    "category": "odber",
+    "categoryLabel": "Odběr krve",
+    "name": "BD Vacutainer® Serum zkumavka 10 ml (červený uzávěr, aktivátor srážení)",
+    "ref": "367896",
+    "image": "/images/products/bd-vacutainer-serum-red.jpg",
+    "description": "Velkoobjemová vakuová odběrová zkumavka pro získání séra. Vnitřní povrch je sprejově potažen silikou (aktivátor srážení) pro standardizované a rychlé vytvoření koagula. Vhodná pro biochemická, sérologická a imunologická vyšetření vyžadující větší objem séra. Plastový uzávěr BD Hemogard™ červený.",
+    "params": {
+      "Objem odběru": "10,0 ml",
+      "Rozměr": "16 × 100 mm",
+      "Aditivum": "Silika (aktivátor srážení)",
+      "Separátor": "Žádný",
+      "Materiál": "PET",
+      "Uzávěr": "BD Hemogard™ červený",
+      "Použití": "Biochemie, sérologie",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 31,
+    "slug": "bd-vacutainer-serum-4ml-silicone",
+    "category": "odber",
+    "categoryLabel": "Odběr krve",
+    "name": "BD Vacutainer® Serum zkumavka 4,0 ml (silikonovaná, červený uzávěr)",
+    "ref": "369032",
+    "image": "/images/products/bd-vacutainer-serum-red.jpg",
+    "description": "Vakuová odběrová zkumavka pro získání séra. Vnitřní povrch silikonovaný pro hladké uvolnění koagula a snížení adheze krevních elementů. Bez aktivátoru srážení — vhodná pro vyšetření, kde je požadováno pomalejší samovolné srážení. Plastový uzávěr BD Hemogard™ červený.",
+    "params": {
+      "Objem odběru": "4,0 ml",
+      "Rozměr": "13 × 75 mm",
+      "Aditivum": "Bez aditiv (silikonovaný povrch)",
+      "Materiál": "PET",
+      "Uzávěr": "BD Hemogard™ červený",
+      "Použití": "Sérologie, biochemie",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 32,
+    "slug": "bd-vacutainer-one-use-holder",
+    "category": "odber",
+    "categoryLabel": "Odběr krve",
+    "name": "BD Vacutainer® One-Use Holder (jednorázový držák jehly)",
+    "ref": "364815",
+    "image": "/images/products/bd-vacutainer-holder.jpg",
+    "description": "Plastový jednorázový držák pro BD Vacutainer® odběrový systém. Kompatibilní se zkumavkami o průměru 13 mm a 16 mm a s BD BACTEC™ hemokulturními lahvičkami. Splňuje doporučení OSHA SHIB 10-15-03 (jednorázové použití držáků pro phlebotomii). Průhledný, nestohovací design pro snadnou likvidaci a prevenci opakovaného použití.",
+    "params": {
+      "Materiál": "Plast (transparentní bílý)",
+      "Kompatibilita": "Zkumavky 13 a 16 mm, BD BACTEC™",
+      "Použití": "Jednorázové (OSHA compliance)",
+      "Vlastnosti": "Nestohovací, žebrovaný povrch pro úchop",
+      "Balení": "250 ks/balíček, 1000 ks/karton"
+    }
+  },
+  {
+    "id": 33,
+    "slug": "bd-vacutainer-luer-adapter",
+    "category": "odber",
+    "categoryLabel": "Odběr krve",
+    "name": "BD Vacutainer® Luer Adapter (multi-sample, sterilní)",
+    "ref": "367300",
+    "image": "/images/products/bd-vacutainer-luer-adapter.jpg",
+    "description": "Sterilní multi-sample adaptér s ventilem pro připojení BD Vacutainer® držáku k jehlovému portu, katetru nebo periferní kanyle s female Luer konektorem. Umožňuje odběr krve do vakuových zkumavek bez nutnosti další venepunkce. Modrý barevný kód pro snadné odlišení.",
+    "params": {
+      "Konektor": "Male Luer + multi-sample ventil",
+      "Sterilita": "Sterilní",
+      "Barva": "Modrá",
+      "Použití": "Odběr z katetru / kanyly",
+      "Balení": "100 ks/karton, 1000 ks/případ"
+    }
+  },
+  {
+    "id": 34,
+    "slug": "bd-vacutainer-eclipse-21g",
+    "category": "odber",
+    "categoryLabel": "Odběr krve",
+    "name": "BD Vacutainer® Eclipse™ bezpečnostní jehla 21G × 1 1/4\" (0,8 × 32 mm)",
+    "ref": "368609",
+    "image": "/images/products/bd-vacutainer-eclipse.jpg",
+    "description": "Bezpečnostní jehla pro venózní odběr krve s plně integrovaným bezpečnostním štítem. Po aktivaci jednou rukou se štít s audibilním cvaknutím nepřátelně zablokuje přes hrot jehly (trojnásobný uzávěrový mechanismus). Orientace štítu je v rovině se zkosením jehly — bez nutnosti vizuální kontroly. Multi-sample provedení pro odběr více zkumavek bez výměny jehly.",
+    "params": {
+      "Gauge": "21G (0,8 mm)",
+      "Délka": "1 1/4\" (32 mm)",
+      "Barva štítu": "Zelená",
+      "Bezpečnostní mechanismus": "Plně integrovaný, jednoruční aktivace",
+      "Multi-sample": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "48 ks/krabice, 480 ks/karton"
+    }
+  },
+  {
+    "id": 35,
+    "slug": "bd-vacutainer-eclipse-22g",
+    "category": "odber",
+    "categoryLabel": "Odběr krve",
+    "name": "BD Vacutainer® Eclipse™ bezpečnostní jehla 22G × 1 1/4\" (0,7 × 32 mm)",
+    "ref": "368610",
+    "image": "/images/products/bd-vacutainer-eclipse.jpg",
+    "description": "Bezpečnostní jehla pro venózní odběr krve s plně integrovaným bezpečnostním štítem (Eclipse™). Jemnější 22G provedení vhodné pro odběry z menších žil. Aktivace jednou rukou s audibilním cvaknutím, nevratný trojnásobný uzávěr. Multi-sample konstrukce.",
+    "params": {
+      "Gauge": "22G (0,7 mm)",
+      "Délka": "1 1/4\" (32 mm)",
+      "Barva štítu": "Černá",
+      "Bezpečnostní mechanismus": "Plně integrovaný, jednoruční aktivace",
+      "Multi-sample": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "48 ks/krabice, 480 ks/karton"
+    }
+  },
+  {
+    "id": 36,
+    "slug": "bd-vacutainer-eclipse-21g-preattached",
+    "category": "odber",
+    "categoryLabel": "Odběr krve",
+    "name": "BD Vacutainer® Eclipse™ jehla 21G s předmontovaným držákem",
+    "ref": "368650",
+    "image": "/images/products/bd-vacutainer-eclipse.jpg",
+    "description": "BD Eclipse™ bezpečnostní jehla 21G × 32 mm s již předem nasazeným jednorázovým držákem. Připraveno k použití — odpadá nutnost manuálního sestavení jehly a držáku. Každý kus individuálně sterilně balen v blistru. Splňuje OSHA požadavky na jednorázové držáky.",
+    "params": {
+      "Gauge": "21G (0,8 mm)",
+      "Délka jehly": "1 1/4\" (32 mm)",
+      "Barva štítu": "Zelená",
+      "Držák": "Předem připevněný, jednorázový",
+      "Balení": "100 ks (individuální blistry)"
+    }
+  },
+  {
+    "id": 37,
+    "slug": "bd-vacutainer-eclipse-22g-preattached",
+    "category": "odber",
+    "categoryLabel": "Odběr krve",
+    "name": "BD Vacutainer® Eclipse™ jehla 22G s předmontovaným držákem",
+    "ref": "368651",
+    "image": "/images/products/bd-vacutainer-eclipse.jpg",
+    "description": "BD Eclipse™ bezpečnostní jehla 22G × 32 mm s předem nasazeným jednorázovým držákem. Připraveno k použití pro venepunkci v menších žilách. Individuální sterilní balení v blistru, OSHA compliant.",
+    "params": {
+      "Gauge": "22G (0,7 mm)",
+      "Délka jehly": "1 1/4\" (32 mm)",
+      "Barva štítu": "Černá",
+      "Držák": "Předem připevněný, jednorázový",
+      "Balení": "100 ks (individuální blistry)"
+    }
+  },
+  {
+    "id": 38,
+    "slug": "bd-vacutainer-safetylok-23g-7",
+    "category": "odber",
+    "categoryLabel": "Odběr krve",
+    "name": "BD Vacutainer® Safety-Lok™ křidélkový set 23G × 3/4\", hadička 178 mm",
+    "ref": "367284",
+    "image": "/images/products/bd-vacutainer-safetylok.jpg",
+    "description": "Bezpečnostní křidélkový (motýlkový) odběrový set s předem připojeným Luer adaptérem pro odběr krve do vakuových zkumavek. Translucentní integrovaný štít umožňuje jednoruční aktivaci ihned po vytažení jehly z žíly — minimalizuje riziko poranění. Velká křidélka pro lepší kontrolu při venepunkci. Bez latexu a DEHP.",
+    "params": {
+      "Gauge": "23G (0,6 mm)",
+      "Délka jehly": "3/4\" (19 mm)",
+      "Délka hadičky": "7\" (178 mm)",
+      "Luer adaptér": "Předem připojený",
+      "Bez latexu": "Ano",
+      "Bez DEHP": "Ano",
+      "Balení": "50 ks/krabice, 200 ks/karton"
+    }
+  },
+  {
+    "id": 39,
+    "slug": "bd-vacutainer-safetylok-25g-7",
+    "category": "odber",
+    "categoryLabel": "Odběr krve",
+    "name": "BD Vacutainer® Safety-Lok™ křidélkový set 25G × 3/4\", hadička 178 mm",
+    "ref": "367295",
+    "image": "/images/products/bd-vacutainer-safetylok.jpg",
+    "description": "Bezpečnostní křidélkový odběrový set s jemnou 25G jehlou — vhodný pro pediatrické pacienty, gerontologii a obtížné venózní přístupy. Integrovaný bezpečnostní štít s jednoruční aktivací. Předem připojený Luer adaptér.",
+    "params": {
+      "Gauge": "25G (0,5 mm)",
+      "Délka jehly": "3/4\" (19 mm)",
+      "Délka hadičky": "7\" (178 mm)",
+      "Luer adaptér": "Předem připojený",
+      "Bez latexu": "Ano",
+      "Bez DEHP": "Ano",
+      "Balení": "50 ks/krabice, 200 ks/karton"
+    }
+  },
+  {
+    "id": 40,
+    "slug": "bd-vacutainer-safetylok-21g-12",
+    "category": "odber",
+    "categoryLabel": "Odběr krve",
+    "name": "BD Vacutainer® Safety-Lok™ křidélkový set 21G × 3/4\", hadička 305 mm",
+    "ref": "367286",
+    "image": "/images/products/bd-vacutainer-safetylok.jpg",
+    "description": "Bezpečnostní křidélkový odběrový set 21G s delší hadičkou (12\") — vhodné pro odběry, kde je třeba větší flexibilita umístění zkumavky. Integrovaný bezpečnostní štít, jednoruční aktivace, předem připojený Luer adaptér.",
+    "params": {
+      "Gauge": "21G (0,8 mm)",
+      "Délka jehly": "3/4\" (19 mm)",
+      "Délka hadičky": "12\" (305 mm)",
+      "Luer adaptér": "Předem připojený",
+      "Bez latexu": "Ano",
+      "Bez DEHP": "Ano",
+      "Balení": "50 ks/krabice, 200 ks/karton"
+    }
+  },
+  {
+    "id": 41,
+    "slug": "bd-vacutainer-safetylok-23g-12",
+    "category": "odber",
+    "categoryLabel": "Odběr krve",
+    "name": "BD Vacutainer® Safety-Lok™ křidélkový set 23G × 3/4\", hadička 305 mm",
+    "ref": "367288",
+    "image": "/images/products/bd-vacutainer-safetylok.jpg",
+    "description": "Bezpečnostní křidélkový odběrový set 23G s delší hadičkou (12\"). Translucentní integrovaný štít pro jednoruční aktivaci, předem připojený Luer adaptér pro připojení k držáku BD Vacutainer®.",
+    "params": {
+      "Gauge": "23G (0,6 mm)",
+      "Délka jehly": "3/4\" (19 mm)",
+      "Délka hadičky": "12\" (305 mm)",
+      "Luer adaptér": "Předem připojený",
+      "Bez latexu": "Ano",
+      "Bez DEHP": "Ano",
+      "Balení": "50 ks/krabice, 200 ks/karton"
+    }
+  },
+  {
+    "id": 42,
+    "slug": "bd-vacutainer-pushbutton-21g-12",
+    "category": "odber",
+    "categoryLabel": "Odběr krve",
+    "name": "BD Vacutainer® Push Button křidélkový set 21G × 3/4\", hadička 305 mm",
+    "ref": "367344",
+    "image": "/images/products/bd-vacutainer-pushbutton.jpg",
+    "description": "Bezpečnostní křidélkový odběrový set s push-button mechanismem — okamžitá retrakce jehly v žíle jediným stisknutím tlačítka. In-vein aktivace zásadně snižuje riziko poranění zdravotníků kontaminovanou jehlou. Studie ukazují až 88% snížení wingset-related needlestick injuries oproti standardním křidélkovým setům. Předem připojený Luer adaptér.",
+    "params": {
+      "Gauge": "21G (0,8 mm)",
+      "Délka jehly": "3/4\" (19 mm)",
+      "Délka hadičky": "12\" (305 mm)",
+      "Aktivace": "Push-button, in-vein retrakce",
+      "Luer adaptér": "Předem připojený",
+      "Bez latexu": "Ano",
+      "Balení": "50 ks/krabice, 200 ks/karton"
+    }
+  },
+  {
+    "id": 43,
+    "slug": "bd-vacutainer-pushbutton-23g-12",
+    "category": "odber",
+    "categoryLabel": "Odběr krve",
+    "name": "BD Vacutainer® Push Button křidélkový set 23G × 3/4\", hadička 305 mm",
+    "ref": "367342",
+    "image": "/images/products/bd-vacutainer-pushbutton.jpg",
+    "description": "Křidélkový odběrový set 23G s push-button bezpečnostním mechanismem. Stisknutím tlačítka se jehla okamžitě retrakuje do těla zařízení — chrání před náhodným poraněním. Vhodný pro standardní venepunkci a pacienty s běžným venózním přístupem.",
+    "params": {
+      "Gauge": "23G (0,6 mm)",
+      "Délka jehly": "3/4\" (19 mm)",
+      "Délka hadičky": "12\" (305 mm)",
+      "Aktivace": "Push-button, in-vein retrakce",
+      "Luer adaptér": "Předem připojený",
+      "Bez latexu": "Ano",
+      "Balení": "50 ks/krabice, 200 ks/karton"
+    }
+  },
+  {
+    "id": 44,
+    "slug": "bd-vacutainer-pushbutton-25g-12",
+    "category": "odber",
+    "categoryLabel": "Odběr krve",
+    "name": "BD Vacutainer® Push Button křidélkový set 25G × 3/4\", hadička 305 mm",
+    "ref": "367341",
+    "image": "/images/products/bd-vacutainer-pushbutton.jpg",
+    "description": "Křidélkový odběrový set s jemnou 25G jehlou a push-button bezpečnostním mechanismem. Vhodný pro pediatrické pacienty, malé žíly a obtížné venózní přístupy (DVA). In-vein retrakce jehly stisknutím tlačítka chrání před náhodným poraněním.",
+    "params": {
+      "Gauge": "25G (0,5 mm)",
+      "Délka jehly": "3/4\" (19 mm)",
+      "Délka hadičky": "12\" (305 mm)",
+      "Aktivace": "Push-button, in-vein retrakce",
+      "Luer adaptér": "Předem připojený",
+      "Bez latexu": "Ano",
+      "Balení": "50 ks/krabice, 200 ks/karton"
+    }
+  },
+  {
+    "id": 45,
+    "slug": "bd-vacutainer-ultratouch-21g",
+    "category": "odber",
+    "categoryLabel": "Odběr krve",
+    "name": "BD Vacutainer® UltraTouch™ Push Button set 21G s předmontovaným držákem",
+    "ref": "367393",
+    "image": "/images/products/bd-vacutainer-ultratouch.jpg",
+    "description": "Nejnovější generace BD Vacutainer® odběrového setu s patentovanou PentaPoint™ 5-bevel technologií zkosení hrotu. Studie ukazují snížení penetračních sil až o 32 % oproti konkurenčním setům — komfortnější vpich pro pacienta. RightGauge™ Ultra-Thin Wall technologie umožňuje použít jemnější gauge bez ztráty průtoku (zlepšení doby plnění zkumavky až o 50 %). Push-button retrakce + předmontovaný držák pro maximální komfort a bezpečnost.",
+    "params": {
+      "Gauge": "21G (0,8 mm)",
+      "Délka jehly": "3/4\" (19 mm)",
+      "Technologie": "PentaPoint™ 5-bevel + RightGauge™",
+      "Aktivace": "Push-button, in-vein retrakce",
+      "Držák": "Předem připevněný",
+      "Bez latexu": "Ano",
+      "Balení": "Individuální sterilní obal"
+    }
+  },
+  {
+    "id": 46,
+    "slug": "bd-microtainer-quikheel-teal",
+    "category": "odber",
+    "categoryLabel": "Odběr krve",
+    "name": "BD Microtainer® Quikheel™ Lanceta Teal (kojenecká, 1,0 × 2,5 mm)",
+    "ref": "368103",
+    "image": "/images/products/bd-microtainer-quikheel.jpg",
+    "description": "Bezpečnostní incizní lanceta pro odběr kapilární krve z patičky novorozenců a kojenců. Jednoruční aktivace uvolní chirurgické ostří, které provede přesný a konzistentní řez a okamžitě se zatáhne zpět do pouzdra. Tvarovaný kontaktní povrch a ergonomický úchop pro stabilní polohování. Verze Teal (modrozelená) je určena pro novorozence s nízkou porodní hmotností (1,0–1,5 kg) a donošené kojence s nižším požadavkem na průtok krve.",
+    "params": {
+      "Hloubka řezu": "1,0 mm",
+      "Délka řezu": "2,5 mm",
+      "Cílová skupina": "Novorozenci 1,0–1,5 kg, donošení kojenci",
+      "Barevný kód": "Teal (modrozelená)",
+      "Aktivace": "Jednoruční, automatická retrakce",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "50 ks/krabice"
+    }
   }
 ]

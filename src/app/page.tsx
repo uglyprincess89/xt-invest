@@ -41,10 +41,9 @@ export default function HomePage() {
           </div>
           <div className="border-t border-white/20 pt-6 flex flex-wrap gap-x-8 gap-y-2">
             {[
-              'Osobní B2B přístup & podpora',
-              '15+ kategorií produktů',
-              'Vlastní sklad v Praze',
               'Originální certifikované produkty',
+              'Osobní B2B přístup & podpora',
+              'Vlastní sklad v Praze',
             ].map(item => (
               <span key={item} className="flex items-center gap-2 text-sm text-white/90">
                 <span className="w-1.5 h-1.5 rounded-full bg-teal shrink-0" />{item}
@@ -82,7 +81,7 @@ export default function HomePage() {
             {[
               { icon: '🛡️', bg: 'bg-[#e6eefb]', title: 'Originální produkty BD', text: 'Jako oficiálně autorizovaný obchodní partner BD garantujeme 100% pravost a plnou certifikaci všech produktů.' },
               { icon: '🚚', bg: 'bg-teal/10', title: 'Rychlé dodávky', text: 'Vlastní sklad + flexibilní logistika. Standardní dodávky do 24–48 hodin, urgentní požadavky řešíme operativně.' },
-              { icon: '🤝', bg: 'bg-navy/10', title: 'Osobní přístup', text: 'Každý klient má svého stálého obchodního zástupce. Individuální podmínky a rychlá reakce vždy.' },
+              { icon: '🤝', bg: 'bg-navy/10', title: 'Osobní přístup', text: 'Každý klient má stálého obchodního zástupce. Individuální podmínky a rychlé reakce.' },
               { icon: '🔬', bg: 'bg-teal/10', title: 'Komplexní řešení', text: 'Široký sortiment BD — od injekční techniky a Vacutainer™ odběrových systémů až po laboratorní řešení.' },
             ].map(card => (
               <div key={card.title} className="bg-gray-50 border border-gray-100 rounded-xl p-5 hover:border-teal hover:shadow-md transition-all">
@@ -110,8 +109,11 @@ export default function HomePage() {
           </div>
           <div className="text-center">
             <Link href="/katalog" className="inline-block bg-navy text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-navy-dark transition-colors text-sm">
-              Zobrazit kompletní katalog (15+ kategorií)
+              Zobrazit kompletní katalog
             </Link>
+            <p className="text-xs text-gray-500 mt-3">
+              Nabídku průběžně rozšiřujeme a doplňujeme — pokud nenajdete konkrétní produkt, ozvěte se nám.
+            </p>
           </div>
         </div>
       </section>
@@ -130,7 +132,7 @@ export default function HomePage() {
               spolehlivý přísun originálních produktů BD za férových podmínek.
             </p>
             <div className="border-l-2 border-teal bg-teal/5 rounded-r-lg p-4 mb-5 text-sm text-gray-700 leading-relaxed">
-              💡 Díky vlastní provozovně — Lékárně u Robina v Praze — známe realitu zdravotnické praxe z první ruky. To nám umožňuje lépe chápat vaše potřeby a nabízet řešení, která skutečně fungují.
+              💡 Provozujeme vlastní lékárnu — Lékárnu u Robina v Praze. Každý den tam řešíme to, co i vy: pacienty, sklady, papírování. Víme proto, co v praxi funguje a co zůstává jen na papíře.
             </div>
             <div className="flex gap-3 items-center">
               <Link href="/o-nas" className="text-sm font-semibold text-navy hover:text-teal-dark transition-colors">Více o nás →</Link>
@@ -140,7 +142,7 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             {[
-              { icon: '📦', num: '15+', label: 'kategorií produktů BD' },
+              { icon: '📦', num: 'BD', label: 'autorizovaný partner' },
               { icon: '✓', num: '100%', label: 'originální produkty' },
               { icon: '🤝', num: 'B2B', label: 'individuální podmínky' },
               { icon: '📍', num: 'ČR', label: 'celostátní pokrytí' },
@@ -164,7 +166,7 @@ export default function HomePage() {
             {[
               {
                 hvezdy: '★★★★★',
-                text: 'Hledali jsme někoho, s kým se dá normálně mluvit a nejsme pro něj jen další kód v databázi. V XT-Investu nám vyšli vstříc i v momentě, kdy jsme potřebovali narychlo změnit objednávku. Oceňuji, že když zavolám, zvedne mi to hned konkrétní člověk a ne automat.',
+                text: 'Hledali jsme někoho, s kým se dá normálně a lidsky mluvit a pro koho nejsme jen další kód v databázi. Oceňuji, že když zavolám, zvedne mi to hned konkrétní člověk a ne automat nebo nekonečné přepojování. Komunikace je příjemná a rychlá. Mám pocit, že je to s námi řešeno individuálně.',
                 autor: 'Monika K.',
                 role: 'Provozní manažerka',
                 zarizeni: 'Soukromá klinika, Praha',
@@ -173,7 +175,7 @@ export default function HomePage() {
               },
               {
                 hvezdy: '★★★★★',
-                text: 'Na rovinu – nejdřív jsem měl trochu obavy z nové firmy, ale přístupem mě dostali. Komunikace je přehledná, rychlá a fakturace sedí do koruny. Je vidět, že se jako začínající e-shop fakt snaží a záleží jim na tom, abychom se vraceli. Za nás naprostá spokojenost s materiálem i dodáním.',
+                text: 'Nejdřív jsem měl trochu obavy z nové firmy, ale přístupem mě překvapili. Komunikace je jasná, rychlá a zboží je v pořádku. Je vidět, že se opravdu snaží a záleží jim na tom, abychom se vraceli. Za nás naprostá spokojenost s materiálem i dodáním.',
                 autor: 'Ing. Marek S.',
                 role: 'Vedoucí nákupu',
                 zarizeni: 'Laboratoř, Praha',
@@ -182,7 +184,7 @@ export default function HomePage() {
               },
               {
                 hvezdy: '★★★★☆',
-                text: 'Přešli jsme k nim od velkého distributora a je to znát hlavně na ochotě. Neřeší, jestli bereme paletu nebo jen pár drobností, přístup je pořád stejně férový. Ceny jsou nastavené rozumně a zatím nenastal jediný zádrhel, který by kluci z XT nevyřešili obratem.',
+                text: 'Přešli jsme k nim od velkého distributora a je to znát hlavně na ochotě. Neřeší, jestli bereme paletu nebo jen pár drobností, přístup je pořád stejně férový. Ceny jsou nastavené rozumně a zatím nenastal žádný problém, který by nebyl vyřešen obratem.',
                 autor: 'Patrik J.',
                 role: 'Provozní manažer',
                 zarizeni: 'Zdravotnické centrum, Brno',
