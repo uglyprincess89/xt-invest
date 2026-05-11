@@ -39,6 +39,9 @@ export default function ONasPage() {
             Becton Dickinson. Máme vlastní sklad, rychlou logistiku a tým lidí, kteří rozumí
             potřebám klinik, laboratoří i menších ordinací.
           </p>
+          <p className="mt-4 text-xs text-white/50 max-w-xl leading-relaxed border-l-2 border-teal/40 pl-3">
+            Tento web je určen výhradně odborníkům ve zdravotnictví a osobám oprávněným nakupovat zdravotnické prostředky.
+          </p>
         </div>
       </section>
 

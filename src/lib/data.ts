@@ -12,6 +12,8 @@ export type Product = {
   image: string
   description: string
   params: Record<string, string>
+  priceUSD?: number
+  priceCZK?: number
 }
 
 export type Company = typeof companyData
@@ -34,4 +36,5 @@ export const categories = [
   { id: 'odber', label: 'Odběr krve' },
   { id: 'kanyly', label: 'Kanyly' },
   { id: 'diagnostika', label: 'Diagnostika' },
+  { id: 'specialni', label: 'Speciální zkumavky' },
 ]
