@@ -41,9 +41,9 @@ export default function HomePage() {
           </div>
           <div className="border-t border-white/20 pt-6 flex flex-wrap gap-x-8 gap-y-2">
             {[
+              'Originální certifikované produkty',
               'Osobní B2B přístup & podpora',
               'Vlastní sklad v Praze',
-              'Originální certifikované produkty',
             ].map(item => (
               <span key={item} className="flex items-center gap-2 text-sm text-white/90">
                 <span className="w-1.5 h-1.5 rounded-full bg-teal shrink-0" />{item}
@@ -81,7 +81,7 @@ export default function HomePage() {
             {[
               { icon: '🛡️', bg: 'bg-[#e6eefb]', title: 'Originální produkty BD', text: 'Jako oficiálně autorizovaný obchodní partner BD garantujeme 100% pravost a plnou certifikaci všech produktů.' },
               { icon: '🚚', bg: 'bg-teal/10', title: 'Rychlé dodávky', text: 'Vlastní sklad + flexibilní logistika. Standardní dodávky do 24–48 hodin, urgentní požadavky řešíme operativně.' },
-              { icon: '🤝', bg: 'bg-navy/10', title: 'Osobní přístup', text: 'Každý klient má svého stálého obchodního zástupce. Individuální podmínky a rychlá reakce vždy.' },
+              { icon: '🤝', bg: 'bg-navy/10', title: 'Osobní přístup', text: 'Každý klient má stálého obchodního zástupce. Individuální podmínky a rychlé reakce.' },
               { icon: '🔬', bg: 'bg-teal/10', title: 'Komplexní řešení', text: 'Široký sortiment BD — od injekční techniky a Vacutainer™ odběrových systémů až po laboratorní řešení.' },
             ].map(card => (
               <div key={card.title} className="bg-gray-50 border border-gray-100 rounded-xl p-5 hover:border-teal hover:shadow-md transition-all">

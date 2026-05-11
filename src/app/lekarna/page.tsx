@@ -76,8 +76,35 @@ export default function LekarnaPage() {
                 <span>E-mail</span>
                 <a href={`mailto:${company.lekarna.email}`} className="text-teal-dark font-medium hover:underline">{company.lekarna.email}</a>
               </div>
+              <div className="flex justify-between text-gray-600">
+                <span>Web</span>
+                <a href="https://www.lekarnafamily.cz" target="_blank" rel="noopener noreferrer" className="text-teal-dark font-medium hover:underline">
+                  lekarnafamily.cz ↗
+                </a>
+              </div>
             </div>
           </div>
+        </div>
+
+        <div className="max-w-7xl mx-auto mt-6 bg-navy text-white rounded-xl p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div>
+            <h3 className="text-sm font-semibold mb-1">Navštivte oficiální web lékárny</h3>
+            <p className="text-white/70 text-xs">
+              Kompletní sortiment léčiv, online objednávky a další informace najdete na webu Lékárny u Robina.
+            </p>
+          </div>
+          <a
+            href="https://www.lekarnafamily.cz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 inline-flex items-center gap-2 bg-teal text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-teal-dark transition-colors text-sm"
+          >
+            lekarnafamily.cz
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M7 17L17 7"/>
+              <path d="M7 7h10v10"/>
+            </svg>
+          </a>
         </div>
       </section>
     </>

@@ -5,8 +5,8 @@ import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
 const navLinks = [
-  { href: '/katalog', label: 'Produkty BD' },
   { href: '/o-nas', label: 'O nás' },
+  { href: '/katalog', label: 'Produkty BD' },
   { href: '/lekarna', label: 'Lékárna u Robina' },
   { href: '/kontakt', label: 'Kontakt' },
 ]
