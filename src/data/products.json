@@ -159,5 +159,360 @@
       "Použití": "Pouze pro výzkum (RUO)",
       "Balení": "100 ks/případ"
     }
+  },
+  {
+    "id": 10,
+    "slug": "bd-microlance-3-27g",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Microlance™ 3 jehla 27G × 1/2\" (0,4 × 13 mm)",
+    "ref": "300635",
+    "image": "/images/products/bd-microlance-3.jpg",
+    "description": "Sterilní jednorázová injekční jehla s tenkostěnnou kanylou a hrotem broušeným ve třech úhlech pro hladký vpich. Silikonová mazací vrstva minimalizuje tření při průniku tkání. Barevně kódována dle ISO 6009 (šedá). Vhodná pro intradermální aplikaci, tuberkulinové testy a aplikaci malých dávek. Kompatibilní s Luer Slip i Luer Lock stříkačkami.",
+    "params": {
+      "Gauge": "27G (0,4 mm)",
+      "Délka": "1/2\" (13 mm)",
+      "Barva": "Šedá",
+      "Hrot": "Regular Bevel, Regular Wall",
+      "Konektor": "Luer / Luer Lock (ISO)",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 11,
+    "slug": "bd-microlance-3-25g",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Microlance™ 3 jehla 25G × 5/8\" (0,5 × 16 mm)",
+    "ref": "300600",
+    "image": "/images/products/bd-microlance-3.jpg",
+    "description": "Sterilní jednorázová injekční jehla s tenkostěnnou kanylou a laserově broušeným hrotem pro snížení bolesti při vpichu. Barevně kódována dle ISO 6009 (oranžová). Typická aplikace: subkutánní injekce, vakcinace. Kompatibilní s Luer Slip i Luer Lock stříkačkami.",
+    "params": {
+      "Gauge": "25G (0,5 mm)",
+      "Délka": "5/8\" (16 mm)",
+      "Barva": "Oranžová",
+      "Hrot": "Regular Bevel, Regular Wall",
+      "Konektor": "Luer / Luer Lock (ISO)",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 12,
+    "slug": "bd-microlance-3-23g",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Microlance™ 3 jehla 23G × 1\" (0,6 × 25 mm)",
+    "ref": "300800",
+    "image": "/images/products/bd-microlance-3.jpg",
+    "description": "Sterilní jednorázová injekční jehla s tenkostěnnou kanylou (thin wall) pro vyšší průtok. Hrot broušený ve třech úhlech zajišťuje hladký a méně bolestivý vpich. Barevně kódována dle ISO 6009 (modrá). Vhodná pro intramuskulární a subkutánní aplikaci, odběr léčiv z lahvičky a ampulky.",
+    "params": {
+      "Gauge": "23G (0,6 mm)",
+      "Délka": "1\" (25 mm)",
+      "Barva": "Modrá",
+      "Hrot": "Regular Bevel, Thin Wall",
+      "Konektor": "Luer / Luer Lock (ISO)",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 13,
+    "slug": "bd-microlance-3-21g",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Microlance™ 3 jehla 21G × 1 1/2\" (0,8 × 40 mm)",
+    "ref": "304432",
+    "image": "/images/products/bd-microlance-21g.jpg",
+    "description": "Sterilní jednorázová injekční jehla 21G s tenkostěnnou kanylou pro vysoký průtok. Barevně kódována dle ISO 6009 (zelená). Vhodná pro intramuskulární aplikaci, aspiraci viskóznějších léčiv a běžný odběr krve. Hrot broušený ve třech úhlech.",
+    "params": {
+      "Gauge": "21G (0,8 mm)",
+      "Délka": "1 1/2\" (40 mm)",
+      "Barva": "Zelená",
+      "Hrot": "Regular Bevel, Thin Wall",
+      "Konektor": "Luer / Luer Lock (ISO)",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 14,
+    "slug": "bd-microlance-3-20g",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Microlance™ 3 jehla 20G × 1 1/2\" (0,9 × 40 mm)",
+    "ref": "301300",
+    "image": "/images/products/bd-microlance-family.jpg",
+    "description": "Sterilní jednorázová injekční jehla 20G s tenkostěnnou kanylou pro maximální průtok. Barevně kódována dle ISO 6009 (žlutá). Vhodná pro aspiraci viskózních roztoků, ředění léčiv a intramuskulární aplikaci u dospělých pacientů.",
+    "params": {
+      "Gauge": "20G (0,9 mm)",
+      "Délka": "1 1/2\" (40 mm)",
+      "Barva": "Žlutá",
+      "Hrot": "Regular Bevel, Thin Wall",
+      "Konektor": "Luer / Luer Lock (ISO)",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 15,
+    "slug": "bd-discardit-ii-2ml",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Discardit™ II stříkačka 2 ml (Luer Slip, bez jehly)",
+    "ref": "300928",
+    "image": "/images/products/bd-discardit-2ml.jpg",
+    "description": "Jednorázová 2-dílná sterilní injekční stříkačka pro injekci a aspiraci léčiv i tělních tekutin. Lubrikace v materiálu válce zajišťuje hladký pohyb pístu se sníženou třecí silou. Robustní retenční kroužek brání nechtěnému vytažení pístu při aspiraci. Průhledný válec s výraznou stupnicí pro přesné dávkování. Excentrický Luer Slip konektor umožňuje aplikaci pod nižším úhlem.",
+    "params": {
+      "Objem": "2 ml",
+      "Konstrukce": "2-dílná",
+      "Konektor": "Luer Slip, excentrický",
+      "Materiál": "Polypropylen / polyetylen",
+      "Bez latexu": "Ano",
+      "Bez PVC/DEHP": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 16,
+    "slug": "bd-discardit-ii-5ml",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Discardit™ II stříkačka 5 ml (Luer Slip, bez jehly)",
+    "ref": "309050",
+    "image": "/images/products/bd-discardit-family.jpg",
+    "description": "Jednorázová 2-dílná sterilní injekční stříkačka 5 ml. Excentrický Luer Slip konektor pro aplikaci pod nízkým úhlem v blízkosti kůže. Průhledný válec s výraznou stupnicí, snadno čitelná i pod úhlem. Latex-free a PVC-free konstrukce. Vhodná pro injekci, aspiraci a výplach.",
+    "params": {
+      "Objem": "5 ml",
+      "Konstrukce": "2-dílná",
+      "Konektor": "Luer Slip, excentrický",
+      "Materiál": "Polypropylen / polyetylen",
+      "Bez latexu": "Ano",
+      "Bez PVC/DEHP": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 17,
+    "slug": "bd-discardit-ii-10ml",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Discardit™ II stříkačka 10 ml (Luer Slip, bez jehly)",
+    "ref": "309110",
+    "image": "/images/products/bd-discardit-family.jpg",
+    "description": "Jednorázová 2-dílná sterilní injekční stříkačka 10 ml. Excentrický Luer Slip konektor. Lubrikovaný píst pro plynulý pohyb a přesné dávkování. Retenční kroužek zabraňuje vytažení pístu při aspiraci. Vhodná pro injekce, aspiraci a výplach ran.",
+    "params": {
+      "Objem": "10 ml",
+      "Konstrukce": "2-dílná",
+      "Konektor": "Luer Slip, excentrický",
+      "Materiál": "Polypropylen / polyetylen",
+      "Bez latexu": "Ano",
+      "Bez PVC/DEHP": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 18,
+    "slug": "bd-discardit-ii-20ml",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Discardit™ II stříkačka 20 ml (Luer Slip, bez jehly)",
+    "ref": "300296",
+    "image": "/images/products/bd-discardit-20ml.jpg",
+    "description": "Jednorázová 2-dílná sterilní injekční stříkačka 20 ml. Excentrický Luer Slip konektor. Vhodná pro aplikaci větších objemů, výplach ran a aspiraci. Průhledný válec s odolnou, dobře čitelnou stupnicí.",
+    "params": {
+      "Objem": "20 ml",
+      "Konstrukce": "2-dílná",
+      "Konektor": "Luer Slip, excentrický",
+      "Materiál": "Polypropylen / polyetylen",
+      "Bez latexu": "Ano",
+      "Bez PVC/DEHP": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "80 ks/krabice"
+    }
+  },
+  {
+    "id": 19,
+    "slug": "bd-emerald-2ml",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Emerald™ stříkačka 2 ml (3-dílná, Luer Slip)",
+    "ref": "307727",
+    "image": "/images/products/bd-emerald-2ml.jpg",
+    "description": "Univerzální 3-dílná injekční stříkačka pro injekci a aspiraci tekutin z lahviček, ampulí a podkožních tkání. Latex-free zátka pístu zabraňuje úniku léčiva a slouží jako referenční značka stupnice. Průhledný válec s výraznou stupnicí. Speciální silikonová lubrikace zajišťuje plynulý a rovnoměrný pohyb pístu. Vyrobeno z méně materiálu (až o 30 %) v souladu s udržitelnou produkcí BD.",
+    "params": {
+      "Objem": "2 ml (stupnice do 2,5 ml)",
+      "Konstrukce": "3-dílná",
+      "Konektor": "Luer Slip, koncentrický",
+      "Mrtvý prostor": "0,07 ml",
+      "Bez latexu": "Ano",
+      "Bez PVC/DEHP": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 20,
+    "slug": "bd-emerald-5ml",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Emerald™ stříkačka 5 ml (3-dílná, Luer Slip)",
+    "ref": "307731",
+    "image": "/images/products/bd-emerald-2ml.jpg",
+    "description": "Univerzální 3-dílná injekční stříkačka 5 ml pro injekci a aspiraci. Latex-free zátka pístu, průhledný válec, výrazná stupnice pro přesné dávkování. Silikonová lubrikace pro plynulý pohyb pístu. Konvenční Luer Slip špička. Šetrná k životnímu prostředí — méně materiálu a netoxické vstupy.",
+    "params": {
+      "Objem": "5 ml",
+      "Konstrukce": "3-dílná",
+      "Konektor": "Luer Slip, koncentrický",
+      "Mrtvý prostor": "0,075 ml",
+      "Bez latexu": "Ano",
+      "Bez PVC/DEHP": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 21,
+    "slug": "bd-plastipak-tuberculin-1ml",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Plastipak™ Tuberkulinová stříkačka 1 ml (3-dílná, bez jehly)",
+    "ref": "303172",
+    "image": "/images/products/bd-tuberculin-1ml.jpg",
+    "description": "Přesná 3-dílná tuberkulinová stříkačka 1 ml s jemnou stupnicí po 0,01 ml pro exaktní dávkování malých objemů. Vhodná pro intradermální a subkutánní aplikaci, tuberkulinový test (PPD) a další aplikace s nízkým objemem. Průhledný válec z polypropylenu, latex-free těsnění pístu, silikonová mazací vrstva. Konvenční Luer Slip špička.",
+    "params": {
+      "Objem": "1 ml",
+      "Stupnice": "0,01 ml dílky",
+      "Konstrukce": "3-dílná",
+      "Konektor": "Luer Slip, koncentrický",
+      "Původ": "Vyrobeno ve Španělsku",
+      "Bez latexu": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 22,
+    "slug": "bd-plastipak-tuberculin-1ml-25g",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Plastipak™ Tuberkulinová stříkačka 1 ml s jehlou 25G × 5/8\"",
+    "ref": "303175",
+    "image": "/images/products/bd-tuberculin-1ml.jpg",
+    "description": "Tuberkulinová 3-dílná stříkačka 1 ml s nasazenou jehlou 25G × 5/8\" (0,5 × 16 mm). Připraveno k použití bez nutnosti samostatného sestavení. Jemná stupnice po 0,01 ml. Vhodné pro tuberkulinový test (Mantoux), vakcinace a další intradermální/subkutánní aplikace.",
+    "params": {
+      "Objem stříkačky": "1 ml",
+      "Stupnice": "0,01 ml dílky",
+      "Jehla": "25G × 5/8\" (0,5 × 16 mm), oranžová",
+      "Konstrukce": "3-dílná",
+      "Konektor": "Luer Slip",
+      "Bez latexu": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 23,
+    "slug": "bd-plastipak-ll-5ml",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Plastipak™ stříkačka 5 ml Luer Lock (3-dílná, bez jehly)",
+    "ref": "309649",
+    "image": "/images/products/bd-plastipak-luer-lock.jpg",
+    "description": "Precizní 3-dílná injekční stříkačka 5 ml s Luer Lock konektorem pro bezpečné, netěsnící připojení jehly nebo katetru. Vysoce průhledný válec a dvojité těsnění pístu zajišťují přesnou aplikaci a snadné odečítání objemu. Plynulý pohyb pístu i u viskóznějších roztoků. Latex-free, PVC-free konstrukce.",
+    "params": {
+      "Objem": "5 ml",
+      "Konstrukce": "3-dílná",
+      "Konektor": "Luer Lock, koncentrický",
+      "Materiál": "Polypropylen",
+      "Bez latexu": "Ano",
+      "Bez PVC/DEHP": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "125 ks/krabice"
+    }
+  },
+  {
+    "id": 24,
+    "slug": "bd-plastipak-ll-10ml",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Plastipak™ stříkačka 10 ml Luer Lock (3-dílná, bez jehly)",
+    "ref": "300912",
+    "image": "/images/products/bd-plastipak-10ml.jpg",
+    "description": "3-dílná injekční stříkačka 10 ml s Luer Lock konektorem (Eurographics provedení) pro bezpečné spojení s jehlou nebo katetrem. Průhledný válec, dvojité těsnění pístu, plynulý chod i u viskózních roztoků. Vhodná pro aplikaci léčiv, výplach a aspiraci. Latex-free.",
+    "params": {
+      "Objem": "10 ml",
+      "Konstrukce": "3-dílná",
+      "Konektor": "Luer Lock, koncentrický",
+      "Materiál": "Polypropylen",
+      "Bez latexu": "Ano",
+      "Bez PVC/DEHP": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 25,
+    "slug": "bd-plastipak-ll-20ml",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Plastipak™ stříkačka 20 ml Luer Lock E/T (3-dílná, bez jehly)",
+    "ref": "300613",
+    "image": "/images/products/bd-plastipak-20ml.jpg",
+    "description": "3-dílná injekční stříkačka 20 ml s excentrickou špičkou (Eccentric Tip) a Luer Lock konektorem. Vhodná pro aplikaci pod nízkým úhlem, větší objemy léčiv, výplachy a aspiraci. Vysoce průhledný válec s výraznou stupnicí, dvojité těsnění pístu pro přesnou aplikaci.",
+    "params": {
+      "Objem": "20 ml",
+      "Konstrukce": "3-dílná",
+      "Konektor": "Luer Lock, excentrický (E/T)",
+      "Materiál": "Polypropylen",
+      "Bez latexu": "Ano",
+      "Bez PVC/DEHP": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "120 ks/karton"
+    }
+  },
+  {
+    "id": 26,
+    "slug": "bd-plastipak-ll-50ml",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Plastipak™ stříkačka 50 ml Luer Lock (3-dílná, koncentrická)",
+    "ref": "300865",
+    "image": "/images/products/bd-plastipak-luer-lock.jpg",
+    "description": "Velkoobjemová 3-dílná injekční stříkačka 50 ml s Luer Lock koncentrickou špičkou. Vhodná pro infuzní pumpy, aplikaci velkých objemů, výplach ran a aspiraci. Robustní konstrukce, plynulý pohyb pístu i při dlouhých aplikacích. Latex-free, PVC-free.",
+    "params": {
+      "Objem": "50 ml",
+      "Konstrukce": "3-dílná",
+      "Konektor": "Luer Lock, koncentrický",
+      "Materiál": "Polypropylen",
+      "Bez latexu": "Ano",
+      "Bez PVC/DEHP": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "60 ks/krabice"
+    }
+  },
+  {
+    "id": 27,
+    "slug": "bd-plastipak-100ml-catheter",
+    "category": "injekce",
+    "categoryLabel": "Injekční technika",
+    "name": "BD Plastipak™ stříkačka 100 ml s katetrovou špičkou (3-dílná)",
+    "ref": "300605",
+    "image": "/images/products/bd-plastipak-luer-lock.jpg",
+    "description": "Velkoobjemová 3-dílná injekční stříkačka 100 ml s katetrovou špičkou (Catheter Tip) pro přímé napojení na katetr nebo sondu. Určená pro výplachy, aspiraci a aplikaci enterální výživy. Vysoce průhledný válec, dvojité těsnění pístu, plynulý chod. Latex-free.",
+    "params": {
+      "Objem": "100 ml",
+      "Konstrukce": "3-dílná",
+      "Konektor": "Catheter Tip (katetrová špička)",
+      "Materiál": "Polypropylen",
+      "Bez latexu": "Ano",
+      "Bez PVC/DEHP": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "25 ks/krabice"
+    }
   }
 ]
