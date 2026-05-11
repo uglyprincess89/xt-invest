@@ -167,7 +167,7 @@ export default function HomePage() {
             {[
               {
                 hvezdy: '★★★★★',
-                text: 'Hledali jsme někoho, s kým se dá normálně mluvit a nejsme pro něj jen další kód v databázi. V XT-Investu nám vyšli vstříc i v momentě, kdy jsme potřebovali narychlo změnit objednávku. Oceňuji, že když zavolám, zvedne mi to hned konkrétní člověk a ne automat.',
+                text: 'Hledali jsme někoho, s kým se dá normálně a lidsky mluvit a pro koho nejsme jen další kód v databázi. Oceňuji, že když zavolám, zvedne mi to hned konkrétní člověk a ne automat nebo nekonečné přepojování. Komunikace je vždy rychlá, příjemná a mám pocit, že se naše situace opravdu řeší individuálně.',
                 autor: 'Monika K.',
                 role: 'Provozní manažerka',
                 zarizeni: 'Soukromá klinika, Praha',
@@ -176,7 +176,7 @@ export default function HomePage() {
               },
               {
                 hvezdy: '★★★★★',
-                text: 'Na rovinu – nejdřív jsem měl trochu obavy z nové firmy, ale přístupem mě dostali. Komunikace je přehledná, rychlá a fakturace sedí do koruny. Je vidět, že se jako začínající e-shop fakt snaží a záleží jim na tom, abychom se vraceli. Za nás naprostá spokojenost s materiálem i dodáním.',
+                text: 'Nejdřív jsem měl trochu obavy z nové firmy, ale přístupem mě překvapili. Komunikace je jasná, rychlá a zboží je v pořádku. Je vidět, že se opravdu snaží a záleží jim na tom, abychom se vraceli. Za nás naprostá spokojenost s materiálem i dodáním.',
                 autor: 'Ing. Marek S.',
                 role: 'Vedoucí nákupu',
                 zarizeni: 'Laboratoř, Praha',
@@ -185,7 +185,7 @@ export default function HomePage() {
               },
               {
                 hvezdy: '★★★★☆',
-                text: 'Přešli jsme k nim od velkého distributora a je to znát hlavně na ochotě. Neřeší, jestli bereme paletu nebo jen pár drobností, přístup je pořád stejně férový. Ceny jsou nastavené rozumně a zatím nenastal jediný zádrhel, který by kluci z XT nevyřešili obratem.',
+                text: 'Přešli jsme k nim od velkého distributora a je to znát hlavně na ochotě. Neřeší, jestli bereme paletu nebo jen pár drobností, přístup je pořád stejně férový. Ceny jsou nastavené rozumně a zatím nenastal žádný problém, který by nebyl vyřešen obratem.',
                 autor: 'Patrik J.',
                 role: 'Provozní manažer',
                 zarizeni: 'Zdravotnické centrum, Brno',
