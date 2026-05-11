@@ -61,6 +61,13 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Disclaimer pro odborníky */}
+        <div className="border-t border-white/10 pt-4 pb-2 mb-1">
+          <p className="text-xs text-white/45 leading-relaxed text-center">
+            Tento web je určen výhradně odborníkům ve zdravotnictví a osobám oprávněným nakupovat zdravotnické prostředky.
+          </p>
+        </div>
+
         {/* Bottom */}
         <div className="border-t border-white/15 pt-5 flex flex-col sm:flex-row justify-between items-center gap-2">
           <span className="text-xs text-white/50">© {company.copyright} {company.name}. Všechna práva vyhrazena.</span>
