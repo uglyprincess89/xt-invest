@@ -7,12 +7,6 @@ export const metadata: Metadata = {
   description: seo.pages.oNas.description,
 }
 
-const recenze = [
-  { text: 'Spolehlivý dodavatel s výbornou reakcí na urgentní požadavky. Vždy doručí včas a materiál je originální.', autor: 'Vedoucí zásobování', zarizeni: 'Soukromé zdravotnické centrum, Praha', tag: 'Zdravotnické centrum', tagClass: 'bg-blue-50 text-navy' },
-  { text: 'Profesionální přístup, kvalitní materiál BD a příjemná komunikace. Dlouhodobá spolupráce na vysoké úrovni.', autor: 'Vedoucí laboratoře', zarizeni: 'Laboratoř, Praha', tag: 'Laboratoř', tagClass: 'bg-teal/10 text-teal-dark' },
-  { text: 'Oceňujeme flexibilitu a rychlost vyřízení. Materiál vždy originální, v perfektní kvalitě a za rozumné ceny.', autor: 'Provozní manažer', zarizeni: 'Klinika, Brno', tag: 'Klinika', tagClass: 'bg-[#e6eefb] text-[#044ED7]' },
-]
-
 const vyhody = [
   { icon: '🛡️', title: 'Autorizace BD', text: 'Oficiálně autorizovaný obchodní partner Becton Dickinson pro ČR. Všechny produkty 100% originální a certifikované.' },
   { icon: '🚚', title: 'Rychlé dodávky', text: 'Vlastní sklad + flexibilní logistika. Standardní dodávky do 24–48 hodin, urgentní požadavky operativně.' },
@@ -96,19 +90,21 @@ export default function ONasPage() {
         </div>
       </section>
 
-      {/* RECENZE */}
+      {/* KOMU SLOUŽÍME */}
       <section className="py-12 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-xl font-semibold text-navy mb-1">Důvěřují nám zdravotnická zařízení po celé ČR</h2>
+          <h2 className="text-xl font-semibold text-navy mb-1">Komu sloužíme</h2>
           <div className="w-8 h-0.5 bg-teal rounded mb-8" />
           <div className="grid md:grid-cols-3 gap-5">
-            {recenze.map((r, i) => (
-              <div key={i} className="bg-gray-50 border border-gray-200 rounded-xl p-5">
-                <div className="text-yellow-400 text-sm mb-3">★★★★★</div>
-                <p className="text-sm text-gray-700 leading-relaxed italic mb-4">„{r.text}"</p>
-                <p className="text-xs font-semibold text-navy">{r.autor}</p>
-                <p className="text-xs text-gray-400 mb-2">{r.zarizeni}</p>
-                <span className={`inline-block text-[10px] px-2 py-0.5 rounded-full font-medium ${r.tagClass}`}>{r.tag}</span>
+            {[
+              { icon: '🏥', title: 'Kliniky a zdravotnická centra', text: 'Pravidelné zásobování širokým sortimentem BD pro chirurgická i interní oddělení.' },
+              { icon: '🔬', title: 'Laboratoře', text: 'Vacutainer® odběrové systémy, speciální zkumavky pro molekulárně-diagnostické testy, PAXgene® stabilizační média.' },
+              { icon: '👨‍⚕️', title: 'Ordinace a ambulance', text: 'Menší flexibilní objednávky bez minimálních odběrů — injekční technika, jehly, stříkačky, lancety.' },
+            ].map(k => (
+              <div key={k.title} className="bg-gradient-to-br from-blue-50 to-white border border-gray-100 rounded-xl p-6">
+                <div className="text-3xl mb-3">{k.icon}</div>
+                <h3 className="text-sm font-semibold text-navy mb-2">{k.title}</h3>
+                <p className="text-xs text-gray-600 leading-relaxed">{k.text}</p>
               </div>
             ))}
           </div>

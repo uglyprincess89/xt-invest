@@ -42,7 +42,6 @@ export default function HomePage() {
           <div className="border-t border-white/20 pt-6 flex flex-wrap gap-x-8 gap-y-2">
             {[
               'Osobní B2B přístup & podpora',
-              'Sortiment průběžně rozšiřujeme',
               'Vlastní sklad v Praze',
               'Originální certifikované produkty',
             ].map(item => (
@@ -167,7 +166,7 @@ export default function HomePage() {
             {[
               {
                 hvezdy: '★★★★★',
-                text: 'Hledali jsme někoho, s kým se dá normálně a lidsky mluvit a pro koho nejsme jen další kód v databázi. Oceňuji, že když zavolám, zvedne mi to hned konkrétní člověk a ne automat nebo nekonečné přepojování. Komunikace je vždy rychlá, příjemná a mám pocit, že se naše situace opravdu řeší individuálně.',
+                text: 'Hledali jsme někoho, s kým se dá normálně a lidsky mluvit a pro koho nejsme jen další kód v databázi. Oceňuji, že když zavolám, zvedne mi to hned konkrétní člověk a ne automat nebo nekonečné přepojování. Komunikace je příjemná a rychlá. Mám pocit, že je to s námi řešeno individuálně.',
                 autor: 'Monika K.',
                 role: 'Provozní manažerka',
                 zarizeni: 'Soukromá klinika, Praha',

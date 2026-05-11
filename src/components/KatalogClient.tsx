@@ -129,30 +129,34 @@ export default function KatalogClient() {
           </div>
 
           {/* Filter tabs */}
-          <div className="flex flex-wrap gap-2 mb-5">
+          <div className="flex flex-wrap gap-1.5 md:gap-2 mb-5">
             <button
               onClick={() => setActiveCategory('vse')}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+              className={`px-3 md:px-4 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-medium transition-colors ${
                 activeCategory === 'vse'
                   ? 'bg-navy text-white shadow-sm'
                   : 'bg-white border border-gray-200 text-gray-600 hover:border-navy hover:text-navy'
               }`}
             >
-              Všechny kategorie ({products.length})
+              Vše ({products.length})
             </button>
-            {categories.map(cat => (
-              <button
-                key={cat.id}
-                onClick={() => setActiveCategory(cat.id)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  activeCategory === cat.id
-                    ? 'bg-navy text-white shadow-sm'
-                    : 'bg-white border border-gray-200 text-gray-600 hover:border-navy hover:text-navy'
-                }`}
-              >
-                {cat.label} ({products.filter(p => p.category === cat.id).length})
-              </button>
-            ))}
+            {categories.map(cat => {
+              const count = products.filter(p => p.category === cat.id).length
+              if (count === 0) return null
+              return (
+                <button
+                  key={cat.id}
+                  onClick={() => setActiveCategory(cat.id)}
+                  className={`px-3 md:px-4 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-medium transition-colors ${
+                    activeCategory === cat.id
+                      ? 'bg-navy text-white shadow-sm'
+                      : 'bg-white border border-gray-200 text-gray-600 hover:border-navy hover:text-navy'
+                  }`}
+                >
+                  {cat.label} ({count})
+                </button>
+              )
+            })}
           </div>
 
           {/* Počet výsledků */}
