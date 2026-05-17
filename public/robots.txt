@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+# Docčasně: katalog je během audit-verifikace REF kódů mimo index.
+# Po dokončení Sprint 1 odstranit níže uvedené Disallow.
+Disallow: /katalog/

@@ -15,7 +15,7 @@
       "Materiál": "Sklo",
       "Uzávěr": "Průhledný (konvenční)",
       "Certifikace": "CE IVD",
-      "Balení": "60 ks/případ"
+      "Balení": "60 ks/krabice"
     }
   },
   {
@@ -34,7 +34,7 @@
       "Materiál": "Sklo",
       "Uzávěr": "Průhledný (konvenční)",
       "Certifikace": "CE IVD",
-      "Balení": "60 ks/případ"
+      "Balení": "60 ks/krabice"
     }
   },
   {
@@ -159,7 +159,7 @@
       "Aditiva": "K2EDTA + inhibitory proteáz, esteráz a DPP-IV",
       "Centrifugace": "1 100–1 300 g / 10 minut",
       "Použití": "Pouze pro výzkum (RUO)",
-      "Balení": "100 ks/případ"
+      "Balení": "100 ks/krabice"
     }
   },
   {
@@ -265,11 +265,11 @@
     "name": "BD Discardit™ II stříkačka 2 ml (Luer Slip, bez jehly)",
     "ref": "300928",
     "image": "/images/products/bd-discardit-2ml.jpg",
-    "description": "Jednorázová 2-dílná sterilní injekční stříkačka pro injekci a aspiraci léčiv i tělních tekutin. Lubrikace v materiálu válce zajišťuje hladký pohyb pístu se sníženou třecí silou. Robustní retenční kroužek brání nechtěnému vytažení pístu při aspiraci. Průhledný válec s výraznou stupnicí pro přesné dávkování. Excentrický Luer Slip konektor umožňuje aplikaci pod nižším úhlem.",
+    "description": "Jednorázová 2-dílná sterilní injekční stříkačka pro injekci a aspiraci léčiv i tělních tekutin. Lubrikace v materiálu válce zajišťuje hladký pohyb pístu se sníženou třecí silou. Robustní retenční kroužek brání nechtěnému vytažení pístu při aspiraci. Průhledný válec s výraznou stupnicí pro přesné dávkování. Koncentrický Luer Slip konektor (u 2 ml varianty BD Discardit™ II).",
     "params": {
       "Objem": "2 ml",
       "Konstrukce": "2-dílná",
-      "Konektor": "Luer Slip, excentrický",
+      "Konektor": "Luer Slip, koncentrický",
       "Materiál": "Polypropylen / polyetylen",
       "Bez latexu": "Ano",
       "Bez PVC/DEHP": "Ano",
@@ -582,7 +582,7 @@
     "category": "odber",
     "categoryLabel": "Odběr krve",
     "name": "BD Vacutainer® Serum zkumavka 4,0 ml (silikonovaná, červený uzávěr)",
-    "ref": "369032",
+    "ref": "367812",
     "image": "/images/products/bd-vacutainer-serum-red.jpg",
     "description": "Vakuová odběrová zkumavka pro získání séra. Vnitřní povrch silikonovaný pro hladké uvolnění koagula a snížení adheze krevních elementů. Bez aktivátoru srážení — vhodná pro vyšetření, kde je požadováno pomalejší samovolné srážení. Plastový uzávěr BD Hemogard™ červený.",
     "params": {
@@ -626,7 +626,7 @@
       "Sterilita": "Sterilní",
       "Barva": "Modrá",
       "Použití": "Odběr z katetru / kanyly",
-      "Balení": "100 ks/karton, 1000 ks/případ"
+      "Balení": "100 ks/krabice, 1000 ks/karton"
     }
   },
   {
@@ -764,7 +764,7 @@
     "category": "odber",
     "categoryLabel": "Odběr krve",
     "name": "BD Vacutainer® Safety-Lok™ křidélkový set 23G × 3/4\", hadička 305 mm",
-    "ref": "367288",
+    "ref": "367283",
     "image": "/images/products/bd-vacutainer-safetylok.jpg",
     "description": "Bezpečnostní křidélkový odběrový set 23G s delší hadičkou (12\"). Translucentní integrovaný štít pro jednoruční aktivaci, předem připojený Luer adaptér pro připojení k držáku BD Vacutainer®.",
     "params": {
