@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 
 export async function POST(req: NextRequest) {
-  const { jmeno, organizace, email, telefon, zajem, zprava } = await req.json()
+  const { jmeno, organizace, ico, email, telefon, zajem, zprava, produktRef } = await req.json()
 
   if (!jmeno || !organizace || !email || !zajem) {
     return NextResponse.json({ error: 'Chybí povinná pole' }, { status: 400 })
@@ -17,17 +17,20 @@ export async function POST(req: NextRequest) {
       from: 'XT-Invest <noreply@contact.xt-invest.cz>',
       to: ['info@xt-invest.cz'],
       reply_to: email,
-      subject: `Poptávka: ${zajem} | ${jmeno}`,
+      subject: produktRef
+        ? `Poptávka REF ${produktRef} | ${organizace}`
+        : `Poptávka: ${zajem} | ${jmeno}`,
       text: `
 NOVÁ POPTÁVKA Z WEBU XT-INVEST.CZ
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Jméno:        ${jmeno}
 Organizace:   ${organizace}
+IČO:          ${ico || 'neuvedeno'}
 E-mail:       ${email}
 Telefon:      ${telefon || 'neuvedeno'}
 Zájem o:      ${zajem}
-
+${produktRef ? `BD REF:       ${produktRef}\n` : ''}
 Zpráva:
 ${zprava || '(bez zprávy)'}
 

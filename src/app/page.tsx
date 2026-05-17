@@ -27,23 +27,24 @@ export default function HomePage() {
             pro zdravotnická zařízení v České republice
           </h1>
           <p className="text-white/90 text-sm leading-relaxed max-w-xl mb-6">
-            Rychlé dodávky originální injekční techniky, Vacutainer™ systémů a laboratorních
-            řešení BD. Osobní přístup, férové B2B podmínky a spolehlivost, na kterou se můžete
-            spolehnout každý den.
+            <strong className="text-white">46 produktů BD Vacutainer®, PAXgene® a BD Microlance™</strong> — speciální
+            zkumavky, odběrový materiál a injekční technika. Originální zboží s plnou IFU dokumentací,
+            CE&nbsp;IVD certifikací a expedicí do 24–48 hodin po celé ČR.
           </p>
           <div className="flex flex-wrap gap-3 mb-12">
             <Link href="/katalog" className="bg-teal text-white font-semibold px-7 py-3.5 rounded-lg hover:bg-teal-dark transition-colors text-sm">
-              Prohlédnout katalog produktů BD
+              Prohlédnout 46 produktů BD →
             </Link>
             <Link href="/kontakt" className="bg-white/10 border border-white/50 text-white font-medium px-7 py-3.5 rounded-lg hover:bg-white/20 transition-colors text-sm">
-              Získat nabídku na míru
+              Vyžádat nabídku do 4 hodin
             </Link>
           </div>
           <div className="border-t border-white/20 pt-6 flex flex-wrap gap-x-8 gap-y-2">
             {[
-              'Originální certifikované produkty',
-              'Osobní B2B přístup & podpora',
-              'Vlastní sklad v Praze',
+              'Autorizace BD pro ČR',
+              'CE IVD / IFU dokumentace ke každému produktu',
+              'Vlastní lékárna v Praze',
+              'Expedice do 24–48 hodin',
             ].map(item => (
               <span key={item} className="flex items-center gap-2 text-sm text-white/90">
                 <span className="w-1.5 h-1.5 rounded-full bg-teal shrink-0" />{item}

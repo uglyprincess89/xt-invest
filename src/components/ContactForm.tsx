@@ -13,10 +13,11 @@ type Status = 'idle' | 'loading' | 'success' | 'error'
 
 interface ContactFormProps {
   produktNazev?: string  // pokud je vyplněno, jde o poptávku konkrétního produktu
+  produktRef?: string    // BD REF kód produktu — předvyplní se do zprávy
   onClose?: () => void   // pokud je vyplněno, zobrazí se tlačítko Zavřít (modal režim)
 }
 
-export default function ContactForm({ produktNazev, onClose }: ContactFormProps) {
+export default function ContactForm({ produktNazev, produktRef, onClose }: ContactFormProps) {
   const [status, setStatus] = useState<Status>('idle')
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -27,16 +28,18 @@ export default function ContactForm({ produktNazev, onClose }: ContactFormProps)
     const data = new FormData(form)
 
     const zajem = produktNazev
-      ? `Poptávka produktu: ${produktNazev}`
+      ? `Poptávka produktu: ${produktNazev}${produktRef ? ` (REF ${produktRef})` : ''}`
       : data.get('zajem') as string
 
     const payload = {
       jmeno:      data.get('jmeno') as string,
       organizace: data.get('organizace') as string,
+      ico:        data.get('ico') as string,
       email:      data.get('email') as string,
       telefon:    data.get('telefon') as string,
       zajem,
       zprava:     data.get('zprava') as string,
+      produktRef,
     }
 
     try {
@@ -110,6 +113,17 @@ export default function ContactForm({ produktNazev, onClose }: ContactFormProps)
               type="text"
               required
               placeholder="Nemocnice Praha s.r.o."
+              className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-navy focus:outline-none focus:border-teal"
+            />
+          </div>
+          <div>
+            <label className="block text-xs font-medium text-gray-500 mb-1.5">IČO</label>
+            <input
+              name="ico"
+              type="text"
+              inputMode="numeric"
+              pattern="[0-9]{8}"
+              placeholder="12345678"
               className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-navy focus:outline-none focus:border-teal"
             />
           </div>
