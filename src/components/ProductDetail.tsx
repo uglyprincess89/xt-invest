@@ -42,7 +42,12 @@ export default function ProductDetail({ product }: { product: Product }) {
         <div>
           <p className="text-xs text-teal-dark uppercase tracking-widest font-medium mb-2">{product.categoryLabel}</p>
           <h1 className="text-xl font-medium text-navy mb-2 leading-snug">{product.name}</h1>
-          <p className="text-sm text-gray-400 mb-4">REF: {product.ref}</p>
+          <div className="flex items-center gap-2 mb-4">
+            <span className="inline-block bg-navy/5 border border-navy/10 text-navy text-xs font-mono font-semibold px-2 py-1 rounded">
+              REF {product.ref}
+            </span>
+            <span className="text-xs text-gray-400">BD katalogové číslo</span>
+          </div>
           <p className="text-sm text-gray-600 leading-relaxed mb-6">{product.description}</p>
 
           <div className="border border-gray-200 rounded-xl overflow-hidden mb-6">
@@ -65,14 +70,14 @@ export default function ProductDetail({ product }: { product: Product }) {
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
             </svg>
-            Dostupnost ověříme po vaší poptávce
+            Dostupnost a cenu potvrdíme do 4 hodin v pracovní době
           </div>
 
           <button
             onClick={() => setModalOpen(true)}
-            className="block w-full text-center bg-teal text-white font-medium py-3.5 rounded-xl hover:bg-teal-dark transition-colors text-sm"
+            className="block w-full text-center bg-teal text-white font-semibold py-3.5 rounded-xl hover:bg-teal-dark transition-colors text-sm"
           >
-            Poptat cenu tohoto produktu
+            Vyžádat nabídku (REF&nbsp;{product.ref}) →
           </button>
         </div>
       </div>
@@ -90,6 +95,7 @@ export default function ProductDetail({ product }: { product: Product }) {
           <div className="w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-xl">
             <ContactForm
               produktNazev={product.name}
+              produktRef={product.ref}
               onClose={() => setModalOpen(false)}
             />
           </div>

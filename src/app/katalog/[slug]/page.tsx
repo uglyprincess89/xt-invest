@@ -17,6 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${product.name} | XT-Invest`,
     description: `${product.description} REF: ${product.ref}.`,
+    robots: { index: false, follow: true },
   }
 }
 

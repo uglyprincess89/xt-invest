@@ -14,7 +14,8 @@
       "Aditiva": "Citrát sodný 0,45 ml 0,1 M + Ficoll™ gel 1,0 ml",
       "Materiál": "Sklo",
       "Uzávěr": "Průhledný (konvenční)",
-      "Balení": "60 ks/případ"
+      "Certifikace": "CE IVD",
+      "Balení": "60 ks/krabice"
     }
   },
   {
@@ -32,7 +33,8 @@
       "Aditiva": "Citrát sodný 1,0 ml 0,1 M + Ficoll™ gel 2,0 ml",
       "Materiál": "Sklo",
       "Uzávěr": "Průhledný (konvenční)",
-      "Balení": "60 ks/případ"
+      "Certifikace": "CE IVD",
+      "Balení": "60 ks/krabice"
     }
   },
   {
@@ -41,7 +43,7 @@
     "category": "specialni",
     "categoryLabel": "Speciální zkumavky",
     "name": "BD Vacutainer® SST™ II Advance 5 ml (plastový uzávěr)",
-    "ref": "362783",
+    "ref": "367955",
     "image": "/images/products/bd-vacutainer-sst2-5ml.jpg",
     "description": "Sérum separační zkumavka SST II Advance 5 ml s aktivátorem srážení a separačním gelem. Plastový uzávěr BD Hemogard™. Pro biochemická vyšetření séra.",
     "params": {
@@ -157,7 +159,7 @@
       "Aditiva": "K2EDTA + inhibitory proteáz, esteráz a DPP-IV",
       "Centrifugace": "1 100–1 300 g / 10 minut",
       "Použití": "Pouze pro výzkum (RUO)",
-      "Balení": "100 ks/případ"
+      "Balení": "100 ks/krabice"
     }
   },
   {
@@ -460,14 +462,14 @@
     "slug": "bd-plastipak-ll-20ml",
     "category": "injekce",
     "categoryLabel": "Injekční technika",
-    "name": "BD Plastipak™ stříkačka 20 ml Luer Lock E/T (3-dílná, bez jehly)",
+    "name": "BD Plastipak™ stříkačka 20 ml Luer Slip E/T (3-dílná, bez jehly)",
     "ref": "300613",
     "image": "/images/products/bd-plastipak-20ml.jpg",
-    "description": "3-dílná injekční stříkačka 20 ml s excentrickou špičkou (Eccentric Tip) a Luer Lock konektorem. Vhodná pro aplikaci pod nízkým úhlem, větší objemy léčiv, výplachy a aspiraci. Vysoce průhledný válec s výraznou stupnicí, dvojité těsnění pístu pro přesnou aplikaci.",
+    "description": "3-dílná injekční stříkačka 20 ml s excentrickou špičkou (Eccentric Tip) a Luer Slip konektorem. Excentrická špička umožňuje aplikaci pod nízkým úhlem v blízkosti kůže. Vhodná pro větší objemy léčiv, výplachy ran a aspiraci. Vysoce průhledný válec s výraznou stupnicí, dvojité těsnění pístu pro přesnou aplikaci.",
     "params": {
       "Objem": "20 ml",
       "Konstrukce": "3-dílná",
-      "Konektor": "Luer Lock, excentrický (E/T)",
+      "Konektor": "Luer Slip, excentrický (E/T)",
       "Materiál": "Polypropylen",
       "Bez latexu": "Ano",
       "Bez PVC/DEHP": "Ano",
@@ -579,17 +581,17 @@
     "slug": "bd-vacutainer-serum-4ml-silicone",
     "category": "odber",
     "categoryLabel": "Odběr krve",
-    "name": "BD Vacutainer® Serum zkumavka 4,0 ml (silikonovaná, červený uzávěr)",
+    "name": "BD Vacutainer® Serum zkumavka 4,0 ml (aktivátor srážení, červený uzávěr)",
     "ref": "369032",
     "image": "/images/products/bd-vacutainer-serum-red.jpg",
-    "description": "Vakuová odběrová zkumavka pro získání séra. Vnitřní povrch silikonovaný pro hladké uvolnění koagula a snížení adheze krevních elementů. Bez aktivátoru srážení — vhodná pro vyšetření, kde je požadováno pomalejší samovolné srážení. Plastový uzávěr BD Hemogard™ červený.",
+    "description": "Vakuová odběrová zkumavka pro získání séra. Vnitřní povrch potažen mikronizovanými silikovými částicemi jako aktivátor srážení (CAT — Clot Activator Tube) pro standardizované a rychlé vytvoření koagula (doporučená minimální koagulační doba 60 minut). Bez separačního gelu. Plastový uzávěr BD Hemogard™ červený. Pro biochemická, sérologická a imunologická vyšetření.",
     "params": {
       "Objem odběru": "4,0 ml",
       "Rozměr": "13 × 75 mm",
-      "Aditivum": "Bez aditiv (silikonovaný povrch)",
+      "Aditivum": "Silika (aktivátor srážení)",
       "Materiál": "PET",
       "Uzávěr": "BD Hemogard™ červený",
-      "Použití": "Sérologie, biochemie",
+      "Použití": "Biochemie, sérologie, imunologie",
       "Balení": "100 ks/krabice"
     }
   },
@@ -624,7 +626,7 @@
       "Sterilita": "Sterilní",
       "Barva": "Modrá",
       "Použití": "Odběr z katetru / kanyly",
-      "Balení": "100 ks/karton, 1000 ks/případ"
+      "Balení": "100 ks/krabice, 1000 ks/karton"
     }
   },
   {
@@ -837,18 +839,19 @@
     "slug": "bd-vacutainer-ultratouch-21g",
     "category": "odber",
     "categoryLabel": "Odběr krve",
-    "name": "BD Vacutainer® UltraTouch™ Push Button set 21G s předmontovaným držákem",
+    "name": "BD Vacutainer® UltraTouch™ Push Button set 21G × 3/4\", hadička 178 mm",
     "ref": "367393",
     "image": "/images/products/bd-vacutainer-ultratouch.jpg",
-    "description": "Nejnovější generace BD Vacutainer® odběrového setu s patentovanou PentaPoint™ 5-bevel technologií zkosení hrotu. Studie ukazují snížení penetračních sil až o 32 % oproti konkurenčním setům — komfortnější vpich pro pacienta. RightGauge™ Ultra-Thin Wall technologie umožňuje použít jemnější gauge bez ztráty průtoku (zlepšení doby plnění zkumavky až o 50 %). Push-button retrakce + předmontovaný držák pro maximální komfort a bezpečnost.",
+    "description": "Nejnovější generace BD Vacutainer® odběrového setu s patentovanou PentaPoint™ 5-bevel technologií zkosení hrotu. Studie ukazují snížení penetračních sil až o 32 % oproti konkurenčním setům — komfortnější vpich pro pacienta. RightGauge™ Ultra-Thin Wall technologie umožňuje použít jemnější gauge bez ztráty průtoku (zlepšení doby plnění zkumavky až o 50 %). Push-button retrakce jehly pro maximální bezpečnost zdravotnického personálu. Předem připojený Luer adaptér.",
     "params": {
       "Gauge": "21G (0,8 mm)",
       "Délka jehly": "3/4\" (19 mm)",
+      "Délka hadičky": "7\" (178 mm)",
       "Technologie": "PentaPoint™ 5-bevel + RightGauge™",
       "Aktivace": "Push-button, in-vein retrakce",
-      "Držák": "Předem připevněný",
+      "Luer adaptér": "Předem připojený",
       "Bez latexu": "Ano",
-      "Balení": "Individuální sterilní obal"
+      "Balení": "50 ks/krabice, 200 ks/karton"
     }
   },
   {
@@ -856,18 +859,19 @@
     "slug": "bd-microtainer-quikheel-teal",
     "category": "odber",
     "categoryLabel": "Odběr krve",
-    "name": "BD Microtainer® Quikheel™ Lanceta Teal (kojenecká, 1,0 × 2,5 mm)",
+    "name": "BD Microtainer® Quikheel™ Lanceta — Infant Teal (1,0 × 2,5 mm)",
     "ref": "368103",
     "image": "/images/products/bd-microtainer-quikheel.jpg",
-    "description": "Bezpečnostní incizní lanceta pro odběr kapilární krve z patičky novorozenců a kojenců. Jednoruční aktivace uvolní chirurgické ostří, které provede přesný a konzistentní řez a okamžitě se zatáhne zpět do pouzdra. Tvarovaný kontaktní povrch a ergonomický úchop pro stabilní polohování. Verze Teal (modrozelená) je určena pro novorozence s nízkou porodní hmotností (1,0–1,5 kg) a donošené kojence s nižším požadavkem na průtok krve.",
+    "description": "Bezpečnostní incizní lanceta pro odběr kapilární krve z patičky novorozenců a kojenců. Po stisknutí tlačítka extra tenké ocelové ostří provede přesný a konzistentní řez a okamžitě se zatáhne zpět do pouzdra (hloubka řezu je předem nastavena pro ochranu proti infekci kostí). Trvale chráněné ostří vylučuje riziko poranění nebo opakovaného použití. Verze Teal (modrozelená) — řez 1,0 × 2,5 mm — je určena pro donošené novorozence a kojence. Pro nedonošené novorozence (preemie) je určena verze Pink REF 368102 (řez 0,85 × 1,75 mm).",
     "params": {
-      "Hloubka řezu": "1,0 mm",
-      "Délka řezu": "2,5 mm",
-      "Cílová skupina": "Novorozenci 1,0–1,5 kg, donošení kojenci",
+      "Hloubka řezu": "1,00 mm",
+      "Šířka řezu": "2,50 mm",
+      "Typ ostří": "Blade (čepel)",
+      "Cílová skupina": "Donošení novorozenci a kojenci",
       "Barevný kód": "Teal (modrozelená)",
-      "Aktivace": "Jednoruční, automatická retrakce",
-      "Sterilizace": "Sterilní, jednorázová",
-      "Balení": "50 ks/krabice"
+      "Aktivace": "Stisknutí tlačítka, automatická retrakce ostří",
+      "Sterilizace": "Sterilní, jednorázová (individuální blistr)",
+      "Balení": "50 ks/krabice, 200 ks/karton"
     }
   }
 ]
