@@ -19,7 +19,7 @@ export default function Navbar() {
     <header className="bg-navy sticky top-0 z-50 shadow-md w-full overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-3">
 
-        <div className="flex items-center gap-3 shrink-0">
+        <div className="flex items-center gap-2 shrink-0">
           {/* Logo */}
           <Link href="/" className="flex items-center" onClick={() => setMenuOpen(false)} aria-label="XT-Invest — domů">
             <Image
@@ -31,12 +31,6 @@ export default function Navbar() {
               priority
             />
           </Link>
-
-          {/* Tagline — viditelný na desktopu, brand frame autorizovaného partnera BD */}
-          <span className="hidden lg:flex flex-col leading-tight border-l border-white/20 pl-3 max-w-[200px]">
-            <span className="text-[10px] uppercase tracking-wider text-teal font-semibold">Autorizovaný obchodní partner</span>
-            <span className="text-xs text-white/80">BD pro Českou republiku</span>
-          </span>
 
           {/* Tlačítko Domů */}
           <Link

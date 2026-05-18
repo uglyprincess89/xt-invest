@@ -26,10 +26,10 @@ export default function CookieBanner() {
     <div className="fixed bottom-0 left-0 right-0 z-50 bg-navy-dark border-t border-white/10 shadow-2xl">
       <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-start sm:items-center gap-4">
         <p className="text-sm text-white/80 leading-relaxed flex-1">
-          Tento web používá pouze technicky nezbytné cookies zajišťující jeho správnou funkci.
-          Žádné sledovací ani marketingové cookies nepoužíváme.{' '}
+          Tento web <strong className="text-white">nepoužívá tracking ani marketingové cookies</strong>.
+          Ukládáme pouze vaši volbu pro tento banner (localStorage), což je nutné pro jeho funkci.{' '}
           <span className="text-white/60 text-xs">
-            Používáním webu souhlasíte s jejich použitím.
+            Pro anonymní statistiky návštěvnosti používáme privacy-friendly Vercel Analytics bez cookies.
           </span>
         </p>
         <div className="flex gap-3 shrink-0">

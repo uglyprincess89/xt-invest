@@ -36,12 +36,12 @@ export default function HomePage() {
               Prohlédnout 46 produktů BD →
             </Link>
             <Link href="/kontakt" className="bg-white/10 border border-white/50 text-white font-medium px-7 py-3.5 rounded-lg hover:bg-white/20 transition-colors text-sm">
-              Vyžádat nabídku do 4 hodin
+              Získat nabídku na míru
             </Link>
           </div>
           <div className="border-t border-white/20 pt-6 flex flex-wrap gap-x-8 gap-y-2">
             {[
-              'Autorizace BD pro ČR',
+              'Originální BD produkty',
               'CE IVD / IFU dokumentace ke každému produktu',
               'Vlastní lékárna v Praze',
               'Expedice do 24–48 hodin',
@@ -64,7 +64,7 @@ export default function HomePage() {
             <strong className="text-navy">Becton, Dickinson and Company</strong> — světový lídr v oblasti zdravotnických pomůcek a diagnostiky
           </p>
           <span className="bg-[#e6eefb] text-[#044ED7] text-xs font-semibold px-3 py-1 rounded-full border border-[#044ED7]/30 shrink-0">
-            Autorizovaný obchodní partner
+            Originální distribuce BD
           </span>
         </div>
       </div>
@@ -80,7 +80,7 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
-              { icon: '🛡️', bg: 'bg-[#e6eefb]', title: 'Originální produkty BD', text: 'Jako oficiálně autorizovaný obchodní partner BD garantujeme 100% pravost a plnou certifikaci všech produktů.' },
+              { icon: '🛡️', bg: 'bg-[#e6eefb]', title: 'Originální produkty BD', text: 'Žádné šedé zboží. Každý produkt s plnou BD dokumentací, CE IVD certifikací a sledovatelností šarže.' },
               { icon: '🚚', bg: 'bg-teal/10', title: 'Rychlé dodávky', text: 'Vlastní sklad + flexibilní logistika. Standardní dodávky do 24–48 hodin, urgentní požadavky řešíme operativně.' },
               { icon: '🤝', bg: 'bg-navy/10', title: 'Osobní přístup', text: 'Každý klient má stálého obchodního zástupce. Individuální podmínky a rychlé reakce.' },
               { icon: '🔬', bg: 'bg-teal/10', title: 'Komplexní řešení', text: 'Široký sortiment BD — od injekční techniky a Vacutainer™ odběrových systémů až po laboratorní řešení.' },
@@ -125,7 +125,7 @@ export default function HomePage() {
           <div>
             <p className="text-xs font-semibold text-navy uppercase tracking-widest mb-3">O společnosti</p>
             <h2 className="text-xl font-semibold text-navy mb-4 leading-snug">
-              {company.name} —<br />autorizovaný obchodní partner BD pro ČR
+              {company.name} —<br />distribuce zdravotnického materiálu BD
             </h2>
             <p className="text-gray-700 text-sm leading-relaxed mb-4">
               Jsme dynamická česká společnost specializující se na distribuci zdravotnického materiálu
@@ -143,7 +143,7 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             {[
-              { icon: '📦', num: 'BD', label: 'autorizovaný partner' },
+              { icon: '📦', num: 'BD', label: 'partner pro ČR' },
               { icon: '✓', num: '100%', label: 'originální produkty' },
               { icon: '🤝', num: 'B2B', label: 'individuální podmínky' },
               { icon: '📍', num: 'ČR', label: 'celostátní pokrytí' },
