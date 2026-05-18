@@ -70,14 +70,14 @@ export default function ProductDetail({ product }: { product: Product }) {
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
             </svg>
-            Dostupnost a cenu potvrdíme do 4 hodin v pracovní době
+            Dostupnost ověříme po vaší poptávce
           </div>
 
           <button
             onClick={() => setModalOpen(true)}
             className="block w-full text-center bg-teal text-white font-semibold py-3.5 rounded-xl hover:bg-teal-dark transition-colors text-sm"
           >
-            Vyžádat nabídku (REF&nbsp;{product.ref}) →
+            Poptat cenu (REF&nbsp;{product.ref}) →
           </button>
         </div>
       </div>
