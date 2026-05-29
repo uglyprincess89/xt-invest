@@ -22,18 +22,24 @@ export default function HomePage() {
           <circle cx="80" cy="380" r="200" fill="none" stroke="white" strokeWidth="42"/>
         </svg>
         <div className="relative max-w-7xl mx-auto px-6 py-10">
+          <div className="inline-flex items-center gap-2 bg-teal/15 border border-teal/40 text-teal-light text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full mb-5">
+            <svg className="w-3.5 h-3.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+            </svg>
+            Pouze pro zdravotnické odborníky
+          </div>
           <h1 className="text-2xl md:text-3xl font-semibold leading-snug mb-4 max-w-2xl">
             Autorizovaný obchodní partner <em className="not-italic text-teal">BD</em><br />
             pro zdravotnická zařízení v České republice
           </h1>
           <p className="text-white/90 text-sm leading-relaxed max-w-xl mb-6">
-            <strong className="text-white">46 produktů BD Vacutainer®, PAXgene® a BD Microlance™</strong> — speciální
-            zkumavky, odběrový materiál a injekční technika. Originální zboží s plnou IFU dokumentací,
-            CE&nbsp;IVD certifikací a expedicí do 24–48 hodin po celé ČR.
+            <strong className="text-white">Kompletní portfolio BD — Vacutainer®, PAXgene® a BD Microlance™</strong> — speciální
+            zkumavky, odběrový materiál a injekční technika. Originální zboží s plnou IFU dokumentací
+            a CE&nbsp;IVD certifikací. Skladové položky expedujeme obratem, ostatní zajistíme přímo od BD.
           </p>
           <div className="flex flex-wrap gap-3 mb-12">
             <Link href="/katalog" className="bg-teal text-white font-semibold px-7 py-3.5 rounded-lg hover:bg-teal-dark transition-colors text-sm">
-              Prohlédnout 46 produktů BD →
+              Prohlédnout portfolio BD →
             </Link>
             <Link href="/kontakt" className="bg-white/10 border border-white/50 text-white font-medium px-7 py-3.5 rounded-lg hover:bg-white/20 transition-colors text-sm">
               Získat nabídku na míru
@@ -44,7 +50,7 @@ export default function HomePage() {
               'Originální BD produkty',
               'CE IVD / IFU dokumentace ke každému produktu',
               'Vlastní lékárna v Praze',
-              'Expedice do 24–48 hodin',
+              'Skladové položky obratem, ostatní na objednávku',
             ].map(item => (
               <span key={item} className="flex items-center gap-2 text-sm text-white/90">
                 <span className="w-1.5 h-1.5 rounded-full bg-teal shrink-0" />{item}
@@ -81,7 +87,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
               { icon: '🛡️', bg: 'bg-[#e6eefb]', title: 'Originální produkty BD', text: 'Žádné šedé zboží. Každý produkt s plnou BD dokumentací, CE IVD certifikací a sledovatelností šarže.' },
-              { icon: '🚚', bg: 'bg-teal/10', title: 'Rychlé dodávky', text: 'Vlastní sklad + flexibilní logistika. Standardní dodávky do 24–48 hodin, urgentní požadavky řešíme operativně.' },
+              { icon: '🚚', bg: 'bg-teal/10', title: 'Flexibilní dodávky', text: 'Běžně poptávaný sortiment držíme skladem a expedujeme obratem. Ostatní produkty objednáváme přímo u BD — termín dodání potvrdíme po obdržení poptávky.' },
               { icon: '🤝', bg: 'bg-navy/10', title: 'Osobní přístup', text: 'Každý klient má stálého obchodního zástupce. Individuální podmínky a rychlé reakce.' },
               { icon: '🔬', bg: 'bg-teal/10', title: 'Komplexní řešení', text: 'Široký sortiment BD — od injekční techniky a Vacutainer™ odběrových systémů až po laboratorní řešení.' },
             ].map(card => (

@@ -38,8 +38,12 @@ export default function KontaktPage() {
               <div key={label} className="flex justify-between items-start py-2.5 border-b border-gray-50 text-sm last:border-0">
                 <span className="text-gray-400 text-xs w-20 shrink-0 pt-0.5">{label}</span>
                 <span className="font-medium text-navy text-right">
-                  {label === 'Telefon' ? <a href={`tel:${value}`} className="text-teal-dark hover:underline">{value}</a>
-                  : label === 'E-mail' ? <a href={`mailto:${value}`} className="text-teal-dark hover:underline">{value}</a>
+                  {label === 'Telefon' ? (
+                    <>
+                      <a href={`tel:${value}`} className="text-teal-dark hover:underline">{value}</a>
+                      <span className="block text-xs text-gray-400 font-normal mt-0.5">{company.kontakt.telefonProvoz}</span>
+                    </>
+                  ) : label === 'E-mail' ? <a href={`mailto:${value}`} className="text-teal-dark hover:underline">{value}</a>
                   : value}
                 </span>
               </div>

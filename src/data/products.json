@@ -226,7 +226,7 @@
     "categoryLabel": "Injekční technika",
     "name": "BD Microlance™ 3 jehla 21G × 1 1/2\" (0,8 × 40 mm)",
     "ref": "304432",
-    "image": "/images/products/bd-microlance-21g.jpg",
+    "image": "/images/products/bd-microlance-3.jpg",
     "description": "Sterilní jednorázová injekční jehla 21G s tenkostěnnou kanylou pro vysoký průtok. Barevně kódována dle ISO 6009 (zelená). Vhodná pro intramuskulární aplikaci, aspiraci viskóznějších léčiv a běžný odběr krve. Hrot broušený ve třech úhlech.",
     "params": {
       "Gauge": "21G (0,8 mm)",
@@ -424,7 +424,7 @@
     "categoryLabel": "Injekční technika",
     "name": "BD Plastipak™ stříkačka 5 ml Luer Lock (3-dílná, bez jehly)",
     "ref": "309649",
-    "image": "/images/products/bd-plastipak-luer-lock.jpg",
+    "image": "/images/products/bd-plastipak-5ml-ll.jpg",
     "description": "Precizní 3-dílná injekční stříkačka 5 ml s Luer Lock konektorem pro bezpečné, netěsnící připojení jehly nebo katetru. Vysoce průhledný válec a dvojité těsnění pístu zajišťují přesnou aplikaci a snadné odečítání objemu. Plynulý pohyb pístu i u viskóznějších roztoků. Latex-free, PVC-free konstrukce.",
     "params": {
       "Objem": "5 ml",
@@ -484,7 +484,7 @@
     "categoryLabel": "Injekční technika",
     "name": "BD Plastipak™ stříkačka 50 ml Luer Lock (3-dílná, koncentrická)",
     "ref": "300865",
-    "image": "/images/products/bd-plastipak-luer-lock.jpg",
+    "image": "/images/products/bd-plastipak-50ml-ll.jpg",
     "description": "Velkoobjemová 3-dílná injekční stříkačka 50 ml s Luer Lock koncentrickou špičkou. Vhodná pro infuzní pumpy, aplikaci velkých objemů, výplach ran a aspiraci. Robustní konstrukce, plynulý pohyb pístu i při dlouhých aplikacích. Latex-free, PVC-free.",
     "params": {
       "Objem": "50 ml",
@@ -504,7 +504,7 @@
     "categoryLabel": "Injekční technika",
     "name": "BD Plastipak™ stříkačka 100 ml s katetrovou špičkou (3-dílná)",
     "ref": "300605",
-    "image": "/images/products/bd-plastipak-luer-lock.jpg",
+    "image": "/images/products/bd-plastipak-100ml-catheter.jpg",
     "description": "Velkoobjemová 3-dílná injekční stříkačka 100 ml s katetrovou špičkou (Catheter Tip) pro přímé napojení na katetr nebo sondu. Určená pro výplachy, aspiraci a aplikaci enterální výživy. Vysoce průhledný válec, dvojité těsnění pístu, plynulý chod. Latex-free.",
     "params": {
       "Objem": "100 ml",
