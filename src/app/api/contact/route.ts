@@ -7,6 +7,13 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Chybí povinná pole' }, { status: 400 })
   }
 
+  // Server-side validace formátu e-mailu (chrání reply_to v Resendu)
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  if (typeof email !== 'string' || email.length > 254 || !emailRegex.test(email.trim())) {
+    return NextResponse.json({ error: 'Neplatný formát e-mailu' }, { status: 400 })
+  }
+  const safeEmail = email.trim()
+
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: {
@@ -16,7 +23,7 @@ export async function POST(req: NextRequest) {
     body: JSON.stringify({
       from: 'XT-Invest <noreply@contact.xt-invest.cz>',
       to: ['info@xt-invest.cz'],
-      reply_to: email,
+      reply_to: safeEmail,
       subject: produktRef
         ? `Poptávka REF ${produktRef} | ${organizace}`
         : `Poptávka: ${zajem} | ${jmeno}`,
@@ -27,7 +34,7 @@ NOVÁ POPTÁVKA Z WEBU XT-INVEST.CZ
 Jméno:        ${jmeno}
 Organizace:   ${organizace}
 IČO:          ${ico || 'neuvedeno'}
-E-mail:       ${email}
+E-mail:       ${safeEmail}
 Telefon:      ${telefon || 'neuvedeno'}
 Zájem o:      ${zajem}
 ${produktRef ? `BD REF:       ${produktRef}\n` : ''}

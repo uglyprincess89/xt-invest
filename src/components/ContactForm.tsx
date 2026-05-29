@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import Link from 'next/link'
 
 const zajemOptions = [
   'Produkty BD — injekční technika',
@@ -174,6 +175,23 @@ export default function ContactForm({ produktNazev, produktRef, onClose }: Conta
           />
         </div>
 
+        <label className="flex items-start gap-2.5 cursor-pointer select-none">
+          <input
+            name="gdprConsent"
+            type="checkbox"
+            required
+            className="mt-0.5 w-4 h-4 shrink-0 accent-teal cursor-pointer"
+          />
+          <span className="text-xs text-gray-500 leading-relaxed">
+            Souhlasím se zpracováním osobních údajů pro vyřízení této poptávky.
+            Údaje zpracováváme v souladu s{' '}
+            <Link href="/ochrana-osobnich-udaju" className="text-teal-dark underline hover:text-teal" target="_blank" rel="noopener">
+              Ochranou osobních údajů
+            </Link>
+            . *
+          </span>
+        </label>
+
         <div className="flex items-start gap-4">
           <button
             type="submit"
@@ -183,7 +201,7 @@ export default function ContactForm({ produktNazev, produktRef, onClose }: Conta
             {status === 'loading' ? 'Odesílám...' : 'Odeslat poptávku'}
           </button>
           <p className="text-xs text-gray-400 pt-1">
-            * Povinná pole. Vaše údaje zpracováváme v souladu s GDPR.
+            * Povinná pole.
           </p>
         </div>
       </form>

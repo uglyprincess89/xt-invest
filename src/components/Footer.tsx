@@ -22,7 +22,18 @@ export default function Footer() {
             </p>
             {/* Firemní údaje — světlejší pro čitelnost */}
             <div className="mt-3 text-xs text-white/60 leading-relaxed space-y-0.5">
-              <p>IČO: {company.ico} | DIČ: {company.dic}</p>
+              <p>
+                IČO: {company.ico}{' '}
+                <a
+                  href={`https://ares.gov.cz/ekonomicke-subjekty?ico=${company.ico}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/45 hover:text-teal underline underline-offset-2 transition-colors"
+                >
+                  (ověřit v ARES)
+                </a>{' '}
+                | DIČ: {company.dic}
+              </p>
               <p>{company.sidlo.ulice}, {company.sidlo.cast}</p>
               <p>{company.sidlo.psc} {company.sidlo.mesto}</p>
             </div>
@@ -31,9 +42,10 @@ export default function Footer() {
           {/* Kontakt */}
           <div>
             <h4 className="text-white font-semibold text-sm mb-3">Kontakt</h4>
-            <a href={`tel:${company.kontakt.telefon}`} className="block text-sm text-white/80 hover:text-teal transition-colors mb-1.5 font-medium">
+            <a href={`tel:${company.kontakt.telefon}`} className="block text-sm text-white/80 hover:text-teal transition-colors mb-0.5 font-medium">
               {company.kontakt.telefon}
             </a>
+            <p className="text-xs text-white/55 mb-3">{company.kontakt.telefonProvoz}</p>
             <a href={`mailto:${company.kontakt.email}`} className="block text-sm text-white/80 hover:text-teal transition-colors mb-4">
               {company.kontakt.email}
             </a>
@@ -69,9 +81,14 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-white/15 pt-5 flex flex-col sm:flex-row justify-between items-center gap-2">
+        <div className="border-t border-white/15 pt-5 flex flex-col sm:flex-row justify-between items-center gap-3">
           <span className="text-xs text-white/50">© {company.copyright} {company.name}. Všechna práva vyhrazena.</span>
-          <span className="text-xs text-teal font-medium">{company.kontakt.web}</span>
+          <div className="flex items-center gap-4">
+            <Link href="/ochrana-osobnich-udaju" className="text-xs text-white/60 hover:text-teal transition-colors">
+              Ochrana osobních údajů
+            </Link>
+            <span className="text-xs text-teal font-medium">{company.kontakt.web}</span>
+          </div>
         </div>
       </div>
     </footer>

@@ -30,7 +30,7 @@ export default function ProductDetail({ product }: { product: Product }) {
         <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl overflow-hidden flex items-center justify-center h-80 relative">
           <Image
             src={product.image}
-            alt={product.name}
+            alt={`${product.name} — BD ${product.categoryLabel}, REF ${product.ref}`}
             fill
             className="object-contain p-8"
             sizes="(max-width: 768px) 100vw, 50vw"

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const vyhody = [
   { icon: '🛡️', title: 'Autorizace BD', text: 'Oficiálně autorizovaný obchodní partner Becton Dickinson pro ČR. Všechny produkty 100% originální a certifikované.' },
-  { icon: '🚚', title: 'Rychlé dodávky', text: 'Vlastní sklad + flexibilní logistika. Standardní dodávky do 24–48 hodin, urgentní požadavky operativně.' },
+  { icon: '🚚', title: 'Flexibilní dodávky', text: 'Běžně poptávaný sortiment držíme skladem a expedujeme obratem. Ostatní produkty objednáváme přímo u BD; termín dodání potvrdíme po obdržení poptávky.' },
   { icon: '🤝', title: 'Osobní přístup', text: 'Stálý obchodní zástupce pro každého klienta, individuální cenové podmínky a rychlá reakce.' },
   { icon: '🏥', title: 'Znalost praxe', text: 'Provozujeme Lékárnu u Robina — rozumíme reálným každodenním potřebám zdravotníků z první ruky.' },
 ]
@@ -59,14 +59,17 @@ export default function ONasPage() {
           <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
             <h2 className="text-sm font-semibold text-navy mb-3 pb-2 border-b-2 border-teal/20">Kontaktní údaje</h2>
             {[
-              ['Telefon', company.kontakt.telefon],
+              ['Telefon', company.kontakt.telefon, company.kontakt.telefonProvoz],
               ['E-mail', company.kontakt.email],
               ['Web', company.kontakt.web],
               ['Provozovna', `${company.lekarna.nazev}, ${company.lekarna.ulice}, ${company.lekarna.mesto}`],
-            ].map(([l, v]) => (
+            ].map(([l, v, hint]) => (
               <div key={l} className="flex justify-between items-start py-2.5 border-b border-gray-100 text-sm last:border-0 gap-4">
                 <span className="text-gray-500 shrink-0">{l}</span>
-                <span className="font-medium text-navy text-right">{v}</span>
+                <span className="font-medium text-navy text-right">
+                  {v}
+                  {hint && <span className="block text-xs text-gray-400 font-normal mt-0.5">{hint}</span>}
+                </span>
               </div>
             ))}
           </div>

@@ -10,13 +10,8 @@ export default function CookieBanner() {
     }
   }, [])
 
-  function accept() {
-    localStorage.setItem('cookieConsent', 'accepted')
-    setVisible(false)
-  }
-
-  function decline() {
-    localStorage.setItem('cookieConsent', 'declined')
+  function dismiss() {
+    localStorage.setItem('cookieConsent', 'acknowledged')
     setVisible(false)
   }
 
@@ -32,15 +27,9 @@ export default function CookieBanner() {
             Pro anonymní statistiky návštěvnosti používáme privacy-friendly Vercel Analytics bez cookies.
           </span>
         </p>
-        <div className="flex gap-3 shrink-0">
+        <div className="shrink-0">
           <button
-            onClick={decline}
-            className="text-xs text-white/60 hover:text-white/90 transition-colors px-3 py-2"
-          >
-            Odmítnout
-          </button>
-          <button
-            onClick={accept}
+            onClick={dismiss}
             className="bg-teal hover:bg-teal-dark text-white text-xs font-semibold px-5 py-2 rounded-lg transition-colors"
           >
             Rozumím

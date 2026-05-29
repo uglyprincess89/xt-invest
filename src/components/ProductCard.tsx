@@ -28,7 +28,7 @@ export default function ProductCard({ product }: { product: Product }) {
         >
           <Link href={`/katalog/${product.slug}`} className="block">
             <div className="relative h-40 bg-gradient-to-br from-blue-50 to-blue-100 overflow-hidden">
-              <Image src={product.image} alt={product.name} fill className="object-contain p-3"
+              <Image src={product.image} alt={`${product.name} — BD ${product.categoryLabel}, REF ${product.ref}`} fill className="object-contain p-3"
                 sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 16vw" />
               <span className="absolute top-2 right-2 bg-[#044ED7] text-white text-[10px] font-semibold px-2 py-0.5 rounded">
                 BD
