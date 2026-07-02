@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import ContactForm from '@/components/ContactForm'
+import { IconArrowRight } from '@/components/icons'
 
 interface Product {
   name: string
@@ -17,7 +18,7 @@ export default function ProductDetail({ product }: { product: Product }) {
   const [modalOpen, setModalOpen] = useState(false)
 
   return (
-    <div className="max-w-5xl mx-auto px-6 py-10">
+    <div className="max-w-5xl mx-auto px-6 py-12 md:py-16">
       <nav className="text-sm text-gray-400 mb-6 flex items-center gap-2">
         <Link href="/" className="hover:text-navy">Domů</Link>
         <span>/</span>
@@ -40,17 +41,17 @@ export default function ProductDetail({ product }: { product: Product }) {
         </div>
 
         <div>
-          <p className="text-xs text-teal-dark uppercase tracking-widest font-medium mb-2">{product.categoryLabel}</p>
-          <h1 className="text-xl font-medium text-navy mb-2 leading-snug">{product.name}</h1>
+          <p className="text-overline uppercase text-teal-dark mb-2">{product.categoryLabel}</p>
+          <h1 className="text-h2 text-navy mb-3">{product.name}</h1>
           <div className="flex items-center gap-2 mb-4">
             <span className="inline-block bg-navy/5 border border-navy/10 text-navy text-xs font-mono font-semibold px-2 py-1 rounded">
               REF {product.ref}
             </span>
             <span className="text-xs text-gray-400">BD katalogové číslo</span>
           </div>
-          <p className="text-sm text-gray-600 leading-relaxed mb-6">{product.description}</p>
+          <p className="text-[15px] text-gray-600 leading-relaxed mb-6">{product.description}</p>
 
-          <div className="border border-gray-200 rounded-xl overflow-hidden mb-6">
+          <div className="border border-gray-200/80 rounded-xl overflow-hidden shadow-card mb-6">
             <div className="bg-navy px-4 py-2">
               <h2 className="text-white text-sm font-medium">Technické parametry</h2>
             </div>
@@ -73,17 +74,18 @@ export default function ProductDetail({ product }: { product: Product }) {
             Dostupnost ověříme po vaší poptávce
           </div>
 
-          <button
-            onClick={() => setModalOpen(true)}
-            className="block w-full text-center bg-teal text-white font-semibold py-3.5 rounded-xl hover:bg-teal-dark transition-colors text-sm"
-          >
-            Poptat cenu (REF&nbsp;{product.ref}) →
+          <button onClick={() => setModalOpen(true)} className="btn-primary group w-full">
+            Poptat cenu (REF&nbsp;{product.ref})
+            <IconArrowRight className="w-5 h-5 transition-transform duration-200 ease-out group-hover:translate-x-1 motion-reduce:transition-none" />
           </button>
         </div>
       </div>
 
-      <div className="mt-10 pt-6 border-t border-gray-100">
-        <Link href="/katalog" className="text-sm text-teal hover:text-teal-dark transition-colors">← Zpět na katalog</Link>
+      <div className="mt-12 pt-6 border-t border-gray-100">
+        <Link href="/katalog" className="group inline-flex items-center gap-1.5 text-[15px] font-semibold text-navy hover:text-teal-dark transition-colors">
+          <IconArrowRight className="w-4 h-4 rotate-180 transition-transform duration-200 ease-out group-hover:-translate-x-1 motion-reduce:transition-none" />
+          Zpět na katalog
+        </Link>
       </div>
 
       {/* Modal s formulářem */}

@@ -1,7 +1,20 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+import Hero from '@/components/Hero'
 import ProductCard from '@/components/ProductCard'
+import {
+  IconShieldCheck,
+  IconTruck,
+  IconUsers,
+  IconMicroscope,
+  IconArrowRight,
+  IconPhone,
+  IconBulb,
+  IconBox,
+  IconCheck,
+  IconMapPin,
+} from '@/components/icons'
 import { products, company, seo } from '@/lib/data'
 
 export const metadata: Metadata = {
@@ -15,86 +28,48 @@ export default function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative bg-gradient-to-br from-[#0a2844] via-navy to-navy-light text-white overflow-hidden">
-        <svg className="absolute inset-0 w-full h-full opacity-[0.055] pointer-events-none" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice">
-          <circle cx="900" cy="80" r="380" fill="none" stroke="white" strokeWidth="70"/>
-          <circle cx="1100" cy="440" r="260" fill="none" stroke="white" strokeWidth="50"/>
-          <circle cx="80" cy="380" r="200" fill="none" stroke="white" strokeWidth="42"/>
-        </svg>
-        <div className="relative max-w-7xl mx-auto px-6 py-10">
-          <div className="inline-flex items-center gap-2 bg-teal/15 border border-teal/40 text-teal-light text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full mb-5">
-            <svg className="w-3.5 h-3.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-            </svg>
-            Pouze pro zdravotnické odborníky
-          </div>
-          <h1 className="text-2xl md:text-3xl font-semibold leading-snug mb-4 max-w-2xl">
-            Autorizovaný obchodní partner <em className="not-italic text-teal">BD</em><br />
-            pro zdravotnická zařízení v České republice
-          </h1>
-          <p className="text-white/90 text-sm leading-relaxed max-w-xl mb-6">
-            <strong className="text-white">Kompletní portfolio BD — Vacutainer®, PAXgene® a BD Microlance™</strong> — speciální
-            zkumavky, odběrový materiál a injekční technika. Originální zboží s plnou IFU dokumentací
-            a CE&nbsp;IVD certifikací. Skladové položky expedujeme obratem, ostatní zajistíme přímo od BD.
-          </p>
-          <div className="flex flex-wrap gap-3 mb-12">
-            <Link href="/katalog" className="bg-teal text-white font-semibold px-7 py-3.5 rounded-lg hover:bg-teal-dark transition-colors text-sm">
-              Prohlédnout portfolio BD →
-            </Link>
-            <Link href="/kontakt" className="bg-white/10 border border-white/50 text-white font-medium px-7 py-3.5 rounded-lg hover:bg-white/20 transition-colors text-sm">
-              Získat nabídku na míru
-            </Link>
-          </div>
-          <div className="border-t border-white/20 pt-6 flex flex-wrap gap-x-8 gap-y-2">
-            {[
-              'Originální BD produkty',
-              'CE IVD / IFU dokumentace ke každému produktu',
-              'Vlastní lékárna v Praze',
-              'Skladové položky obratem, ostatní na objednávku',
-            ].map(item => (
-              <span key={item} className="flex items-center gap-2 text-sm text-white/90">
-                <span className="w-1.5 h-1.5 rounded-full bg-teal shrink-0" />{item}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Hero />
 
       {/* BD STRIP */}
-      <div className="bg-blue-50 border-t-4 border-teal px-6 py-4">
-        <div className="max-w-7xl mx-auto flex items-center gap-4 flex-wrap">
-          <div className="bg-white border-2 border-gray-200 rounded-lg px-4 py-1.5 shrink-0">
+      <div className="bg-white border-b border-gray-100 px-6 py-5">
+        <div className="max-w-7xl mx-auto flex items-center gap-5 flex-wrap">
+          <div className="bg-white border border-gray-200 rounded-xl px-4 py-2 shadow-card shrink-0">
             <Image src="/images/bd-logo.svg" alt="Becton Dickinson" width={65} height={25} />
           </div>
-          <p className="text-sm text-gray-700 flex-1">
-            <strong className="text-navy">Becton, Dickinson and Company</strong> — světový lídr v oblasti zdravotnických pomůcek a diagnostiky
+          <p className="text-[15px] text-gray-600 flex-1">
+            <strong className="font-semibold text-navy">Becton, Dickinson and Company</strong> — světový lídr v oblasti zdravotnických pomůcek a diagnostiky
           </p>
-          <span className="bg-[#e6eefb] text-[#044ED7] text-xs font-semibold px-3 py-1 rounded-full border border-[#044ED7]/30 shrink-0">
+          <span className="bg-[#e6eefb] text-[#044ED7] text-xs font-semibold px-3.5 py-1.5 rounded-full border border-[#044ED7]/20 shrink-0">
             Originální distribuce BD
           </span>
         </div>
       </div>
 
       {/* PROČ MY */}
-      <section className="py-14 px-6 bg-white">
+      <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl font-semibold text-navy mb-3">
+          <div className="text-center mb-12 md:mb-16">
+            <p className="text-overline uppercase text-teal-dark mb-3">Proč XT-Invest</p>
+            <h2 className="text-h2 text-navy max-w-3xl mx-auto">
               Váš spolehlivý partner v oblasti zdravotnického materiálu BD po celé ČR
             </h2>
-            <div className="w-8 h-0.5 bg-teal rounded mx-auto mt-4" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: '🛡️', bg: 'bg-[#e6eefb]', title: 'Originální produkty BD', text: 'Žádné šedé zboží. Každý produkt s plnou BD dokumentací, CE IVD certifikací a sledovatelností šarže.' },
-              { icon: '🚚', bg: 'bg-teal/10', title: 'Flexibilní dodávky', text: 'Běžně poptávaný sortiment držíme skladem a expedujeme obratem. Ostatní produkty objednáváme přímo u BD — termín dodání potvrdíme po obdržení poptávky.' },
-              { icon: '🤝', bg: 'bg-navy/10', title: 'Osobní přístup', text: 'Každý klient má stálého obchodního zástupce. Individuální podmínky a rychlé reakce.' },
-              { icon: '🔬', bg: 'bg-teal/10', title: 'Komplexní řešení', text: 'Široký sortiment BD — od injekční techniky a Vacutainer™ odběrových systémů až po laboratorní řešení.' },
+              { Icon: IconShieldCheck, tint: 'bg-teal-light text-teal-dark', title: 'Originální produkty BD', text: 'Žádné šedé zboží. Každý produkt s plnou BD dokumentací, CE IVD certifikací a sledovatelností šarže.' },
+              { Icon: IconTruck, tint: 'bg-navy/[0.06] text-navy', title: 'Flexibilní dodávky', text: 'Běžně poptávaný sortiment držíme skladem a expedujeme obratem. Ostatní produkty objednáváme přímo u BD — termín dodání potvrdíme po obdržení poptávky.' },
+              { Icon: IconUsers, tint: 'bg-teal-light text-teal-dark', title: 'Osobní přístup', text: 'Každý klient má stálého obchodního zástupce. Individuální podmínky a rychlé reakce.' },
+              { Icon: IconMicroscope, tint: 'bg-navy/[0.06] text-navy', title: 'Komplexní řešení', text: 'Široký sortiment BD — od injekční techniky a Vacutainer™ odběrových systémů až po laboratorní řešení.' },
             ].map(card => (
-              <div key={card.title} className="bg-gray-50 border border-gray-100 rounded-xl p-5 hover:border-teal hover:shadow-md transition-all">
-                <div className={`w-11 h-11 ${card.bg} rounded-lg flex items-center justify-center text-lg mb-4`}>{card.icon}</div>
-                <h3 className="text-sm font-semibold text-navy mb-2">{card.title}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">{card.text}</p>
+              <div
+                key={card.title}
+                className="bg-white border border-gray-200/80 rounded-2xl p-6 shadow-card transition-all duration-200 ease-out hover:-translate-y-1 hover:border-teal/40 hover:shadow-card-hover motion-reduce:transition-none motion-reduce:hover:translate-y-0"
+              >
+                <div className={`w-12 h-12 ${card.tint} rounded-xl flex items-center justify-center mb-5`}>
+                  <card.Icon className="w-6 h-6" />
+                </div>
+                <h3 className="text-base font-semibold text-navy mb-2">{card.title}</h3>
+                <p className="text-[15px] text-gray-600 leading-relaxed">{card.text}</p>
               </div>
             ))}
           </div>
@@ -102,23 +77,33 @@ export default function HomePage() {
       </section>
 
       {/* KATALOG */}
-      <section className="py-12 px-6 bg-gray-50">
+      <section className="py-20 md:py-28 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-baseline justify-between mb-1">
-            <h2 className="text-xl font-semibold text-navy">Vybrané produkty Becton Dickinson</h2>
-            <Link href="/katalog" className="text-sm text-navy font-semibold hover:text-teal-dark transition-colors shrink-0">Zobrazit vše →</Link>
+          <div className="flex items-end justify-between gap-4 mb-2">
+            <div>
+              <p className="text-overline uppercase text-teal-dark mb-3">Katalog</p>
+              <h2 className="text-h2 text-navy">Vybrané produkty Becton Dickinson</h2>
+            </div>
+            <Link href="/katalog" className="group hidden sm:inline-flex items-center gap-1.5 text-[15px] text-navy font-semibold hover:text-teal-dark transition-colors shrink-0 pb-1">
+              Zobrazit vše
+              <IconArrowRight className="w-4 h-4 transition-transform duration-200 ease-out group-hover:translate-x-1 motion-reduce:transition-none" />
+            </Link>
           </div>
-          <p className="text-sm text-gray-600 mb-6">Injekční technika • Odběrový materiál • Kanyly • Laboratorní řešení</p>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+          <p className="text-base text-gray-600 mb-10">Injekční technika • Odběrový materiál • Kanyly • Laboratorní řešení</p>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 mb-12">
             {featuredProducts.map(product => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
           <div className="text-center">
-            <Link href="/katalog" className="inline-block bg-navy text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-navy-dark transition-colors text-sm">
+            <Link
+              href="/katalog"
+              className="inline-flex items-center gap-2 bg-navy text-white text-base font-semibold px-8 py-4 rounded-xl shadow-card transition-all duration-200 ease-out hover:bg-navy-dark hover:-translate-y-0.5 hover:shadow-card-hover motion-reduce:transition-none motion-reduce:hover:translate-y-0"
+            >
               Zobrazit kompletní katalog
+              <IconArrowRight className="w-5 h-5" />
             </Link>
-            <p className="text-xs text-gray-500 mt-3">
+            <p className="text-sm text-gray-500 mt-4">
               Nabídku průběžně rozšiřujeme a doplňujeme — pokud nenajdete konkrétní produkt, ozvěte se nám.
             </p>
           </div>
@@ -126,38 +111,48 @@ export default function HomePage() {
       </section>
 
       {/* O NÁS TEASER */}
-      <section className="py-12 px-6 bg-white">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
-            <p className="text-xs font-semibold text-navy uppercase tracking-widest mb-3">O společnosti</p>
-            <h2 className="text-xl font-semibold text-navy mb-4 leading-snug">
+            <p className="text-overline uppercase text-teal-dark mb-3">O společnosti</p>
+            <h2 className="text-h2 text-navy mb-5">
               {company.name} —<br />distribuce zdravotnického materiálu BD
             </h2>
-            <p className="text-gray-700 text-sm leading-relaxed mb-4">
+            <p className="text-base text-gray-600 leading-relaxed mb-6">
               Jsme dynamická česká společnost specializující se na distribuci zdravotnického materiálu
               Becton Dickinson. Náš cíl je jednoduchý — zajistit klinikám, laboratořím a ordinacím
               spolehlivý přísun originálních produktů BD za férových podmínek.
             </p>
-            <div className="border-l-2 border-teal bg-teal/5 rounded-r-lg p-4 mb-5 text-sm text-gray-700 leading-relaxed">
-              💡 Provozujeme vlastní lékárnu — Lékárnu u Robina v Praze. Každý den tam řešíme to, co i vy: pacienty, sklady, papírování. Víme proto, co v praxi funguje a co zůstává jen na papíře.
+            <div className="flex gap-4 border-l-2 border-teal bg-teal-light/60 rounded-r-xl p-5 mb-7 text-[15px] text-gray-700 leading-relaxed">
+              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-teal-dark shadow-card shrink-0">
+                <IconBulb className="w-5 h-5" />
+              </div>
+              <p>Provozujeme vlastní lékárnu — Lékárnu u Robina v Praze. Každý den tam řešíme to, co i vy: pacienty, sklady, papírování. Víme proto, co v praxi funguje a co zůstává jen na papíře.</p>
             </div>
-            <div className="flex gap-3 items-center">
-              <Link href="/o-nas" className="text-sm font-semibold text-navy hover:text-teal-dark transition-colors">Více o nás →</Link>
-              <span className="text-gray-300">|</span>
-              <Link href="/kontakt" className="text-sm font-semibold text-navy hover:text-teal transition-colors">Kontaktovat obchodního zástupce →</Link>
+            <div className="flex flex-wrap gap-x-8 gap-y-3 items-center">
+              <Link href="/o-nas" className="group inline-flex items-center gap-1.5 text-[15px] font-semibold text-navy hover:text-teal-dark transition-colors">
+                Více o nás
+                <IconArrowRight className="w-4 h-4 transition-transform duration-200 ease-out group-hover:translate-x-1 motion-reduce:transition-none" />
+              </Link>
+              <Link href="/kontakt" className="group inline-flex items-center gap-1.5 text-[15px] font-semibold text-navy hover:text-teal-dark transition-colors">
+                Kontaktovat obchodního zástupce
+                <IconArrowRight className="w-4 h-4 transition-transform duration-200 ease-out group-hover:translate-x-1 motion-reduce:transition-none" />
+              </Link>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-5">
             {[
-              { icon: '📦', num: 'BD', label: 'partner pro ČR' },
-              { icon: '✓', num: '100%', label: 'originální produkty' },
-              { icon: '🤝', num: 'B2B', label: 'individuální podmínky' },
-              { icon: '📍', num: 'ČR', label: 'celostátní pokrytí' },
+              { Icon: IconBox, num: 'BD', label: 'partner pro ČR' },
+              { Icon: IconCheck, num: '100%', label: 'originální produkty' },
+              { Icon: IconUsers, num: 'B2B', label: 'individuální podmínky' },
+              { Icon: IconMapPin, num: 'ČR', label: 'celostátní pokrytí' },
             ].map(f => (
-              <div key={f.label} className="bg-gray-50 border border-gray-100 rounded-xl p-5 text-center">
-                <div className="text-2xl mb-1">{f.icon}</div>
-                <p className="text-2xl font-bold text-navy">{f.num}</p>
-                <p className="text-xs text-gray-600 mt-0.5 leading-tight">{f.label}</p>
+              <div key={f.label} className="bg-white border border-gray-200/80 rounded-2xl p-6 text-center shadow-card">
+                <div className="w-11 h-11 mx-auto bg-teal-light text-teal-dark rounded-full flex items-center justify-center mb-3">
+                  <f.Icon className="w-5 h-5" />
+                </div>
+                <p className="text-3xl font-bold tracking-tight text-navy">{f.num}</p>
+                <p className="text-sm text-gray-600 mt-1 leading-tight">{f.label}</p>
               </div>
             ))}
           </div>
@@ -165,10 +160,10 @@ export default function HomePage() {
       </section>
 
       {/* RECENZE */}
-      <section className="py-12 px-6 bg-gray-50">
+      <section className="py-20 md:py-28 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-xl font-semibold text-navy mb-1">Co o nás říkají klienti</h2>
-          <div className="w-8 h-0.5 bg-teal rounded mb-8" />
+          <p className="text-overline uppercase text-teal-dark mb-3">Reference</p>
+          <h2 className="text-h2 text-navy mb-10 md:mb-12">Co o nás říkají klienti</h2>
           <div className="grid md:grid-cols-3 gap-5">
             {[
               {
@@ -199,14 +194,17 @@ export default function HomePage() {
                 tagColor: 'bg-[#f0f4ff] text-navy',
               },
             ].map((r, i) => (
-              <div key={i} className="bg-white border border-gray-200 rounded-xl p-5 flex flex-col">
-                <div className="text-yellow-500 text-sm mb-3">{r.hvezdy}</div>
-                <p className="text-sm text-gray-700 leading-relaxed mb-4 flex-1">„{r.text}"</p>
-                <div>
-                  <p className="text-xs font-semibold text-navy">{r.autor}</p>
-                  <p className="text-xs text-gray-500">{r.role}</p>
-                  <p className="text-xs text-gray-600 mb-2">{r.zarizeni}</p>
-                  <span className={`inline-block text-[10px] px-2 py-0.5 rounded-full font-medium ${r.tagColor}`}>{r.tag}</span>
+              <div
+                key={i}
+                className="bg-white border border-gray-200/80 rounded-2xl p-6 flex flex-col shadow-card transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-card-hover motion-reduce:transition-none motion-reduce:hover:translate-y-0"
+              >
+                <div className="text-amber-400 text-sm tracking-[0.2em] mb-4" aria-label={`Hodnocení: ${r.hvezdy.split('★').length - 1} z 5 hvězd`}>{r.hvezdy}</div>
+                <p className="text-[15px] text-gray-700 leading-relaxed mb-6 flex-1">„{r.text}"</p>
+                <div className="border-t border-gray-100 pt-4">
+                  <p className="text-sm font-semibold text-navy">{r.autor}</p>
+                  <p className="text-sm text-gray-500">{r.role}</p>
+                  <p className="text-sm text-gray-600 mb-3">{r.zarizeni}</p>
+                  <span className={`inline-block text-xs px-2.5 py-1 rounded-full font-medium ${r.tagColor}`}>{r.tag}</span>
                 </div>
               </div>
             ))}
@@ -215,17 +213,26 @@ export default function HomePage() {
       </section>
 
       {/* KONTAKT CTA */}
-      <section className="py-12 px-6 bg-navy text-white">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <section className="relative isolate overflow-hidden py-16 md:py-20 px-6 bg-navy-ink text-white">
+        <div
+          className="absolute inset-0 -z-10 bg-[linear-gradient(155deg,#0a2036_10%,#0f3358_70%,#164a70_120%)]"
+          aria-hidden="true"
+        />
+        <div
+          className="absolute -top-24 right-[10%] -z-10 h-[22rem] w-[22rem] rounded-full bg-teal/[0.12] blur-[100px]"
+          aria-hidden="true"
+        />
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
-            <h2 className="text-xl font-semibold mb-2">Preferujete přímý kontakt?</h2>
-            <p className="text-white/90 text-sm">Volejte přímo nebo napište — odpovídáme do 24 hodin.</p>
+            <h2 className="text-h2 mb-3">Preferujete přímý kontakt?</h2>
+            <p className="text-white/70 text-base">Volejte přímo nebo napište — odpovídáme do 24 hodin.</p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-3 shrink-0">
-            <a href={`tel:${company.kontakt.telefon}`} className="flex items-center gap-2 bg-teal text-white font-semibold px-6 py-3 rounded-lg hover:bg-teal-dark transition-colors text-sm">
-              📞 {company.kontakt.telefon}
+          <div className="flex flex-col sm:flex-row gap-4 shrink-0">
+            <a href={`tel:${company.kontakt.telefon}`} className="btn-primary">
+              <IconPhone className="w-5 h-5" />
+              {company.kontakt.telefon}
             </a>
-            <Link href="/kontakt" className="flex items-center gap-2 bg-white/10 border border-white/50 text-white font-semibold px-6 py-3 rounded-lg hover:bg-white/20 transition-colors text-sm">
+            <Link href="/kontakt" className="btn-outline">
               Napsat zprávu
             </Link>
           </div>

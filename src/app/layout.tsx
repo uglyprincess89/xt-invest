@@ -8,7 +8,7 @@ import CookieBanner from '@/components/CookieBanner'
 import { Analytics } from '@vercel/analytics/next'
 import { seo } from '@/lib/data'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin', 'latin-ext'] })
 
 export const metadata: Metadata = {
   metadataBase: new URL(seo.default.siteUrl),

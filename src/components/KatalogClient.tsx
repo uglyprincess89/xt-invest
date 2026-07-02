@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import ProductCard from '@/components/ProductCard'
 import ContactForm from '@/components/ContactForm'
+import PageHero from '@/components/PageHero'
 import { products, categories, type Product } from '@/lib/data'
 
 type ViewMode = 'grid' | 'list'
@@ -40,30 +41,21 @@ export default function KatalogClient() {
   return (
     <>
       {/* HERO */}
-      <section className="relative bg-gradient-to-r from-navy-dark to-navy text-white py-12 px-6 overflow-hidden">
-        <svg className="absolute inset-0 w-full h-full opacity-[0.05] pointer-events-none" viewBox="0 0 1200 300" preserveAspectRatio="xMidYMid slice">
-          <circle cx="1000" cy="0" r="250" fill="none" stroke="white" strokeWidth="50"/>
-        </svg>
-        <div className="relative max-w-7xl mx-auto">
-          <p className="text-xs font-semibold text-teal uppercase tracking-widest mb-2">Becton Dickinson</p>
-          <h1 className="text-2xl md:text-3xl font-semibold mb-2">Katalog produktů BD</h1>
-          <p className="text-white/70 text-sm">
-            Injekční technika • Odběrový materiál • Kanyly • Laboratorní řešení
-          </p>
-        </div>
-      </section>
+      <PageHero overline="Becton Dickinson" title="Katalog produktů BD">
+        <p>Injekční technika • Odběrový materiál • Kanyly • Laboratorní řešení</p>
+      </PageHero>
 
       {/* FILTR + GRID */}
-      <section className="py-8 px-6 bg-gray-50 min-h-screen">
+      <section className="py-12 md:py-16 px-6 bg-gray-50 min-h-screen">
         <div className="max-w-7xl mx-auto">
 
           {/* Search + view toggle */}
-          <div className="flex flex-col md:flex-row gap-3 mb-5">
+          <div className="flex flex-col md:flex-row gap-3 mb-6">
             <div className="relative flex-1">
               <svg
-                className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"
+                className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"
                 width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+                stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
               >
                 <circle cx="11" cy="11" r="8"/>
                 <line x1="21" y1="21" x2="16.65" y2="16.65"/>
@@ -73,7 +65,7 @@ export default function KatalogClient() {
                 value={query}
                 onChange={e => setQuery(e.target.value)}
                 placeholder="Hledat produkt, REF, popis…"
-                className="w-full pl-10 pr-10 py-2.5 text-sm bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-teal focus:ring-2 focus:ring-teal/20 text-gray-800 placeholder:text-gray-400"
+                className="w-full pl-11 pr-10 py-3 text-[15px] bg-white border border-gray-200 rounded-xl shadow-card transition-shadow duration-200 focus:outline-none focus:border-teal focus:ring-2 focus:ring-teal/20 text-gray-800 placeholder:text-gray-400"
               />
               {query && (
                 <button
@@ -90,7 +82,7 @@ export default function KatalogClient() {
               )}
             </div>
 
-            <div className="inline-flex bg-white border border-gray-200 rounded-lg p-1 shrink-0 self-start">
+            <div className="inline-flex bg-white border border-gray-200 rounded-xl p-1 shadow-card shrink-0 self-start">
               <button
                 type="button"
                 onClick={() => setViewMode('grid')}
@@ -276,15 +268,20 @@ export default function KatalogClient() {
           )}
 
           {/* CTA pod katalogem */}
-          <div className="mt-12 bg-navy rounded-2xl p-8 text-white text-center">
-            <h3 className="text-lg font-semibold mb-2">Nenašli jste co hledáte?</h3>
-            <p className="text-white/70 text-sm mb-5">
+          <div className="relative isolate overflow-hidden mt-16 bg-navy-ink rounded-2xl p-10 text-white text-center">
+            <div
+              className="absolute inset-0 -z-10 bg-[linear-gradient(155deg,#0a2036_10%,#0f3358_70%,#164a70_120%)]"
+              aria-hidden="true"
+            />
+            <div
+              className="absolute -top-20 left-1/2 -z-10 h-[18rem] w-[18rem] -translate-x-1/2 rounded-full bg-teal/[0.12] blur-[90px]"
+              aria-hidden="true"
+            />
+            <h3 className="text-h3 mb-3">Nenašli jste co hledáte?</h3>
+            <p className="text-white/70 text-[15px] mb-7 max-w-xl mx-auto">
               Náš sortiment BD je širší a průběžně jej rozšiřujeme. Kontaktujte nás a připravíme individuální nabídku.
             </p>
-            <button
-              onClick={() => setModalOpen(true)}
-              className="inline-block bg-teal text-white font-semibold px-6 py-3 rounded-lg hover:bg-teal-dark transition-colors text-sm"
-            >
+            <button onClick={() => setModalOpen(true)} className="btn-primary">
               Nezávazně poptat
             </button>
           </div>
