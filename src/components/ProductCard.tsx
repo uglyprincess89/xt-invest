@@ -11,24 +11,11 @@ export default function ProductCard({ product }: { product: Product }) {
   return (
     <>
       <div className="group h-full">
-        <div className="bg-white border border-gray-200 rounded-xl overflow-hidden h-full flex flex-col"
-          style={{transition:'all 0.2s ease'}}
-          onMouseEnter={e => {
-            const el = e.currentTarget as HTMLElement
-            el.style.transform = 'scale(1.02)'
-            el.style.boxShadow = '0 10px 20px rgba(0,0,0,0.08)'
-            el.style.borderColor = '#2bbfa4'
-          }}
-          onMouseLeave={e => {
-            const el = e.currentTarget as HTMLElement
-            el.style.transform = 'scale(1)'
-            el.style.boxShadow = 'none'
-            el.style.borderColor = '#e5e7eb'
-          }}
-        >
+        <div className="bg-white border border-gray-200 rounded-xl overflow-hidden h-full flex flex-col shadow-card transition-all duration-200 ease-out group-hover:-translate-y-1 group-hover:border-teal/50 group-hover:shadow-card-hover motion-reduce:transition-none motion-reduce:group-hover:translate-y-0">
           <Link href={`/katalog/${product.slug}`} className="block">
             <div className="relative h-40 bg-gradient-to-br from-blue-50 to-blue-100 overflow-hidden">
-              <Image src={product.image} alt={`${product.name} — BD ${product.categoryLabel}, REF ${product.ref}`} fill className="object-contain p-3"
+              <Image src={product.image} alt={`${product.name} — BD ${product.categoryLabel}, REF ${product.ref}`} fill
+                className="object-contain p-3 transition-transform duration-300 ease-out group-hover:scale-[1.04] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
                 sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 16vw" />
               <span className="absolute top-2 right-2 bg-[#044ED7] text-white text-[10px] font-semibold px-2 py-0.5 rounded">
                 BD

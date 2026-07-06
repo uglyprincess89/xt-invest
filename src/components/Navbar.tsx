@@ -16,7 +16,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header className="bg-navy sticky top-0 z-50 shadow-md w-full overflow-x-hidden">
+    <header className="bg-navy-ink/95 backdrop-blur-md border-b border-white/10 sticky top-0 z-50 w-full overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-3">
 
         <div className="flex items-center gap-2 shrink-0">
@@ -38,13 +38,13 @@ export default function Navbar() {
             onClick={() => setMenuOpen(false)}
             aria-label="Domů"
             title="Domů"
-            className={`hidden sm:flex items-center justify-center w-9 h-9 rounded-md transition-colors ${
+            className={`hidden sm:flex items-center justify-center w-9 h-9 rounded-lg transition-colors ${
               pathname === '/'
                 ? 'bg-white/15 text-white'
                 : 'text-white/80 hover:bg-white/10 hover:text-white'
             }`}
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
               <polyline points="9 22 9 12 15 12 15 22"/>
             </svg>
@@ -57,10 +57,10 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className={`px-3 py-2 text-sm whitespace-nowrap transition-colors rounded ${
+              className={`relative px-3.5 py-2 text-sm whitespace-nowrap transition-colors rounded-lg ${
                 pathname === link.href || pathname.startsWith(link.href + '/')
-                  ? 'text-white font-semibold underline underline-offset-4 decoration-teal decoration-2'
-                  : 'text-white/90 hover:text-white hover:bg-white/10'
+                  ? 'text-white font-semibold after:absolute after:left-3.5 after:right-3.5 after:-bottom-[3px] after:h-0.5 after:rounded-full after:bg-teal'
+                  : 'text-white/80 hover:text-white hover:bg-white/10'
               }`}
             >
               {link.label}
@@ -71,7 +71,7 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <Link
           href="/kontakt"
-          className="hidden md:block shrink-0 bg-teal border border-teal text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-teal-dark hover:border-teal-dark transition-colors whitespace-nowrap"
+          className="hidden md:block shrink-0 bg-teal text-white text-sm font-semibold px-4 py-2 rounded-lg whitespace-nowrap transition-all duration-200 ease-out hover:bg-teal-dark hover:-translate-y-0.5 hover:shadow-glow-teal motion-reduce:transition-none motion-reduce:hover:translate-y-0"
         >
           Poptat nabídku
         </Link>
@@ -96,14 +96,14 @@ export default function Navbar() {
 
       {/* Mobilní menu — větší touch targety */}
       {menuOpen && (
-        <div className="md:hidden bg-navy-dark border-t border-white/10 px-4 py-3 w-full">
+        <div className="md:hidden bg-navy-ink border-t border-white/10 px-4 py-3 w-full">
           {navLinks.map(link => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className={`block py-4 text-sm border-b border-white/10 last:border-0 font-medium ${
-                pathname === link.href ? 'text-white font-semibold' : 'text-white/90'
+              className={`block py-4 text-[15px] border-b border-white/10 last:border-0 font-medium transition-colors ${
+                pathname === link.href ? 'text-teal font-semibold' : 'text-white/85 hover:text-white'
               }`}
             >
               {link.label}
@@ -112,7 +112,7 @@ export default function Navbar() {
           <Link
             href="/kontakt"
             onClick={() => setMenuOpen(false)}
-            className="block mt-3 bg-teal text-white text-sm font-semibold px-4 py-3.5 rounded-lg text-center"
+            className="block mt-3 mb-2 bg-teal text-white text-[15px] font-semibold px-4 py-3.5 rounded-xl text-center shadow-glow-teal"
           >
             Poptat nabídku
           </Link>

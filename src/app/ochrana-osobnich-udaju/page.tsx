@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import PageHero from '@/components/PageHero'
 import { company } from '@/lib/data'
 
 export const metadata: Metadata = {
@@ -166,29 +167,23 @@ export default function OchranaUdajuPage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative bg-gradient-to-br from-[#0a2844] to-navy text-white py-10 px-6 overflow-hidden">
-        <div className="relative max-w-7xl mx-auto">
-          <p className="text-xs font-semibold text-teal uppercase tracking-widest mb-3">Právní informace</p>
-          <h1 className="text-2xl md:text-3xl font-semibold mb-3 leading-snug">
-            Ochrana osobních údajů
-          </h1>
-          <p className="text-white/75 text-sm max-w-2xl leading-relaxed">
-            Informace o zpracování osobních údajů na webu xt-invest.cz v souladu s nařízením GDPR
-            a zákonem č. 110/2019 Sb., o zpracování osobních údajů.
-          </p>
-        </div>
-      </section>
+      <PageHero overline="Právní informace" title="Ochrana osobních údajů">
+        <p>
+          Informace o zpracování osobních údajů na webu xt-invest.cz v souladu s nařízením GDPR
+          a zákonem č. 110/2019 Sb., o zpracování osobních údajů.
+        </p>
+      </PageHero>
 
       {/* OBSAH */}
-      <section className="py-10 px-6 bg-white">
+      <section className="py-16 md:py-20 px-6 bg-white">
         <div className="max-w-3xl mx-auto">
-          <article className="prose prose-sm max-w-none text-gray-700 leading-relaxed">
+          <article className="max-w-none text-gray-700 leading-relaxed">
             {sections.map(s => (
-              <section key={s.title} className="mb-8">
-                <h2 className="text-base font-semibold text-navy mb-3 pb-2 border-b-2 border-teal/20">
+              <section key={s.title} className="mb-10">
+                <h2 className="text-h3 text-navy mb-4 pb-3 border-b border-gray-100">
                   {s.title}
                 </h2>
-                <div className="text-sm space-y-2">{s.body}</div>
+                <div className="text-[15px] space-y-2">{s.body}</div>
               </section>
             ))}
           </article>

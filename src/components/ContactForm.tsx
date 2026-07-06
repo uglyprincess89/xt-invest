@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
+import { IconCheck, IconX } from '@/components/icons'
 
 const zajemOptions = [
   'Produkty BD — injekční technika',
@@ -62,35 +63,36 @@ export default function ContactForm({ produktNazev, produktRef, onClose }: Conta
   }
 
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6">
-      <div className="flex items-center justify-between mb-5">
+    <div className="bg-white border border-gray-200/80 rounded-2xl p-6 md:p-7 shadow-card">
+      <div className="flex items-center justify-between gap-4 mb-6">
         <div>
-          <h2 className="text-base font-medium text-navy">
+          <h2 className="text-h3 text-navy">
             {produktNazev ? 'Poptávka produktu' : 'Poptávkový formulář'}
           </h2>
           {produktNazev && (
-            <p className="text-xs text-teal-dark mt-0.5">{produktNazev}</p>
+            <p className="text-sm text-teal-dark mt-1">{produktNazev}</p>
           )}
         </div>
         {onClose && (
           <button
             onClick={onClose}
-            className="text-gray-400 hover:text-gray-600 transition-colors text-xl leading-none"
+            className="p-2 -mr-2 rounded-lg text-gray-400 hover:text-navy hover:bg-gray-100 transition-colors self-start"
             aria-label="Zavřít"
           >
-            ✕
+            <IconX className="w-5 h-5" />
           </button>
         )}
       </div>
 
       {status === 'success' && (
-        <div className="bg-teal/10 border border-teal/30 text-teal-dark rounded-lg p-4 mb-5 text-sm">
-          ✓ Poptávka odeslána! Odpovíme vám zpravidla do 24 hodin.
+        <div className="flex items-center gap-3 bg-teal-light border border-teal/30 text-teal-dark rounded-xl p-4 mb-6 text-[15px]">
+          <IconCheck className="w-5 h-5 shrink-0" />
+          Poptávka odeslána! Odpovíme vám zpravidla do 24 hodin.
         </div>
       )}
 
       {status === 'error' && (
-        <div className="bg-red-50 border border-red-200 text-red-700 rounded-lg p-4 mb-5 text-sm">
+        <div className="bg-red-50 border border-red-200 text-red-700 rounded-xl p-4 mb-6 text-[15px]">
           Odeslání se nezdařilo. Zkuste to prosím znovu nebo nás kontaktujte přímo na info@xt-invest.cz
         </div>
       )}
@@ -98,53 +100,53 @@ export default function ContactForm({ produktNazev, produktRef, onClose }: Conta
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="grid md:grid-cols-2 gap-4">
           <div>
-            <label className="block text-xs font-medium text-gray-500 mb-1.5">Jméno a příjmení *</label>
+            <label className="block text-sm font-medium text-gray-600 mb-1.5">Jméno a příjmení *</label>
             <input
               name="jmeno"
               type="text"
               required
               placeholder="MUDr. Jan Novák"
-              className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-navy focus:outline-none focus:border-teal"
+              className="input-field"
             />
           </div>
           <div>
-            <label className="block text-xs font-medium text-gray-500 mb-1.5">Název organizace *</label>
+            <label className="block text-sm font-medium text-gray-600 mb-1.5">Název organizace *</label>
             <input
               name="organizace"
               type="text"
               required
               placeholder="Nemocnice Praha s.r.o."
-              className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-navy focus:outline-none focus:border-teal"
+              className="input-field"
             />
           </div>
           <div>
-            <label className="block text-xs font-medium text-gray-500 mb-1.5">IČO</label>
+            <label className="block text-sm font-medium text-gray-600 mb-1.5">IČO</label>
             <input
               name="ico"
               type="text"
               inputMode="numeric"
               pattern="[0-9]{8}"
               placeholder="12345678"
-              className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-navy focus:outline-none focus:border-teal"
+              className="input-field"
             />
           </div>
           <div>
-            <label className="block text-xs font-medium text-gray-500 mb-1.5">E-mail *</label>
+            <label className="block text-sm font-medium text-gray-600 mb-1.5">E-mail *</label>
             <input
               name="email"
               type="email"
               required
               placeholder="novak@nemocnice.cz"
-              className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-navy focus:outline-none focus:border-teal"
+              className="input-field"
             />
           </div>
           <div>
-            <label className="block text-xs font-medium text-gray-500 mb-1.5">Telefon</label>
+            <label className="block text-sm font-medium text-gray-600 mb-1.5">Telefon</label>
             <input
               name="telefon"
               type="tel"
               placeholder="+420 xxx xxx xxx"
-              className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-navy focus:outline-none focus:border-teal"
+              className="input-field"
             />
           </div>
         </div>
@@ -152,10 +154,10 @@ export default function ContactForm({ produktNazev, produktRef, onClose }: Conta
         {/* Zájem o — zobrazí se jen na obecném formuláři, ne při poptávce produktu */}
         {!produktNazev && (
           <div>
-            <label className="block text-xs font-medium text-gray-500 mb-1.5">Zájem o</label>
+            <label className="block text-sm font-medium text-gray-600 mb-1.5">Zájem o</label>
             <select
               name="zajem"
-              className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-navy focus:outline-none focus:border-teal bg-white"
+              className="input-field"
             >
               {zajemOptions.map(o => <option key={o}>{o}</option>)}
             </select>
@@ -163,7 +165,7 @@ export default function ContactForm({ produktNazev, produktRef, onClose }: Conta
         )}
 
         <div>
-          <label className="block text-xs font-medium text-gray-500 mb-1.5">Zpráva</label>
+          <label className="block text-sm font-medium text-gray-600 mb-1.5">Zpráva</label>
           <textarea
             name="zprava"
             rows={4}
@@ -171,7 +173,7 @@ export default function ContactForm({ produktNazev, produktRef, onClose }: Conta
               ? `Doplňte prosím množství, frekvenci objednávek nebo jiné požadavky...`
               : `Popište prosím váš zájem nebo konkrétní poptávku...`
             }
-            className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-navy focus:outline-none focus:border-teal resize-none"
+            className="input-field resize-none"
           />
         </div>
 
@@ -182,7 +184,7 @@ export default function ContactForm({ produktNazev, produktRef, onClose }: Conta
             required
             className="mt-0.5 w-4 h-4 shrink-0 accent-teal cursor-pointer"
           />
-          <span className="text-xs text-gray-500 leading-relaxed">
+          <span className="text-[13px] text-gray-500 leading-relaxed">
             Souhlasím se zpracováním osobních údajů pro vyřízení této poptávky.
             Údaje zpracováváme v souladu s{' '}
             <Link href="/ochrana-osobnich-udaju" className="text-teal-dark underline hover:text-teal" target="_blank" rel="noopener">
@@ -192,15 +194,15 @@ export default function ContactForm({ produktNazev, produktRef, onClose }: Conta
           </span>
         </label>
 
-        <div className="flex items-start gap-4">
+        <div className="flex items-center gap-4 pt-1">
           <button
             type="submit"
             disabled={status === 'loading'}
-            className="bg-teal text-white font-medium px-7 py-3 rounded-lg hover:bg-teal-dark transition-colors text-sm disabled:opacity-60 disabled:cursor-not-allowed"
+            className="btn-primary disabled:opacity-60 disabled:pointer-events-none"
           >
-            {status === 'loading' ? 'Odesílám...' : 'Odeslat poptávku'}
+            {status === 'loading' ? 'Odesílám…' : 'Odeslat poptávku'}
           </button>
-          <p className="text-xs text-gray-400 pt-1">
+          <p className="text-[13px] text-gray-400">
             * Povinná pole.
           </p>
         </div>
