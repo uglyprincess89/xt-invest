@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import PageHero from '@/components/PageHero'
-import { IconDocument, IconTruck, IconPill, IconPhone } from '@/components/icons'
 import { company, seo } from '@/lib/data'
 
 export const metadata: Metadata = {
@@ -8,11 +7,13 @@ export const metadata: Metadata = {
   description: seo.pages.lekarna.description,
 }
 
+// Měkká sekce — záměrně emoji místo line ikon (přátelštější tón),
+// usazené ve stejných dlaždicích jako ikony jinde na webu.
 const sluzby = [
-  { Icon: IconDocument, title: 'Výdej na žádanky', text: 'Pravidelný výdej léčiv na základě žádanek pro zdravotnická zařízení. Rychlé a spolehlivé vyřízení.' },
-  { Icon: IconTruck, title: 'Zásobování zařízení', text: 'Pravidelné zásobování ambulancí, klinik a ordinací s individuálním harmonogramem dodávek.' },
-  { Icon: IconPill, title: 'Léčiva na předpis', text: 'Kompletní sortiment léčiv na lékařský předpis. Spolupráce s pojišťovnami a přímý výdej.' },
-  { Icon: IconPhone, title: 'Urgentní objednávky', text: `V případě potřeby zajistíme urgentní dodávku léčiv. Kontakt: ${company.lekarna.telefon}.` },
+  { emoji: '📋', title: 'Výdej na žádanky', text: 'Pravidelný výdej léčiv na základě žádanek pro zdravotnická zařízení. Rychlé a spolehlivé vyřízení.' },
+  { emoji: '🚚', title: 'Zásobování zařízení', text: 'Pravidelné zásobování ambulancí, klinik a ordinací s individuálním harmonogramem dodávek.' },
+  { emoji: '💊', title: 'Léčiva na předpis', text: 'Kompletní sortiment léčiv na lékařský předpis. Spolupráce s pojišťovnami a přímý výdej.' },
+  { emoji: '📞', title: 'Urgentní objednávky', text: `V případě potřeby zajistíme urgentní dodávku léčiv. Kontakt: ${company.lekarna.telefon}.` },
 ]
 
 const dnyVTydnu = ['Po', 'Út', 'St', 'Čt', 'Pá', 'So', 'Ne']
@@ -39,8 +40,8 @@ export default function LekarnaPage() {
                 key={s.title}
                 className="bg-white border border-gray-200/80 rounded-2xl p-5 shadow-card transition-all duration-200 ease-out hover:-translate-y-1 hover:border-teal/40 hover:shadow-card-hover motion-reduce:transition-none motion-reduce:hover:translate-y-0"
               >
-                <div className="w-11 h-11 bg-teal-light text-teal-dark rounded-xl flex items-center justify-center mb-4">
-                  <s.Icon className="w-5 h-5" />
+                <div className="w-11 h-11 bg-teal-light rounded-xl flex items-center justify-center mb-4 text-[22px] leading-none" aria-hidden="true">
+                  {s.emoji}
                 </div>
                 <h3 className="text-base font-semibold text-navy mb-1.5">{s.title}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{s.text}</p>
