@@ -5,6 +5,7 @@ import { company } from '@/lib/data'
 export const metadata: Metadata = {
   title: 'Ochrana osobních údajů | XT-Invest',
   description: 'Informace o zpracování osobních údajů na webu xt-invest.cz v souladu s GDPR.',
+  alternates: { canonical: '/ochrana-osobnich-udaju' },
   robots: { index: true, follow: true },
 }
 

@@ -6,6 +6,7 @@ import ContactForm from '@/components/ContactForm'
 export const metadata: Metadata = {
   title: seo.pages.kontakt.title,
   description: seo.pages.kontakt.description,
+  alternates: { canonical: '/kontakt' },
 }
 
 export default function KontaktPage() {

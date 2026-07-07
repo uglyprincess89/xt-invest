@@ -1,15 +1,16 @@
 import { company } from '@/lib/data'
+import { siteUrl, absoluteUrl } from '@/lib/site'
 
 // JSON-LD schémata pro Google - pomáhá pochopit kontext webu
 export default function JsonLd() {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    '@id': 'https://www.xt-invest.cz/#organization',
+    '@id': `${siteUrl}/#organization`,
     name: company.name,
     alternateName: 'XT-Invest',
-    url: 'https://www.xt-invest.cz',
-    logo: 'https://www.xt-invest.cz/images/xt-invest-logo-dark.svg',
+    url: siteUrl,
+    logo: absoluteUrl('/images/xt-invest-logo-dark.svg'),
     description: 'Autorizovaný obchodní partner Becton Dickinson pro Českou republiku.',
     taxID: company.dic,
     vatID: company.dic,
@@ -41,11 +42,11 @@ export default function JsonLd() {
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'Pharmacy',
-    '@id': 'https://www.xt-invest.cz/#lekarna',
+    '@id': `${siteUrl}/#lekarna`,
     name: company.lekarna.nazev,
-    image: 'https://www.xt-invest.cz/images/xt-invest-logo-dark.svg',
+    image: absoluteUrl('/images/xt-invest-logo-dark.svg'),
     parentOrganization: {
-      '@id': 'https://www.xt-invest.cz/#organization',
+      '@id': `${siteUrl}/#organization`,
     },
     address: {
       '@type': 'PostalAddress',

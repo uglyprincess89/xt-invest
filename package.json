@@ -3,10 +3,15 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "predev": "node scripts/generate-catalog-index.mjs",
     "dev": "next dev",
+    "prebuild": "node scripts/validate-data.mjs && node scripts/generate-catalog-index.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "validate:data": "node scripts/validate-data.mjs",
+    "generate:catalog": "node scripts/generate-catalog-index.mjs",
+    "check:images": "node scripts/check-images.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

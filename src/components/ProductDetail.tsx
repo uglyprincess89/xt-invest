@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import ContactForm from '@/components/ContactForm'
+import Modal from '@/components/Modal'
 import { IconArrowRight } from '@/components/icons'
 
 interface Product {
@@ -18,7 +19,7 @@ export default function ProductDetail({ product }: { product: Product }) {
   const [modalOpen, setModalOpen] = useState(false)
 
   return (
-    <div className="max-w-5xl mx-auto px-6 py-12 md:py-16">
+    <div className="max-w-5xl mx-auto px-6 py-12 md:py-16 pb-24 md:pb-16">
       <nav className="text-sm text-gray-400 mb-6 flex items-center gap-2">
         <Link href="/" className="hover:text-navy">Domů</Link>
         <span>/</span>
@@ -88,20 +89,22 @@ export default function ProductDetail({ product }: { product: Product }) {
         </Link>
       </div>
 
+      {/* Sticky poptávka na mobilu — CTA vždy po ruce i u dlouhé tabulky parametrů */}
+      <div className="md:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur border-t border-gray-200 px-4 py-3">
+        <button onClick={() => setModalOpen(true)} className="btn-primary w-full">
+          Poptat cenu (REF&nbsp;{product.ref})
+        </button>
+      </div>
+
       {/* Modal s formulářem */}
       {modalOpen && (
-        <div
-          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
-          onClick={(e) => { if (e.target === e.currentTarget) setModalOpen(false) }}
-        >
-          <div className="w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-xl">
-            <ContactForm
-              produktNazev={product.name}
-              produktRef={product.ref}
-              onClose={() => setModalOpen(false)}
-            />
-          </div>
-        </div>
+        <Modal label={`Poptávka produktu: ${product.name} (REF ${product.ref})`} onClose={() => setModalOpen(false)}>
+          <ContactForm
+            produktNazev={product.name}
+            produktRef={product.ref}
+            onClose={() => setModalOpen(false)}
+          />
+        </Modal>
       )}
     </div>
   )

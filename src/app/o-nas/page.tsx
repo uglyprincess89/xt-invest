@@ -15,6 +15,7 @@ import { company, seo } from '@/lib/data'
 export const metadata: Metadata = {
   title: seo.pages.oNas.title,
   description: seo.pages.oNas.description,
+  alternates: { canonical: '/o-nas' },
 }
 
 const vyhody = [
