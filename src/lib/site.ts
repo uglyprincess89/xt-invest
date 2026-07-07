@@ -12,16 +12,16 @@ export const siteUrl: string = seo.default.siteUrl.replace(/\/+$/, '')
 /**
  * Má být katalog (/katalog a /katalog/[slug]) indexovatelný vyhledávači?
  *
- * Během auditu REF kódů byl katalog dočasně mimo index (viz public/robots.txt
- * a robots:{index:false} na stránkách). Tento jediný přepínač řídí koherentně:
+ * Jediný přepínač řídí koherentně:
  *   1. robots meta na /katalog a /katalog/[slug]
- *   2. app/robots.ts (Disallow)
- *   3. app/sitemap.ts (zařazení katalogových URL)
+ *   2. zařazení katalogových URL do app/sitemap.ts
+ *   3. Product/ItemList JSON-LD na katalogu
  *
- * ⚠️ ROZHODNUTÍ UŽIVATELE: přepnout na `true` až po odsouhlasení, že data
- * katalogu jsou ověřená a web smí jít do indexu. Viz notes/k-ruční-kontrole.
+ * Zapnuto 2026-07-07 po odsouhlasení majitelem (data katalogu ověřena proti
+ * oficiálním BD zdrojům). Musí zůstat v souladu s public/robots.txt — při
+ * vypnutí vrať i `Disallow: /katalog/`.
  */
-export const CATALOG_INDEXABLE = false
+export const CATALOG_INDEXABLE = true
 
 /** Sestaví absolutní URL z cesty (pro canonical, JSON-LD, sitemap, OG). */
 export function absoluteUrl(path = '/'): string {

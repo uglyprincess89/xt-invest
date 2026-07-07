@@ -29,8 +29,9 @@ Otevřete prohlížeč na **http://localhost:3000**
 
 ```
 xt-invest/
-├── data/                    ← EDITOVATELNÁ DATA (bez kódu)
-│   ├── products.json        ← 15 produktů BD (název, ref, parametry, obrázek)
+├── src/data/                ← EDITOVATELNÁ DATA (bez kódu)
+│   ├── products.json        ← Produkty BD (název, ref, parametry, obrázek)
+│   ├── catalog-index.json   ← GENEROVANÉ (needitovat — npm run generate:catalog)
 │   ├── seo.json             ← SEO titulky a popisy pro každou stránku
 │   └── company.json         ← Firemní údaje, kontakty, otevírací doba
 │
@@ -66,7 +67,8 @@ xt-invest/
 ## ✏️ Jak editovat obsah (bez kódu)
 
 ### Přidat/upravit produkt
-Otevřete `data/products.json` a upravte nebo přidejte položku:
+Otevřete `src/data/products.json` a upravte nebo přidejte položku
+(podrobný postup a pravidla: `docs/agentic-workflow.md`):
 
 ```json
 {
@@ -88,10 +90,10 @@ Otevřete `data/products.json` a upravte nebo přidejte položku:
 Fotku produktu uložte do `/public/images/products/`.
 
 ### Změnit SEO texty
-Editujte `data/seo.json` — titulky a popisy pro každou stránku.
+Editujte `src/data/seo.json` — titulky a popisy pro každou stránku.
 
 ### Změnit kontaktní údaje
-Editujte `data/company.json` — telefon, e-mail, adresy, otevírací doba.
+Editujte `src/data/company.json` — telefon, e-mail, adresy, otevírací doba.
 
 ---
 

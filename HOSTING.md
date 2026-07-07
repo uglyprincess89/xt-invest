@@ -104,7 +104,7 @@ sudo certbot --nginx -d xt-invest.cz -d www.xt-invest.cz
 
 ## 🔄 Aktualizace obsahu produktů (bez redeploymentu)
 
-Soubory v `data/` (products.json, seo.json, company.json) se načítají při buildu.
+Soubory v `src/data/` (products.json, seo.json, company.json) se načítají při buildu.
 Pro změnu obsahu:
 
 1. Upravte JSON soubor

@@ -1,8 +1,6 @@
+# Katalog indexovatelný od 2026-07-07 (audit REF dokončen).
+# Stav musí odpovídat přepínači CATALOG_INDEXABLE v src/lib/site.ts.
 User-agent: *
 Allow: /
-# Katalog je dočasně mimo index (audit REF kódů). Stav odpovídá přepínači
-# CATALOG_INDEXABLE v src/lib/site.ts. Po zapnutí indexace odstraňte řádek
-# Disallow níže — sitemap.xml se katalogem naplní automaticky.
-Disallow: /katalog/
 
 Sitemap: https://www.xt-invest.cz/sitemap.xml
