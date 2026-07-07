@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
-# Docčasně: katalog je během audit-verifikace REF kódů mimo index.
-# Po dokončení Sprint 1 odstranit níže uvedené Disallow.
+# Katalog je dočasně mimo index (audit REF kódů). Stav odpovídá přepínači
+# CATALOG_INDEXABLE v src/lib/site.ts. Po zapnutí indexace odstraňte řádek
+# Disallow níže — sitemap.xml se katalogem naplní automaticky.
 Disallow: /katalog/
+
+Sitemap: https://www.xt-invest.cz/sitemap.xml

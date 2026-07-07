@@ -20,6 +20,7 @@ import { products, company, seo } from '@/lib/data'
 export const metadata: Metadata = {
   title: seo.pages.home.title,
   description: seo.pages.home.description,
+  alternates: { canonical: '/' },
 }
 
 export default function HomePage() {

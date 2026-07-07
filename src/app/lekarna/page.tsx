@@ -5,6 +5,7 @@ import { company, seo } from '@/lib/data'
 export const metadata: Metadata = {
   title: seo.pages.lekarna.title,
   description: seo.pages.lekarna.description,
+  alternates: { canonical: '/lekarna' },
 }
 
 // Měkká sekce — záměrně emoji místo line ikon (přátelštější tón),
