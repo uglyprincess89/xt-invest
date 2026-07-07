@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://www.xt-invest.cz/schemas/products.schema.json",
+  "title": "XT-Invest — katalog produktů BD",
+  "description": "Schéma pro src/data/products.json. Zdroj pravdy pro katalog. Faktické údaje (name, ref, params, certifikace) POUZE z oficiálních BD zdrojů (bd.com, oficiální BD katalogy/IFU). Ceny se na web NEDÁVAJÍ.",
+  "type": "array",
+  "items": { "$ref": "#/definitions/product" },
+  "definitions": {
+    "product": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "slug", "category", "categoryLabel", "name", "ref", "image", "description", "params"],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Unikátní celé číslo. Neměnit u existujících produktů (stabilní klíč)."
+        },
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "description": "URL-safe identifikátor (a-z, 0-9, pomlčky). Unikátní. Tvoří /katalog/<slug> — u existujících neměnit (rozbilo by odkazy/SEO)."
+        },
+        "category": {
+          "type": "string",
+          "enum": ["injekce", "odber", "specialni"],
+          "description": "Musí odpovídat categories v src/lib/catalog.ts."
+        },
+        "categoryLabel": {
+          "type": "string",
+          "enum": ["Injekční technika", "Odběr krve", "Speciální zkumavky"],
+          "description": "Lidský název kategorie; musí odpovídat category."
+        },
+        "name": {
+          "type": "string",
+          "minLength": 3,
+          "description": "FAKT. Oficiální název BD včetně ochranných značek (®, ™). Jen z oficiálních BD zdrojů."
+        },
+        "ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "FAKT. BD katalogové číslo (REF). Unikátní napříč katalogem. Jen z oficiálních BD zdrojů."
+        },
+        "image": {
+          "type": "string",
+          "pattern": "^/images/products/.+\\.(jpg|jpeg|png|webp|avif)$",
+          "description": "Cesta k obrázku v public/. Soubor musí existovat. Rodinné (sdílené) foto je přípustné."
+        },
+        "description": {
+          "type": "string",
+          "minLength": 10,
+          "description": "Popis produktu. Faktická tvrzení (indikace, materiál, aditiva) jen z oficiálních zdrojů. Nejisté označit 'NEOVĚŘENO'."
+        },
+        "params": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": { "type": "string" },
+          "description": "FAKTA. Technické parametry klíč→hodnota (Objem, Rozměr, Aditiva, Materiál, Uzávěr, Certifikace, Balení…). Jen z oficiálních BD zdrojů."
+        },
+        "subcategory": {
+          "type": "string",
+          "description": "Volitelné. Navigační podskupina pro škálování (např. 'Jehly', 'Stříkačky'). Není faktický údaj produktu."
+        },
+        "keywords": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Volitelné. Synonyma/aliasy pro hledání (např. 'kanyla', 'IV katetr'). Navigační pomůcka, ne fakt."
+        }
+      }
+    }
+  }
+}

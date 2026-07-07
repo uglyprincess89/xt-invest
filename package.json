@@ -10,7 +10,8 @@
     "start": "next start",
     "lint": "next lint",
     "validate:data": "node scripts/validate-data.mjs",
-    "generate:catalog": "node scripts/generate-catalog-index.mjs"
+    "generate:catalog": "node scripts/generate-catalog-index.mjs",
+    "check:images": "node scripts/check-images.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
