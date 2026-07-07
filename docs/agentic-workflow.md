@@ -102,8 +102,10 @@ faktických údajů.
    *Guardraily:* jen oficiální BD domény; žádné ceny; žádné domýšlení.
 
 2. **Hlídač konzistence dat (CI).**
-   `validate:data` v GitHub Actions na každý PR měnící `src/data/**` — viz
-   `.github/workflows/data-validation.yml`. Zabrání nekonzistentnímu katalogu.
+   `validate:data` + `build` v GitHub Actions na každý PR. Zabrání nekonzistentnímu
+   katalogu. Připravený workflow je níže v [příloze A](#příloha-a--návrh-ci-workflow) —
+   přidej ho ručně jako `.github/workflows/data-validation.yml` (vytvoření workflow
+   přes API vyžaduje token s `workflow` scope, proto není součástí tohoto PR).
 
 3. **Kontrola odkazů a obrázků.**
    Rozšířit `check-images` o kontrolu rozměrů a o návrh komprese těžkých fotek;
@@ -131,3 +133,40 @@ faktických údajů.
 - Nejisté = `NEOVĚŘENO`, nechat na člověku.
 - Nic nemergovat bez lidské revize; PR je kontrolní brána.
 - Neměnit `id`/`slug` existujících produktů (stabilita odkazů a SEO).
+
+---
+
+## Příloha A — návrh CI workflow
+
+Ulož jako `.github/workflows/data-validation.yml`. Volitelné; nic nenasazuje ani
+neposílá ven — jen validace + build na GitHub runneru.
+
+```yaml
+# Hlídá integritu katalogových dat a build na každém PR.
+name: Data validation & build
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Validate catalog data
+        run: npm run validate:data
+      - name: Check images (report)
+        run: npm run check:images
+      - name: Build
+        run: npm run build
+```
+

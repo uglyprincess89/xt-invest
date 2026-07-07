@@ -32,9 +32,11 @@ Kořenový `data/*.json` (46 produktů) je **zastaralý a nikde se nepoužívá*
 kanonická data jsou `src/data/*.json` (91). Doporučuji kořenový `data/` smazat,
 ať nemate. Nemazal jsem (mimo mnou vytvořené soubory).
 
-## 5. Volitelné CI — `.github/workflows/data-validation.yml`
-Návrh: na každém PR spustí `validate:data` + `check:images` + `build`. Pokud CI
-nechceš, před mergem soubor smaž. Nic nenasazuje.
+## 5. Volitelné CI — přidat ručně
+Návrh workflow (validace + build na každém PR) je v
+`docs/agentic-workflow.md` → Příloha A. Do PR jsem ho nemohl přidat jako soubor
+(push workflow vyžaduje token s `workflow` scope). Pokud CI chceš, zkopíruj YAML
+do `.github/workflows/data-validation.yml`. Nic nenasazuje.
 
 ## 6. Připomínka (mimo tento PR): MDR patička
 Stále chybí **číslo BD autorizace** a **odpovědná osoba** (měl jsi dodat). Až
