@@ -1038,13 +1038,13 @@
     "slug": "bd-vacutainer-eclipse-signal-21g",
     "category": "odber",
     "categoryLabel": "Odběr krve",
-    "name": "BD Vacutainer® Eclipse™ Signal™ jehla 21G × 1 1/4\" (0,8 × 32 mm)",
+    "name": "BD Vacutainer® Eclipse™ Signal™ jehla 21G × 1\" (0,8 × 25 mm)",
     "ref": "368837",
     "image": "/images/products/bd-vacutainer-eclipse.jpg",
     "description": "Bezpečnostní jehla pro venózní odběr krve s komůrkou s flashbackem (Signal) pro okamžité potvrzení vstupu do žíly. Jednoruční aktivace integrovaného bezpečnostního štítu snižuje riziko poranění. Multi-sample provedení, bez předmontovaného držáku.",
     "params": {
       "Gauge": "21G (0,8 mm)",
-      "Délka": "1 1/4\" (32 mm)",
+      "Délka": "1\" (25 mm)",
       "Držák": "Bez integrovaného držáku",
       "Flashback (Signal)": "Ano",
       "Bezpečnostní mechanismus": "Jednoruční aktivace",
@@ -1070,7 +1070,7 @@
       "Stěna": "Tenkostěnná",
       "Sterilizace": "Sterilní, jednorázová",
       "Certifikace": "CE",
-      "Balení": "100 ks/krabice"
+      "Balení": "100 ks/krabice, 1000 ks/karton"
     }
   },
   {
@@ -1090,7 +1090,7 @@
       "Stěna": "Tenkostěnná",
       "Sterilizace": "Sterilní, jednorázová",
       "Certifikace": "CE",
-      "Balení": "100 ks/krabice"
+      "Balení": "100 ks/krabice, 1000 ks/karton"
     }
   },
   {
@@ -1656,6 +1656,86 @@
       "Použití": "Perorální podání (neinjekční)",
       "Sterilizace": "Sterilní, jednorázová",
       "Balení": "100 ks/krabice"
+    }
+  },
+  {
+    "id": 88,
+    "slug": "bd-vacutainer-eclipse-signal-22g",
+    "category": "odber",
+    "categoryLabel": "Odběr krve",
+    "name": "BD Vacutainer® Eclipse™ Signal™ jehla 22G × 1\" (0,7 × 25 mm)",
+    "ref": "368838",
+    "image": "/images/products/bd-vacutainer-eclipse.jpg",
+    "description": "Bezpečnostní jehla pro venózní odběr krve s komůrkou s flashbackem (Signal) pro okamžité potvrzení vstupu do žíly. Jednoruční aktivace integrovaného bezpečnostního štítu snižuje riziko poranění. Multi-sample provedení, bez předmontovaného držáku.",
+    "params": {
+      "Gauge": "22G (0,7 mm)",
+      "Délka": "1\" (25 mm)",
+      "Držák": "Bez integrovaného držáku",
+      "Flashback (Signal)": "Ano",
+      "Bezpečnostní mechanismus": "Jednoruční aktivace",
+      "Multi-sample": "Ano",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Balení": "50 ks/krabice, 500 ks/karton"
+    }
+  },
+  {
+    "id": 89,
+    "slug": "bd-vacutainer-multisample-22g-25mm",
+    "category": "odber",
+    "categoryLabel": "Odběr krve",
+    "name": "BD Vacutainer® jehla pro odběr krve (multi-sample) 22G × 1\" (0,7 × 25 mm)",
+    "ref": "360210",
+    "image": "/images/products/bd-vacutainer-jehla-21g.jpg",
+    "description": "Konvenční oboustranná jehla pro venózní odběr krve do vakuových zkumavek s držákem BD Vacutainer®. Ventilová manžeta na straně zkumavky umožňuje odběr více zkumavek z jednoho vpichu (multi-sample) a omezuje kontakt s krví. Silikonizovaný hrot pro plynulý vpich.",
+    "params": {
+      "Gauge": "22G (0,7 mm)",
+      "Délka": "1\" (25 mm)",
+      "Barva": "Černá",
+      "Provedení": "Multi-sample (více zkumavek)",
+      "Stěna": "Tenkostěnná",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Certifikace": "CE",
+      "Balení": "100 ks/krabice, 1000 ks/karton"
+    }
+  },
+  {
+    "id": 90,
+    "slug": "bd-vacutainer-multisample-21g-25mm",
+    "category": "odber",
+    "categoryLabel": "Odběr krve",
+    "name": "BD Vacutainer® jehla pro odběr krve (multi-sample) 21G × 1\" (0,8 × 25 mm)",
+    "ref": "360212",
+    "image": "/images/products/bd-vacutainer-jehla-21g.jpg",
+    "description": "Konvenční oboustranná jehla pro venózní odběr krve do vakuových zkumavek s držákem BD Vacutainer®. Ventilová manžeta na straně zkumavky umožňuje odběr více zkumavek z jednoho vpichu (multi-sample) a omezuje kontakt s krví. Silikonizovaný hrot pro plynulý vpich.",
+    "params": {
+      "Gauge": "21G (0,8 mm)",
+      "Délka": "1\" (25 mm)",
+      "Barva": "Zelená",
+      "Provedení": "Multi-sample (více zkumavek)",
+      "Stěna": "Tenkostěnná",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Certifikace": "CE",
+      "Balení": "100 ks/krabice, 1000 ks/karton"
+    }
+  },
+  {
+    "id": 91,
+    "slug": "bd-vacutainer-multisample-20g-38mm",
+    "category": "odber",
+    "categoryLabel": "Odběr krve",
+    "name": "BD Vacutainer® jehla pro odběr krve (multi-sample) 20G × 1 1/2\" (0,9 × 38 mm)",
+    "ref": "360215",
+    "image": "/images/products/bd-vacutainer-jehla-21g.jpg",
+    "description": "Konvenční oboustranná jehla pro venózní odběr krve do vakuových zkumavek s držákem BD Vacutainer®. Ventilová manžeta na straně zkumavky umožňuje odběr více zkumavek z jednoho vpichu (multi-sample) a omezuje kontakt s krví. Silikonizovaný hrot pro plynulý vpich.",
+    "params": {
+      "Gauge": "20G (0,9 mm)",
+      "Délka": "1 1/2\" (38 mm)",
+      "Barva": "Žlutá",
+      "Provedení": "Multi-sample (více zkumavek)",
+      "Stěna": "Tenkostěnná",
+      "Sterilizace": "Sterilní, jednorázová",
+      "Certifikace": "CE",
+      "Balení": "100 ks/krabice, 1000 ks/karton"
     }
   }
 ]

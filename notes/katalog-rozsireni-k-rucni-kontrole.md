@@ -1,63 +1,56 @@
 # Rozšíření katalogu — položky k ruční kontrole
 
-Druhá vlna rozšíření katalogu (46 → 87 produktů). Tento soubor shrnuje, co
-**nebylo založeno** nebo je **s nižší jistotou** a čeká na tvou osobní kontrolu.
-Data všech založených karet pocházejí výhradně z oficiálních BD zdrojů
-(bd.com produktové stránky, oficiální BD EMEA packaging SKU katalog pro Itálii —
-IDS/MDS, FDA GUDID). Nic není domýšleno z paměti.
+Druhá vlna rozšíření katalogu (46 → 91 produktů). Data všech karet pocházejí
+výhradně z oficiálních BD zdrojů: bd.com produktové stránky, oficiální BD EMEA
+packaging SKU katalog (Itálie — IDS/MDS), FDA GUDID a **oficiální BD Vacutainer
+katalog dodaný uživatelem** (`Katalog.pdf`). Nic není domýšleno z paměti.
 
-## A) NEZALOŽENO — nedohledáno v žádném dostupném oficiálním BD zdroji
+## A) Opravené / doplněné dle oficiálního BD Vacutainer katalogu
 
-Tyto REF nemají produktovou stránku na bd.com (zkoušeno en-us / en-uk / en-no / en-in),
-nejsou v oficiálním BD packaging katalogu (Itálie IDS/MDS) ani ve FDA GUDID.
-Ponechány k doplnění po ověření z tvého interního BD podkladu / e-katalogu.
+| REF | Co | Zdroj |
+|-----|----|-------|
+| 368837 | Délka opravena **32 mm → 25 mm (1")** (seznam měl chybnou délku) | Katalog s. 53 |
+| 360211, 360213 | Balení doplněno na 100/1000 (krab./karton) | Katalog s. 55 |
+| **368838** | **Nově založeno** (22G Signal, 25 mm, 50/500). *Seznam uváděl 368338 — v katalogu existuje jen 368838 (překlep 3→8).* | Katalog s. 53 |
+| **360210** | **Nově založeno** (22G multi-sample, 25 mm). *Seznam uváděl 360220.* | Katalog s. 55 |
+| **360212** | **Nově založeno** (21G multi-sample, 25 mm). *Seznam uváděl 360222.* | Katalog s. 55 |
+| **360215** | **Nově založeno** (20G multi-sample, 38 mm). *Seznam uváděl 360225.* | Katalog s. 55 |
 
-| REF | Popis ze seznamu | Poznámka |
-|-----|------------------|----------|
-| 368338 | SIGNAL 22x1 NON INT (Eclipse Signal jehla 22G) | Produkt reálně existuje (distributoři uvádějí 22G × 1", 25 mm), ale bez oficiální BD stránky/katalogového záznamu. Ověř REF a délku. |
-| 360220 | PrecisionGlide MSN 22G × 1" | Bez per-REF bd.com stránky. Pozor: 22G×1,5" je i pod REF 360221 **a** 360211 — možná duplicitní/starší REF. |
-| 360221 | PrecisionGlide MSN 22G × 1,5" | Stejná specifikace jako **360211** (založeno). Ověř, zda nejde o totéž. |
-| 360222 | PrecisionGlide MSN 21G × 1" | Bez per-REF bd.com stránky. |
-| 360223 | PrecisionGlide MSN 21G × 1,5" | Stejná specifikace jako **360213** (založeno). Ověř, zda nejde o totéž. |
-| 360225 | PrecisionGlide MSN 20G × 1,6" | Neobvyklá délka „1.6" v seznamu — ověř (běžně 1,5"). |
-| 360227 | PrecisionGlide MSN 18G × 1,5" | Bez per-REF bd.com stránky. |
-| 303299 | SYRINGE 1ML DN 27GA 3/8 SP120 (1 ml s jehlou 27G × 3/8") | Nedohledáno. Blízké 303176 (1 ml + 26G × 3/8") je založeno. Ověř REF. |
+Pozn.: Multi-sample jehly BD Vacutainer mají v katalogu REF **360210–360215**
+(20/21/22G × 25/38 mm). Tvé REF 360220–360227 těmto odpovídají gauge i délkou —
+šlo tedy o systematický překlep 4. číslice (2 ↔ 1).
 
-## B) Ponecháno dle tvého pokynu „nech na ruční kontrolu"
+## B) Stále k ruční kontrole
 
-| REF | Popis | Stav |
-|-----|-------|------|
-| 362783 | TUBE SST II PLH 13X100 5.0 PLBL CE MD/BL | **NEZALOŽENO.** V paměti evidovaná anomálie (SST II 362783 vs. 367955). Pozn.: bd.com má sousední REF 362782 = „SST II 5 ml 13×100" — ověř přesné provedení a barvu uzávěru. |
-| 367393 | ULTRATOUCH Push Button 21G / PBBCS UTW 21X.75 7' | **JIŽ ZALISTOVÁNO** (beze změny). Historická anomálie 367393 vs. 368689 (368689 = UltraTouch 21G × 0,75", 12" hadička, plně sterilní balení). Zkontroluj, že stávající karta 367393 odpovídá. |
+| REF | Popis | Stav / důvod |
+|-----|-------|--------------|
+| 360227 | PrecisionGlide 18G × 1,5" | **NEZALOŽENO** — multi-sample jehla v 18G v katalogu **neexistuje** (jen 20/21/22G). Ověř REF/gauge. |
+| 362783 | TUBE SST II PLH 13X100 5.0 | **NEZALOŽENO** — v katalogu není; 5ml SST II 13×100 = **367955** (už zalistováno). Pravděpodobně duplicita/překlep. |
+| 303299 | SYRINGE 1ML DN 27GA 3/8 (1 ml s jehlou 27G × 3/8") | **NEZALOŽENO** — hypodermický produkt, není ve Vacutainer katalogu; nedohledáno ani na bd.com/MDS. Blízké 303176 (26G) je založeno. Ověř REF. |
+| 367393 | UltraTouch Push Button 21G | **JIŽ ZALISTOVÁNO** (beze změny). Katalog (s. 51) potvrzuje 21G, 19 mm jehla, 178 mm hadička, 50/200 — karta odpovídá. |
 
-## C) Založeno, ale s NIŽŠÍ jistotou / upozornění
+## C) Založeno s nižší jistotou (mimo Vacutainer katalog)
 
-| REF | Karta | Co ověřit |
-|-----|-------|-----------|
-| 368837 | Eclipse Signal 21G × 1 1/4" (32 mm) | Gauge 21G potvrzen z bd.com; **délka 1 1/4" (32 mm) je ze SKU popisu**, ne přímo z bd.com stránky (ta délku neuvádí). |
-| 304100 | Microlance™ jehla 24G × 1" | Rozměr z oficiálního BD MDS katalogu; **generace (Microlance™ II) a barva (šedá dle ISO)** nejsou per-REF potvrzeny z bd.com. |
-| 303174 | Inzulínová stříkačka 1 ml U-100 | Z BD MDS katalogu („SYRINGE 1ML LS U100"); provedení Luer Slip. Bez bd.com stránky. |
-| 300300, 300700, 301000, 301750, 303800, 304300, 304727 | Microlance™ 3 jehly (MDS) | Gauge + délka ověřeny z oficiálního BD MDS katalogu; **barva dle ISO 6009**, bevel/wall dle SKU popisu; CE 0318 a balení dle rodiny Microlance™ 3 (shodné u sourozeneckých REF ověřených na bd.com). |
+| REF | Karta | Poznámka |
+|-----|-------|----------|
+| 304100 | Microlance™ 24G × 1" | Rozměr z BD MDS katalogu; generace (Microlance™ II) a barva (šedá dle ISO) nepotvrzeny per-REF. Hypodermický produkt — mimo dodaný Vacutainer katalog. |
+| 303174 | Inzulínová stříkačka 1 ml U-100 | Z BD MDS katalogu; bez bd.com stránky. |
+| 300300, 300700, 301000, 301750, 303800, 304300, 304727 | Microlance™ 3 jehly | Gauge + délka z BD MDS katalogu; barva dle ISO 6009, bevel/wall dle SKU; CE 0318 a balení dle rodiny. |
 
 ## D) Obrázky
 
-- **22 karet má oficiální produktové foto z bd.com** (staženo z `og:image`, pojmenováno `bd-<REF>.<ext>`).
-- **19 karet používá stávající rodinné foto** (stejná konvence jako dosavadní katalog — jedno foto pro variantní REF):
-  - Zkumavky SST II 8,5 ml (367953) a **PST II 4,5 ml (367376)** → `bd-vacutainer-sst2-5ml.jpg`.
-    **Pozn.: PST II má světle zelený uzávěr — foto je z SST II (zlatý). Doplnit oficiální PST II foto.**
-  - EST 3,0 ml (362725) → `bd-vacutainer-sst.jpg` (neutrální zkumavka).
-  - Eclipse Signal jehly (368835, 368837) → `bd-vacutainer-eclipse.jpg`.
-  - Multi-sample jehly (360211, 360213) → `bd-vacutainer-jehla-21g.jpg`.
-  - Microlance™ 3 jehly bez staženého fota (300300, 300700, 301000, 301750, 303262, 303800, 304100, 304300, 304727) → `bd-microlance-3.jpg`.
-  - Stříkačky bez staženého fota (303174, 303176, 309658) → `bd-tuberculin-1ml.jpg` / `bd-plastipak-5ml-ll.jpg`.
+- **22 karet** = oficiální produktové foto z bd.com (`bd-<REF>.<ext>`).
+- Ostatní = stávající rodinné foto (konvence katalogu). K doplnění zejména:
+  - **PST II 4,5 ml (367376)** — dočasně sdílí foto SST II (jiná barva uzávěru).
+  - Nové multi-sample (360210/212/215) a Signal 22G (368838) → rodinné foto.
 
-## E) Vyřešené nejasnosti (potvrzeno proti bd.com)
+## E) Potvrzeno proti oficiálnímu BD Vacutainer katalogu
 
-- **305959** „10 ml II San agustin" = BD Plastipak™ 10 ml Luer-Lok™ („San Agustin" je závod výroby).
-- **300629** „L3 ST 20 LC" = BD Plastipak™ 20 ml Luer-Lok™.
-- **300866** = 50 ml excentrický Luer Slip (bd.com potvrzuje 50 ml; italský packaging list uváděl 60 ml — řídím se produktovou stránkou).
-- **362725** „EST … S E" = EST™ (Evacuated Secondary Tube) — **sekundární zkumavka bez aditiva**, nikoli sérová.
-- **367953** = SST™ II Advance 8,5 ml (potvrzeno FDA GUDID, výrobce Becton Dickinson U.K.).
+- Zkumavky: **367953** (SST II Advance 8,5 ml, silika+gel), **367376** (PST II 4,5 ml,
+  Li-heparin+gel), **368856/367864** (K2EDTA 3/6 ml), **362725** (EST 3 ml, bez aditiva,
+  see-thru) — vše sedí.
+- **305959** = Plastipak 10 ml LL · **300629** = 20 ml LL · **300866** = 50 ml eccentric
+  (bd.com; italský packaging list chybně uváděl 60 ml) · **367953** = SST II Advance (FDA GUDID).
 
 ---
-Vygenerováno automaticky při rozšíření katalogu. Ceny na web nedávány (dle zadání).
+Ceny na web nedávány (dle zadání). Nic nemergováno — vše k osobní revizi.
