@@ -19,26 +19,6 @@ export type Product = {
   priceCZK?: number
 }
 
-/**
- * Lehká projekce produktu pro výpisy (katalog, dlaždice). Neobsahuje popis ani
- * strukturované params — ty putují jen na SSG detail. Katalogový klient tak
- * neposílá do bundle popisy všech produktů, což drží velikost při stovkách REF.
- * `search` je předpočítaný normalizovaný index (bez diakritiky, lowercase).
- */
-export type ProductListItem = {
-  id: number
-  slug: string
-  category: string
-  categoryLabel: string
-  name: string
-  ref: string
-  image: string
-  search: string
-}
-
-/** Pole, která k vykreslení potřebuje dlaždice/řádek (Product i ProductListItem je splňují). */
-export type ProductCardData = Pick<Product, 'slug' | 'name' | 'ref' | 'image' | 'categoryLabel'>
-
 export type Company = typeof companyData
 export type SeoData = typeof seoData
 
