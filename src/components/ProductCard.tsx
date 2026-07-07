@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import type { ProductCardData } from '@/lib/catalog'
 import ContactForm from '@/components/ContactForm'
+import Modal from '@/components/Modal'
 
 export default function ProductCard({ product }: { product: ProductCardData }) {
   const [modalOpen, setModalOpen] = useState(false)
@@ -57,17 +58,12 @@ export default function ProductCard({ product }: { product: ProductCardData }) {
       </div>
 
       {modalOpen && (
-        <div
-          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
-          onClick={(e) => { if (e.target === e.currentTarget) setModalOpen(false) }}
-        >
-          <div className="w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-xl">
-            <ContactForm
-              produktNazev={product.name}
-              onClose={() => setModalOpen(false)}
-            />
-          </div>
-        </div>
+        <Modal label={`Poptávka produktu: ${product.name}`} onClose={() => setModalOpen(false)}>
+          <ContactForm
+            produktNazev={product.name}
+            onClose={() => setModalOpen(false)}
+          />
+        </Modal>
       )}
     </>
   )

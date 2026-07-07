@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import ProductCard from '@/components/ProductCard'
 import ContactForm from '@/components/ContactForm'
+import Modal from '@/components/Modal'
 import PageHero from '@/components/PageHero'
 import { productList, categories, normalize, type ProductListItem } from '@/lib/catalog'
 
@@ -342,29 +343,19 @@ export default function KatalogClient() {
 
       {/* Modal s obecným formulářem */}
       {modalOpen && (
-        <div
-          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
-          onClick={(e) => { if (e.target === e.currentTarget) setModalOpen(false) }}
-        >
-          <div className="w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-xl">
-            <ContactForm onClose={() => setModalOpen(false)} />
-          </div>
-        </div>
+        <Modal label="Nezávazná poptávka" onClose={() => setModalOpen(false)}>
+          <ContactForm onClose={() => setModalOpen(false)} />
+        </Modal>
       )}
 
       {/* Modal s formulářem pro konkrétní produkt (z list view) */}
       {poptatProduct && (
-        <div
-          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
-          onClick={(e) => { if (e.target === e.currentTarget) setPoptatProduct(null) }}
-        >
-          <div className="w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-xl">
-            <ContactForm
-              produktNazev={poptatProduct.name}
-              onClose={() => setPoptatProduct(null)}
-            />
-          </div>
-        </div>
+        <Modal label={`Poptávka produktu: ${poptatProduct.name}`} onClose={() => setPoptatProduct(null)}>
+          <ContactForm
+            produktNazev={poptatProduct.name}
+            onClose={() => setPoptatProduct(null)}
+          />
+        </Modal>
       )}
     </>
   )
