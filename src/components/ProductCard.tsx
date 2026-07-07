@@ -2,10 +2,10 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import type { Product } from '@/lib/data'
+import type { ProductCardData } from '@/lib/catalog'
 import ContactForm from '@/components/ContactForm'
 
-export default function ProductCard({ product }: { product: Product }) {
+export default function ProductCard({ product }: { product: ProductCardData }) {
   const [modalOpen, setModalOpen] = useState(false)
 
   return (

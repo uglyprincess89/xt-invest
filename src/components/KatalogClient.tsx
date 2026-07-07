@@ -1,42 +1,64 @@
 'use client'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import ProductCard from '@/components/ProductCard'
 import ContactForm from '@/components/ContactForm'
 import PageHero from '@/components/PageHero'
-import { products, categories, type Product } from '@/lib/data'
+import { productList, categories, normalize, type ProductListItem } from '@/lib/catalog'
 
 type ViewMode = 'grid' | 'list'
+type SortMode = 'doporucene' | 'nazev' | 'kategorie'
 
-function normalize(s: string): string {
-  return s
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '')
+/** Kolik produktů vykreslit najednou; „Zobrazit další" přidá stejný počet. */
+const PAGE_SIZE = 24
+
+const sortOptions: { id: SortMode; label: string }[] = [
+  { id: 'doporucene', label: 'Doporučené' },
+  { id: 'nazev', label: 'Název A–Z' },
+  { id: 'kategorie', label: 'Podle kategorie' },
+]
+
+/** Tokenizované hledání: každé slovo dotazu musí být v předpočítaném indexu. */
+function matchesQuery(p: ProductListItem, terms: string[]): boolean {
+  if (terms.length === 0) return true
+  return terms.every((t) => p.search.includes(t))
 }
 
-function matchesQuery(p: Product, q: string): boolean {
-  if (!q) return true
-  const needle = normalize(q)
-  const haystack = normalize(
-    `${p.name} ${p.ref} ${p.description} ${p.categoryLabel} ${Object.values(p.params).join(' ')}`
-  )
-  return haystack.includes(needle)
+function sortProducts(list: ProductListItem[], mode: SortMode): ProductListItem[] {
+  if (mode === 'doporucene') return list
+  const copy = [...list]
+  if (mode === 'nazev') {
+    copy.sort((a, b) => a.name.localeCompare(b.name, 'cs'))
+  } else if (mode === 'kategorie') {
+    copy.sort((a, b) => a.categoryLabel.localeCompare(b.categoryLabel, 'cs') || a.name.localeCompare(b.name, 'cs'))
+  }
+  return copy
 }
 
 export default function KatalogClient() {
   const [activeCategory, setActiveCategory] = useState<string>('vse')
   const [query, setQuery] = useState<string>('')
+  const [sortBy, setSortBy] = useState<SortMode>('doporucene')
   const [viewMode, setViewMode] = useState<ViewMode>('grid')
+  const [visibleCount, setVisibleCount] = useState<number>(PAGE_SIZE)
   const [modalOpen, setModalOpen] = useState(false)
-  const [poptatProduct, setPoptatProduct] = useState<Product | null>(null)
+  const [poptatProduct, setPoptatProduct] = useState<ProductListItem | null>(null)
 
   const filtered = useMemo(() => {
+    const terms = normalize(query).split(/\s+/).filter(Boolean)
     const byCategory =
-      activeCategory === 'vse' ? products : products.filter(p => p.category === activeCategory)
-    return byCategory.filter(p => matchesQuery(p, query))
-  }, [activeCategory, query])
+      activeCategory === 'vse' ? productList : productList.filter((p) => p.category === activeCategory)
+    return sortProducts(byCategory.filter((p) => matchesQuery(p, terms)), sortBy)
+  }, [activeCategory, query, sortBy])
+
+  // Po každé změně filtru/hledání/řazení začni zas od první stránky.
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE)
+  }, [activeCategory, query, sortBy])
+
+  const visible = filtered.slice(0, visibleCount)
+  const remaining = filtered.length - visible.length
 
   return (
     <>
@@ -49,18 +71,21 @@ export default function KatalogClient() {
       <section className="py-12 md:py-16 px-6 bg-gray-50 min-h-screen">
         <div className="max-w-7xl mx-auto">
 
-          {/* Search + view toggle */}
+          {/* Search + sort + view toggle */}
           <div className="flex flex-col md:flex-row gap-3 mb-6">
             <div className="relative flex-1">
+              <label htmlFor="katalog-hledat" className="sr-only">Hledat v katalogu produktů BD</label>
               <svg
                 className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"
                 width="18" height="18" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
+                aria-hidden="true"
               >
                 <circle cx="11" cy="11" r="8"/>
                 <line x1="21" y1="21" x2="16.65" y2="16.65"/>
               </svg>
               <input
+                id="katalog-hledat"
                 type="search"
                 value={query}
                 onChange={e => setQuery(e.target.value)}
@@ -74,12 +99,25 @@ export default function KatalogClient() {
                   className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 text-gray-400 hover:text-navy"
                   aria-label="Vymazat hledání"
                 >
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <line x1="18" y1="6" x2="6" y2="18"/>
                     <line x1="6" y1="6" x2="18" y2="18"/>
                   </svg>
                 </button>
               )}
+            </div>
+
+            {/* Řazení */}
+            <div className="shrink-0">
+              <label htmlFor="katalog-razeni" className="sr-only">Řadit produkty</label>
+              <select
+                id="katalog-razeni"
+                value={sortBy}
+                onChange={e => setSortBy(e.target.value as SortMode)}
+                className="h-full w-full md:w-auto bg-white border border-gray-200 rounded-xl px-3.5 py-3 text-[15px] text-gray-700 shadow-card focus:outline-none focus:border-teal focus:ring-2 focus:ring-teal/20 cursor-pointer"
+              >
+                {sortOptions.map(o => <option key={o.id} value={o.id}>Řadit: {o.label}</option>)}
+              </select>
             </div>
 
             <div className="inline-flex bg-white border border-gray-200 rounded-xl p-1 shadow-card shrink-0 self-start">
@@ -91,7 +129,7 @@ export default function KatalogClient() {
                   viewMode === 'grid' ? 'bg-navy text-white' : 'text-gray-600 hover:text-navy'
                 }`}
               >
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <rect x="3" y="3" width="7" height="7"/>
                   <rect x="14" y="3" width="7" height="7"/>
                   <rect x="3" y="14" width="7" height="7"/>
@@ -107,7 +145,7 @@ export default function KatalogClient() {
                   viewMode === 'list' ? 'bg-navy text-white' : 'text-gray-600 hover:text-navy'
                 }`}
               >
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <line x1="8" y1="6" x2="21" y2="6"/>
                   <line x1="8" y1="12" x2="21" y2="12"/>
                   <line x1="8" y1="18" x2="21" y2="18"/>
@@ -130,10 +168,10 @@ export default function KatalogClient() {
                   : 'bg-white border border-gray-200 text-gray-600 hover:border-navy hover:text-navy'
               }`}
             >
-              Vše ({products.length})
+              Vše ({productList.length})
             </button>
             {categories.map(cat => {
-              const count = products.filter(p => p.category === cat.id).length
+              const count = productList.filter(p => p.category === cat.id).length
               if (count === 0) return null
               return (
                 <button
@@ -152,8 +190,10 @@ export default function KatalogClient() {
           </div>
 
           {/* Počet výsledků */}
-          <p className="text-xs text-gray-500 mb-4 font-medium">
-            Zobrazeno {filtered.length} z {products.length} produktů
+          <p className="text-xs text-gray-500 mb-4 font-medium" aria-live="polite">
+            {filtered.length === productList.length
+              ? <>Zobrazeno {visible.length} z {productList.length} produktů</>
+              : <>Nalezeno {filtered.length} z {productList.length} produktů</>}
             {query && <> · hledáno: <span className="text-navy">„{query}"</span></>}
           </p>
 
@@ -173,7 +213,7 @@ export default function KatalogClient() {
           {/* GRID view */}
           {viewMode === 'grid' && filtered.length > 0 && (
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-              {filtered.map(product => (
+              {visible.map(product => (
                 <ProductCard key={product.id} product={product} />
               ))}
             </div>
@@ -191,11 +231,11 @@ export default function KatalogClient() {
                 <span className="text-right">Akce</span>
               </div>
               <ul>
-                {filtered.map((product, i) => (
+                {visible.map((product, i) => (
                   <li
                     key={product.id}
                     className={`grid grid-cols-[44px_1fr] md:grid-cols-[60px_minmax(0,3fr)_minmax(0,1.4fr)_110px_180px] gap-3 px-4 py-3 items-center ${
-                      i !== filtered.length - 1 ? 'border-b border-gray-100' : ''
+                      i !== visible.length - 1 ? 'border-b border-gray-100' : ''
                     } hover:bg-gray-50/60 transition-colors`}
                   >
                     <Link
@@ -264,6 +304,18 @@ export default function KatalogClient() {
                   </li>
                 ))}
               </ul>
+            </div>
+          )}
+
+          {/* Zobrazit další (progresivní render pro velké katalogy) */}
+          {remaining > 0 && (
+            <div className="mt-8 text-center">
+              <button
+                onClick={() => setVisibleCount(c => c + PAGE_SIZE)}
+                className="inline-flex items-center gap-2 bg-white border border-gray-200 text-navy text-sm font-semibold px-6 py-3 rounded-xl shadow-card hover:border-navy transition-colors"
+              >
+                Zobrazit další ({Math.min(PAGE_SIZE, remaining)} z {remaining})
+              </button>
             </div>
           )}
 
